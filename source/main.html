@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewellery</title>
+    <link rel="preload" as="style" href="./css/style.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="preload" href="./fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="./fonts/poppins-regular.woff" as="font" type="font/woff" crossorigin="">
+  </head>
+  <body>
+    <h1 class="visually-hidden">Jewellery Shop</h1>
+    <header class="page-header">
+      <div class="page-header__top">
+        <div class="page-header__input">
+          <label class="visually-hidden" for="search-input">Search</label>
+          <input class="js-input-search" type="text" id="search-input" minlength="1" maxlength="100" placeholder="Type here to search">
+        </div>
+        <a class="logo" href="">
+          <img src="./img/logo.svg" alt="">
+        </a>
+        <div class="header__buttons">
+          <button type="button">Login</button>
+          <button type="button">Cart 0</button>
+        </div>
+      </div>
+      <nav>
+        <ul class="">
+          <li>
+            <a href="">What’s new</a>
+          </li>
+          <li>
+            <a href="">Chokers</a>
+          </li>
+          <li>
+            <a href="">Necklaces</a>
+          </li>
+          <li>
+            <a href="">Rings</a>
+          </li>
+          <li>
+            <a href="">Earrings</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="promo">
+        <picture>
+          <!-- 320 х 463 без ретины, 640 х 926 c ретиной -->
+          <source type="image/webp" media="(max-width:767px)" srcset="./img/intro-main-mobile.webp 1x, ./img/intro-main-mobile@2x.webp 2x">
+          <!-- 768 х 463 без ретины, 1536 х 926 c ретиной -->
+          <source type="image/webp" media="(max-width:1023px)" srcset="./img/intro-main-tablet.webp 1x, ./img/intro-main-tablet@2x.webp 2x">
+          <!-- 1366 x 463 без ретины, 2732 х 926 c ретиной -->
+          <source type="image/webp" srcset="./img/intro-main-desktop.webp 1x, ./img/intro-main-desktop@2x.webp 2x">
+          <!-- 320 х 463 без ретины, 640 х 926 c ретиной -->
+          <source media="(max-width:767px)" srcset="./img/intro-main-mobile.jpg 1x, ./img/intro-main-mobile@2x.jpg 2x">
+          <!-- 768 х 463 без ретины, 1536 х 926 c ретиной -->
+          <source media="(max-width:1023px)" srcset="./img/intro-main-tablet.jpg 1x, ./img/intro-main-tablet@2x.jpg 2x">
+          <!-- 1366 x 463 без ретины, 2732 х 926 c ретиной -->
+          <img src="./img/intro-main-desktop.jpg" srcset="./img/intro-main-desktop@2x.jpg 2x" alt="jewerly set" height="463" style="width:100%">
+        </picture>
+        <h2>PERFECTION</h2>
+        <p>made to be yours</p>
+      </section>
+      <section class="new-jewelery">
+        <div class="new-jewelery__slider">
+          <button type="button"></button>
+          <div class="new-jewelery__title">
+            <h2>New In</h2>
+            <a>Shop Now</a>
+          </div>
+          <button type="button"></button>
+        </div>
+        <!-- Тут будет слайдер -->
+      </section>
+      <section class="blog">
+        <h2>Blog</h2>
+        <a href="">Read All</a>
+        <div class="blog__tiles">
+          <div class="blog__tile blog__tile--reversed">
+            <div class="blog__article">
+              <p>September 30, 2019</p>
+              <p>How to care for
+                your jewellery</p>
+              <a href="#">Read Article</a>
+            </div>
+            <div class="blog__image">
+              <picture>
+                <!-- 285 х 300 без ретины, 678 х 600 -->
+                <source type="image/webp" srcset="./img/blog-img-1.webp 1x, ./img/blog-img-1@2x.webp 2x">
+                <source type="image/jpeg" srcset="./img/blog-img-1.jpg 1x, ./img/blog-img-1@2x.jpg 2x">
+                <img src="./img/blog-img-1.jpg" srcset="./img/blog-img-1@2x.jpg 2x" height="300" width="285" alt="jewerly">
+              </picture>
+            </div>
+          </div>
+          <div class="blog__tile">
+            <div class="blog__article">
+              <p>September 23, 2019</p>
+              <p>Power of
+                crystals </p>
+              <a href="#">Read Article</a>
+            </div>
+            <div class="blog__image">
+              <picture>
+                <!-- 285 х 300 без ретины, 678 х 600 -->
+                <source type="image/webp" srcset="./img/blog-img-2.webp 1x, ./img/blog-img-2@2x.webp 2x">
+                <source type="image/jpeg" srcset="./img/blog-img-2.jpg 1x, ./img/blog-img-2@2x.jpg 2x">
+                <img src="./img/blog-img-2.jpg" height="300" width="285" alt="jewerly">
+              </picture>
+            </div>
+          </div>
+          <div class="blog__tile blog__tile--special">
+            <div class="blog__article">
+              <p>September 16, 2019</p>
+              <p>AW 19 trends</p>
+              <a href="#">Read Article</a>
+            </div>
+            <div class="blog__image blog__image--special">
+              <picture>
+                <!-- 285 х 300 без ретины, 678 х 600 -->
+                <source type="image/webp" srcset="./img/blog-img-3.webp 1x, ./img/blog-img-3@2x.webp 2x">
+                <source type="image/jpeg" srcset="./img/blog-img-3.jpg 1x, ./img/blog-img-3@2x.jpg 2x">
+                <img src="./img/blog-img-3.jpg" srcset="./img/blog-img-3@2x.jpg 2x" height="630" width="570" alt="jewerly">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
