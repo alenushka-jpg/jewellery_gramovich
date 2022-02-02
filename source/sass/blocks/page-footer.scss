@@ -1,0 +1,57 @@
+.page-footer {
+  background-color: $basic-black;
+}
+
+.page-footer h3 {
+  margin: 0;
+  font-family: "Cormorant Garamond", "Times New Roman", "Times", serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+  color: $basic-white;
+}
+
+.page-footer p {
+  font-weight: 400;
+  font-size: 16px;
+  color: $light-font;
+  line-height: 130%;
+}
+
+.page-footer input {
+  padding: 0;
+  font-family: "Poppins", "Courier New", "Courier", monospace;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $dark-font;
+
+  &::placeholder {
+    color: $light-font;
+  }
+}
+
+.page-footer button {
+  padding: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  border: none;
+  background-color: inherit;
+  color: $basic-white;
+}
+
+.page-footer__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-footer__list a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: $basic-white;
+  text-decoration: none;
+}
