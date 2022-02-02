@@ -1,1 +1,10 @@
-//g
+.follow h2 {
+  font-family: "Cormorant Garamond", "Times New Roman", "Times", serif;
+  letter-spacing: 0.03em;
+}
+
+.follow a {
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid $primary;
+}

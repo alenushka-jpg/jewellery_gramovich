@@ -1,1 +1,34 @@
-//j
+.questions ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.questions h3 {
+  margin: 0;
+  font-family: "Cormorant Garamond", "Times New Roman", "Times", serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+  color: $dark-font;
+}
+
+.questions button {
+  padding: 0;
+  font-family: "Poppins", "Courier New", "Courier", monospace;
+  background-color: inherit;
+  border: none;
+}
+
+.questions span {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130%;
+  color: $dark-font;
+}
+
+.questions p {
+  font-size: 16px;
+  line-height: 130%;
+}

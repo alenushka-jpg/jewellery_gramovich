@@ -1,1 +1,30 @@
-//h
+.new-jewelery__title a {
+  text-decoration: none;
+  border-bottom: 1px solid $primary;
+}
+
+.new-jewelery__catalog ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.new-jewelery__catalog a {
+  display: block;
+  text-decoration: none;
+}
+
+.new-jewelery__catalog h3 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: $dark-font;
+}
+
+.new-jewelery__catalog p {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 130%;
+  color: $dark-font;
+}

@@ -1,1 +1,24 @@
-//g
+.promo {
+  position: relative;
+}
+
+.promo__title {
+  position: absolute;
+  top: 0;
+}
+
+.promo h2 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 130%;
+  color: $basic-white;
+}
+
+.promo p {
+  margin: 0;
+  font-style: italic;
+  font-size: 38px;
+  line-height: 130%;
+  color: $basic-white;
+}

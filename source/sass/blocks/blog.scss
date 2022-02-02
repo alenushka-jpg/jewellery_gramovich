@@ -1,1 +1,31 @@
-//t
+.blog a {
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid $primary;
+}
+
+.blog__article {
+  background-color: $light-background;
+}
+
+.blog__article span {
+  font-size: 14px;
+  color: $light-font;
+}
+
+.blog__article p:nth-child(2n) {
+  font-family: "Cormorant Garamond", "Times New Roman", "Times", serif;
+  color: $basic-black;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 130%;
+}
+
+.blog__article p:last-child {
+  font-family: "Poppins","Courier New", "Courier", monospace;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+

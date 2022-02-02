@@ -1,47 +1,55 @@
-body,
-html {
+html,
+body {
+  margin: 0;
+  padding: 0;
   height: 100%;
+  width: 100%;
 }
 
 html {
+  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Poppins", "Courier New", "Courier", monospace;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
-  position: relative;
+  font-family: "Poppins", "Courier New", "Courier", monospace;
 }
 
-.container {
-  max-width: 1366px;
-  margin: 0 auto;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
-
-.content {
-  flex: 1 0 auto;
-}
-
-.footer {
-  flex: 0 0 auto;
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
 }
 
 .visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
-main {
-  position: relative;
+h2 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 130%;
+  color: $dark-font;
+}
+
+p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: $dark-font;
+
 }
