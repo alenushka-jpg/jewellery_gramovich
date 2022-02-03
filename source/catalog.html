@@ -14,9 +14,9 @@
     <h1 class="visually-hidden">Jewellery Shop</h1>
     <header class="page-header">
       <div class="page-header__top">
-        <div class="page-header__input">
+        <div class="page-header__search">
           <label class="visually-hidden" for="search-input">Search</label>
-          <input class="js-input-search" type="text" id="search-input" minlength="1" maxlength="100" placeholder="Type here to search">
+          <input type="text" id="search-input" minlength="1" maxlength="100" placeholder="Type here to search">
         </div>
         <a class="logo" href="">
           <img src="./img/logo.svg" alt="">
@@ -26,7 +26,7 @@
           <button type="button">Cart 0</button>
         </div>
       </div>
-      <nav>
+      <nav class="main-nav">
         <ul class="">
           <li>
             <a href="">What’s new</a>
@@ -61,57 +61,117 @@
           <!-- 768 х 261 без ретины, 1536 х 522 c ретиной -->
           <source media="(max-width:1023px)" srcset="./img/intro-catalog-tablet.jpg 1x, ./img/intro-catalog-tablet@2x.jpg 2x">
           <!-- 1366 x 261 без ретины, 2732 х 522 c ретиной -->
-          <img src="./img/intro-catalog-desktop.jpg" srcset="./img/intro-catalog-desktop@2x.jpg 2x" alt="jewerly set" height="261">
+          <img src="./img/intro-catalog-desktop.jpg" srcset="./img/intro-catalog-desktop@2x.jpg 2x" alt="jewerly set" height="261" width="100%">
         </picture>
-        <h2>ALL JEWELLERY</h2>
-        <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
+        <div class="promo__title">
+          <h2>ALL JEWELLERY</h2>
+          <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
+        </div>
       </section>
       <div class="catalog__filter">
-      <form action="">
-        <fieldset>
-          <button type="button">
-            <span>Product</span>
-          </button>
-          <div class="catalog__filters"></div>
-        </fieldset>
-        <fieldset>
-          <button type="button" >
-            <span>Material</span>
-          </button>
-          <div class="catalog__filters"></div>
-        </fieldset>
-        <fieldset>
-          <button type="button" >
-            <span>Collection</span>
-          </button>
-          <div class="catalog__filters"></div>
-        </fieldset>
-        <fieldset>
-          <button type="button" >
-            <span>Price</span>
-          </button>
-          <div class="catalog__filters">
-            <div class="catalog__range">
-              <div class="catalog__range-handler">
-                <div></div>
-                <p>$ 55</p>
-              </div>
-              <div class="catalog__range-handler">
-                <div></div>
-                <p>$ 155</p>
+        <form action="">
+          <fieldset>
+            <button type="button">
+              <span>Product</span>
+            </button>
+            <div class="catalog__filters">
+              <ul class="checkbox">
+                <li>
+                  <label class="checkbox">
+                    <input class="checkbox__input" name="name" type="checkbox">
+                    <span class="checkbox__label">Necklaces</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox">
+                    <input class="checkbox__input" name="name" type="checkbox">
+                    <span class="checkbox__label">Chokers</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox">
+                    <input class="checkbox__input" name="name" type="checkbox">
+                    <span class="checkbox__label">Rings</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox">
+                    <input class="checkbox__input" name="name" type="checkbox">
+                    <span class="checkbox__label">Earrings</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+          <fieldset>
+            <button type="button" >
+              <span>Material</span>
+            </button>
+            <div class="catalog__filters">
+              <ul class="checkbox">
+                <li>
+                  <label class="checkbox">
+                    <input class="checkbox__input" name="type" type="checkbox">
+                    <span class="checkbox__label">Gold</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox">
+                    <input class="checkbox__input" name="type" type="checkbox">
+                    <span class="checkbox__label">Silver</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+          <fieldset>
+            <button type="button" >
+              <span>Collection</span>
+            </button>
+            <div class="catalog__filters">
+              <ul class="checkbox">
+                <li>
+                  <label class="checkbox">
+                    <input class="checkbox__input" name="type" type="checkbox">
+                    <span class="checkbox__label">Pink flamingo</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox">
+                    <input class="checkbox__input" name="type" type="checkbox">
+                    <span class="checkbox__label">Dreams</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+          <fieldset>
+            <button type="button" >
+              <span>Price</span>
+            </button>
+            <div class="catalog__filters">
+              <div class="catalog__range">
+                <div class="catalog__range-handler">
+                  <div></div>
+                  <p>$ 55</p>
+                </div>
+                <div class="catalog__range-handler">
+                  <div></div>
+                  <p>$ 155</p>
+                </div>
               </div>
             </div>
+          </fieldset>
+          <div class="catalog__form-buttons">
+            <button type="submit">
+              <span>Apply</span>
+            </button>
+            <button type="button">
+              <span>Clear All</span>
+            </button>
           </div>
-        </fieldset>
-        <div class="catalog__form-buttons">
-          <button type="submit">
-            <span>Apply</span>
-          </button>
-          <button type="button">
-            <span>Clear All</span>
-          </button>
-        </div>
-      </form>
+        </form>
+      </div>
       <div class="catalog__list">
         <ul>
           <li>
@@ -227,23 +287,23 @@
       <div class="catalog__slider">
         <button type="button">Previous</button>
         <div class="breadcrumbs">
-          <button type="button" class="active">1</button>
-          <button type="button">2</button>
-          <button type="button">3</button>
-          <button type="button">4</button>
-          <button type="button">5</button>
+          <button class="breadcrumbs__button breadcrumbs__button--active" type="button">1</button>
+          <button class="breadcrumbs__button" type="button">2</button>
+          <button class="breadcrumbs__button" type="button">3</button>
+          <button class="breadcrumbs__button" type="button">4</button>
+          <button class="breadcrumbs__button" type="button">5</button>
         </div>
         <button type="button">Next</button>
       </div>
     </main>
 
-    <footer class="footer">
+    <footer class="page-footer">
       <div class="container">
-        <section class="footer__inbox">
+        <section class="page-footer__inbox">
           <h3>The good stuff in your inbox</h3>
           <p>News and updates from CH.
             No spam, we promise.</p>
-          <div class="footer__email">
+          <div class="page-footer__email">
             <label for="email-input" class="visually-hidden">Email</label>
             <input type="email" placeholder="Your E-mail" id="email-input" minlength="1" maxlength="100">
             <button type="button">
@@ -251,8 +311,8 @@
             </button>
           </div>
         </section>
-        <div class="footer__lists">
-          <ul class="footer__list footer__list--purchases">
+        <div class="page-footer__lists">
+          <ul class="page-footer__list">
             <li>
               <a href="#">Ordering & Payment</a>
             </li>
@@ -266,7 +326,7 @@
               <a href="#">Delivery</a>
             </li>
           </ul>
-          <ul class="footer__list footer__list--information">
+          <ul class="page-footer__list">
             <li>
               <a href="#">About CH</a>
             </li>
@@ -280,7 +340,7 @@
               <a href="#">Contact Us</a>
             </li>
           </ul>
-          <ul class="footer__list footer__list--socials">
+          <ul class="page-footer__list">
             <li>
               <a href="#" aria-label="Facebook">
                 <span>Facebook</span>

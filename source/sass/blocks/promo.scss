@@ -2,6 +2,11 @@
   position: relative;
 }
 
+.promo img {
+  object-fit: cover;
+  min-height: 261px;
+}
+
 .promo__title {
   position: absolute;
   top: 0;
@@ -9,6 +14,7 @@
 
 .promo h2 {
   margin: 0;
+  font-family: "Cormorant Garamond", "Times New Roman", "Times", serif;
   font-weight: 700;
   font-size: 45px;
   line-height: 130%;
@@ -17,6 +23,7 @@
 
 .promo p {
   margin: 0;
+  font-family: "Cormorant Garamond", "Times New Roman", "Times", serif;
   font-style: italic;
   font-size: 38px;
   line-height: 130%;
