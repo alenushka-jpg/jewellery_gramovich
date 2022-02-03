@@ -1,3 +1,19 @@
+.page-header {
+  &--open {
+    background-color: $primary;
+
+    .page-header__burger svg,
+    .page-header__basket svg {
+      stroke: $basic-white;
+    }
+
+    .page-header__logo svg {
+      fill: $basic-white;
+      stroke: $basic-white;
+    }
+  }
+}
+
 .page-header__top {
   display: flex;
   justify-content: space-between;
@@ -25,11 +41,26 @@
   }
 }
 
+.page-header__burger svg,
+.page-header__basket svg {
+  stroke: $dark-font;
+}
+
 .page-header__search,
 .page-header__buttons {
   @media (max-width: $tablet-width) {
     display: none;
   }
+}
+
+.page-header__logo svg {
+  stroke: $primary;
+}
+
+.page-header button {
+  padding: 0;
+  background-color: inherit;
+  border: 0;
 }
 
 .page-header__search input {
@@ -40,16 +71,12 @@
 }
 
 .page-header__buttons button{
-  padding: 0;
   font-family: "Poppins", "Courier New", "Courier", monospace;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
-  background-color: inherit;
   color: $dark-font;
-  border: 0;
 }
-
 
 .page-header__main-nav {
   padding: 18px 18px 10px;
@@ -61,13 +88,20 @@
   }
 }
 
+.page-header ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 .page-header__main-nav ul {
   display: grid;
   grid-template-columns: repeat(5, min-content);
   column-gap: 34px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
+}
+
+.page-header a {
+  text-decoration: none;
 }
 
 .page-header__main-nav a {
@@ -75,10 +109,79 @@
   font-size: 16px;
   line-height: 24px;
   color: $dark-font;
-  text-decoration: none;
   white-space: nowrap;
 }
 
 .page-header__popup {
   display: none;
+
+  @media (max-width: $tablet-width) {
+    padding: 10px 15px 50px;
+    background-color: $primary;
+
+    &--open {
+      display: block;
+    }
+
+    a,
+    button {
+      color: $basic-white;
+    }
+
+    .page-header__list--information a {
+      color: rgba($basic-white, 0.75);
+    }
+  }
+}
+
+.page-header__input {
+  position: relative;
+  margin-bottom: 36px;
+}
+
+.page-header__input input {
+  padding: 0;
+  height: 40px;
+  width: 100%;
+  background-color: rgba($basic-white, 0.15);
+  border-radius: 21px;
+  border: none;
+}
+
+.page-header__input svg {
+  position: absolute;
+  left: 16px;
+  top: 13px;
+  fill: $basic-white;
+}
+
+.page-header__list {
+  font-weight: 500;
+
+  @media (max-width: $tablet-width) {
+    &--types {
+      font-size: 24px;
+      line-height: 36px;
+
+      li {
+        margin-bottom: 21px;
+      }
+    }
+
+    &--information,
+    &--login button {
+      font-size: 18px;
+      line-height: 130%;
+    }
+
+    &--information {
+      li {
+        margin-bottom: 18px;
+      }
+    }
+
+    &--login button {
+      margin-top: 27px;
+    }
+  }
 }
