@@ -286,20 +286,14 @@
         </div>
       </section>
       <section class="blog container">
-        <h2>Blog</h2>
-        <a href="">
-          <p>Read All</p>
-        </a>
+        <div class="blog__title">
+          <h2>Blog</h2>
+          <a href="">
+            <p>Read All</p>
+          </a>
+        </div>
         <div class="blog__tiles">
-          <div class="blog__tile blog__tile--reversed">
-            <div class="blog__article">
-              <span>September 30, 2019</span>
-              <p>How to care for
-                your jewellery</p>
-              <a href="#">
-                <p>Read Article</p>
-              </a>
-            </div>
+          <div class="blog__tile blog__tile--first">
             <div class="blog__image">
               <picture>
                 <!-- 285 х 300 без ретины, 678 х 600 -->
@@ -308,8 +302,16 @@
                 <img src="./img/blog-img-1.jpg" srcset="./img/blog-img-1@2x.jpg 2x" height="300" width="285" alt="jewerly">
               </picture>
             </div>
+            <div class="blog__article ">
+              <span>September 30, 2019</span>
+              <p>How to care for
+                your jewellery</p>
+              <a href="#">
+                <p>Read Article</p>
+              </a>
+            </div>
           </div>
-          <div class="blog__tile">
+          <div class="blog__tile blog__tile--second">
             <div class="blog__article">
               <span>September 23, 2019</span>
               <p>Power of
@@ -327,21 +329,21 @@
               </picture>
             </div>
           </div>
-          <div class="blog__tile blog__tile--special">
-            <div class="blog__article">
-              <span>September 16, 2019</span>
-              <p>AW 19 trends</p>
-              <a href="#">
-                <p>Read Article</p>
-              </a>
-            </div>
-            <div class="blog__image blog__image--special">
+          <div class="blog__tile blog__tile--third">
+            <div class="blog__image">
               <picture>
                 <!-- 285 х 300 без ретины, 678 х 600 -->
                 <source type="image/webp" srcset="./img/blog-img-3.webp 1x, ./img/blog-img-3@2x.webp 2x">
                 <source type="image/jpeg" srcset="./img/blog-img-3.jpg 1x, ./img/blog-img-3@2x.jpg 2x">
                 <img src="./img/blog-img-3.jpg" srcset="./img/blog-img-3@2x.jpg 2x" height="630" width="570" alt="jewerly">
               </picture>
+              <div class="blog__article">
+                <span>September 16, 2019</span>
+                <p>AW 19 trends</p>
+                <a href="#">
+                  <p>Read Article</p>
+                </a>
+              </div>
             </div>
           </div>
         </div>
