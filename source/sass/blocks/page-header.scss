@@ -7,6 +7,10 @@
   @media (max-width: $tablet-width) {
     padding: 30px 38px 23px;
   }
+
+  @media (max-width: $mobile-width) {
+    padding: 20px 15px 13px;
+  }
 }
 
 .page-header__burger,
@@ -51,6 +55,10 @@
   padding: 18px 18px 10px;
   display: flex;
   justify-content: center;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .page-header__main-nav ul {

@@ -28,4 +28,16 @@
   line-height: 130%;
 }
 
+.blog__image--special img {
+  @media (max-width: $tablet-width) {
+    object-fit: contain;
+    height: 100%;
+    width: 339px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 290px;
+  }
+}
+
 
