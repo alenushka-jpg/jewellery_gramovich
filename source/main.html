@@ -13,17 +13,29 @@
     <h1 class="visually-hidden">Jewellery Shop</h1>
     <header class="page-header container">
       <div class="page-header__top">
+        <button class="page-header__burger" aria-label="Open menu">
+          <svg width="25" height="16">
+            <use href="./img/sprite.svg#burger"></use>
+          </svg>
+        </button>
         <div class="page-header__search">
           <label class="visually-hidden" for="search-input">Search</label>
           <input type="text" id="search-input" minlength="1" maxlength="100" placeholder="Type here to search">
         </div>
-        <a class="logo" href="">
-          <img src="./img/svg/logo.svg" alt="">
+        <a class="logo" href="#">
+          <svg width="66" height="66" >
+            <use href="./img/sprite.svg#logo"></use>
+          </svg>
         </a>
-        <div class="header__buttons">
+        <div class="page-header__buttons">
           <button type="button">Login</button>
           <button type="button">Cart 0</button>
         </div>
+        <button class="page-header__basket" type="button" aria-label="Shopping cart">
+          <svg width="18" height="16" fill="none">
+            <use href="./img/sprite.svg#basket"></use>
+          </svg>
+        </button>
       </div>
       <nav class="page-header__main-nav">
         <ul class="">
@@ -44,6 +56,53 @@
           </li>
         </ul>
       </nav>
+      <div class="page-header__popup">
+        <div class="page-header__popup-navigation">
+          <div class="page-header__input">
+            <label class="visually-hidden" for="search-input-menu">Search</label>
+            <input type="text" id="search-input-menu" minlength="1" maxlength="100" class="js-input-search">
+            <svg width="16" height="16" class="search-icon">
+              <use href="./img/sprite.svg#search"></use>
+            </svg>
+          </div>
+          <ul class="page-header__list">
+            <li>
+              <a href="#">What’s new</a>
+            </li>
+            <li>
+              <a href="#">Chokers</a>
+            </li>
+            <li>
+              <a href="#">Necklaces</a>
+            </li>
+            <li>
+              <a href="#">Rings</a>
+            </li>
+            <li>
+              <a href="#">Earrings</a>
+            </li>
+          </ul>
+          <ul class="page-header__list">
+            <li>
+              <a href="#">About CH</a>
+            </li>
+            <li>
+              <a href="#">Stores & Hours</a>
+            </li>
+            <li>
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
+          <ul class="page-header__list">
+            <li>
+              <button>Login</button>
+            </li>
+            <li>
+              <a href="login.html">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
     <main>
       <section class="promo container">

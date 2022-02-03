@@ -3,6 +3,29 @@
   justify-content: space-between;
   align-items: center;
   padding: 30px 100px 13px 98px;
+
+  @media (max-width: $tablet-width) {
+    padding: 30px 38px 23px;
+  }
+}
+
+.page-header__burger,
+.page-header__basket {
+  display: none;
+  padding: 0;
+  background-color: inherit;
+  border: 0;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.page-header__search,
+.page-header__buttons {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .page-header__search input {
@@ -12,7 +35,7 @@
   font-family: "Poppins", "Courier New", "Courier", monospace;
 }
 
-.header__buttons button{
+.page-header__buttons button{
   padding: 0;
   font-family: "Poppins", "Courier New", "Courier", monospace;
   font-weight: 500;
@@ -22,6 +45,7 @@
   color: $dark-font;
   border: 0;
 }
+
 
 .page-header__main-nav {
   padding: 18px 18px 10px;
@@ -45,4 +69,8 @@
   color: $dark-font;
   text-decoration: none;
   white-space: nowrap;
+}
+
+.page-header__popup {
+  display: none;
 }
