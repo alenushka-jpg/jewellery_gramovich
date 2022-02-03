@@ -1,12 +1,109 @@
+.new-jewelery {
+  display: flex;
+  flex-direction: column;
+  padding: 120px 98px 65px;
+
+  @media (max-width: 1170px) {
+    padding-left: 43px;
+    padding-right: 43px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.new-jewelery__slider {
+  display: flex;
+  justify-content: space-between;
+
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 43px;
+  }
+
+  @media (max-width: $mobile-width) {
+    justify-content: center;
+
+    button {
+      display: none;
+    }
+  }
+}
+
+.new-jewelery button {
+  padding: 0;
+  background-color: inherit;
+  border: none;
+}
+
+.new-jewelery__title {
+  text-align: center;
+}
+
 .new-jewelery__title a {
+  display: inline-block;
+  vertical-align: baseline;
   text-decoration: none;
   border-bottom: 1px solid $primary;
 }
 
 .new-jewelery__catalog ul {
+  display: flex;
   padding: 0;
-  margin: 0;
+  margin: 40px 0;
+  width: 1170px;
   list-style: none;
+  overflow: hidden;
+  scroll-behavior: smooth;
+
+  @media (max-width: 1170px) {
+    width: 938px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 290px;
+  }
+}
+
+.new-jewelery__catalog li {
+  margin: 15px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  @media (max-width: 1170px) {
+    width: 206px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: auto;
+    margin-right: 20px;
+  }
+}
+
+.new-jewelery__catalog img {
+  display: block;
+  height: 284px;
+  width: auto;
+  object-fit: cover;
+
+  @media (max-width: 1170px) {
+    height: 220px;
+    width: auto;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 324px;
+    height: 340px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 130px;
+    height: 136px;
+  }
 }
 
 .new-jewelery__catalog a {
@@ -15,16 +112,17 @@
 }
 
 .new-jewelery__catalog h3 {
-  margin: 0;
+  margin-top: 25px;
+  margin-bottom: 4px;
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
   color: $dark-font;
+  text-align: center;
 }
 
 .new-jewelery__catalog p {
   font-weight: 700;
   font-size: 14px;
-  line-height: 130%;
-  color: $dark-font;
+  text-align: center;
 }

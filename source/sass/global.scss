@@ -37,24 +37,34 @@ body {
   overflow: hidden;
 }
 
-h2 {
+h2,
+p {
   margin: 0;
-  font-weight: 700;
-  font-size: 34px;
   line-height: 130%;
   color: $dark-font;
 }
 
+h2 {
+  font-family: "Cormorant Garamond", "Times New Roman", "Times", serif;
+  font-weight: 700;
+  font-size: 34px;
+}
+
 p {
-  margin: 0;
   font-weight: 500;
   font-size: 16px;
-  line-height: 130%;
-  color: $dark-font;
 }
 
 .container {
   max-width: 1366px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.arrow-icon {
+  stroke: $primary;
+
+  &--right {
+    transform: rotate(-180deg);
+  }
 }
