@@ -11,21 +11,21 @@
   </head>
   <body>
     <h1 class="visually-hidden">Jewellery Shop</h1>
-    <header class="page-header">
+    <header class="page-header container">
       <div class="page-header__top">
         <div class="page-header__search">
           <label class="visually-hidden" for="search-input">Search</label>
           <input type="text" id="search-input" minlength="1" maxlength="100" placeholder="Type here to search">
         </div>
         <a class="logo" href="">
-          <img src="./img/logo.svg" alt="">
+          <img src="./img/svg/logo.svg" alt="">
         </a>
         <div class="header__buttons">
           <button type="button">Login</button>
           <button type="button">Cart 0</button>
         </div>
       </div>
-      <nav class="main-nav">
+      <nav class="page-header__main-nav">
         <ul class="">
           <li>
             <a href="">What’s new</a>
@@ -46,7 +46,7 @@
       </nav>
     </header>
     <main>
-      <section class="promo">
+      <section class="promo container">
         <picture>
           <!-- 320 х 463 без ретины, 640 х 926 c ретиной -->
           <source type="image/webp" media="(max-width:767px)" srcset="./img/intro-main-mobile.webp 1x, ./img/intro-main-mobile@2x.webp 2x">
@@ -66,7 +66,7 @@
           <p>made to be yours</p>
         </div>
       </section>
-      <section class="new-jewelery">
+      <section class="new-jewelery container">
         <div class="new-jewelery__slider">
           <button type="button"></button>
           <div class="new-jewelery__title">
@@ -219,7 +219,7 @@
           </div>
         </div>
       </section>
-      <section class="blog">
+      <section class="blog container">
         <h2>Blog</h2>
         <a href="">
           <p>Read All</p>

@@ -51,5 +51,10 @@ p {
   font-size: 16px;
   line-height: 130%;
   color: $dark-font;
+}
 
+.container {
+  max-width: 1366px;
+  margin-left: auto;
+  margin-right: auto;
 }
