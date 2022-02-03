@@ -19,9 +19,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 30px 100px 13px 98px;
+  border-bottom: 1px solid $light-bottom;
 
   @media (max-width: $tablet-width) {
     padding: 30px 38px 23px;
+    border-bottom: none;
   }
 
   @media (max-width: $mobile-width) {
@@ -53,6 +55,18 @@
   }
 }
 
+.page-header__search {
+  position: relative;
+  padding-left: 29px;
+
+  svg {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    top: 3px;
+  }
+}
+
 .page-header__logo svg {
   stroke: $primary;
 }
@@ -64,11 +78,14 @@
 }
 
 .page-header__search input {
+  padding: 0;
+  font-family: "Poppins", "Courier New", "Courier", monospace;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
-  font-family: "Poppins", "Courier New", "Courier", monospace;
+  border: none;
 }
+
 
 .page-header__buttons button{
   font-family: "Poppins", "Courier New", "Courier", monospace;
