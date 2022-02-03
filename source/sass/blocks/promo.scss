@@ -1,31 +1,39 @@
 .promo {
   position: relative;
+  background-color: $primary;
+  min-height: 463px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: $basic-white;
+  text-align: center;
+  justify-content: center;
 }
 
 .promo img {
-  object-fit: cover;
-  min-height: 261px;
-}
-
-.promo__title {
+  display: block;
   position: absolute;
   top: 0;
+  left: 0;
+  height: 100%;
+  object-fit: cover;
 }
 
-.promo h2 {
-  margin: 0;
-  font-family: "Cormorant Garamond", "Times New Roman", "Times", serif;
-  font-weight: 700;
-  font-size: 45px;
-  line-height: 130%;
-  color: $basic-white;
-}
-
+.promo h2,
 .promo p {
   margin: 0;
   font-family: "Cormorant Garamond", "Times New Roman", "Times", serif;
-  font-style: italic;
-  font-size: 38px;
   line-height: 130%;
   color: $basic-white;
+  z-index: 1;
+}
+
+.promo h2 {
+  font-weight: 700;
+  font-size: 45px;
+}
+
+.promo p {
+  font-style: italic;
+  font-size: 38px;
 }
