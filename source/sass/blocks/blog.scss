@@ -130,6 +130,19 @@
       transform: translate(30px, 70px) scale(1.5);
     }
   }
+
+  @media (max-width: $mobile-width) {
+    .blog__image {
+      min-height: 256px;
+      width: 290px;
+    }
+
+    img {
+      height: 256px;
+      width: 100%;
+      transform: translate(30px,58px) scale(1.5);
+    }
+  }
 }
 
 .blog__title {
