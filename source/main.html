@@ -468,8 +468,8 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="container">
-        <section class="page-footer__inbox">
+      <div class="page-footer__container container">
+        <section class="page-footer__subscription">
           <h3>The good stuff in your inbox</h3>
           <p>News and updates from CH.
             No spam, we promise.</p>
@@ -478,10 +478,13 @@
             <input type="email" placeholder="Your E-mail" id="email-input" minlength="1" maxlength="100">
             <button type="button">
               <span>Sign Up</span>
+              <svg class="page-footer__arrow" width="29" height="9">
+                <use href="./img/sprite.svg#arrow"></use>
+              </svg>
             </button>
           </div>
         </section>
-        <div class="page-footer__lists">
+        <div class="page-footer__links">
           <ul class="page-footer__list">
             <li>
               <a href="#">Ordering & Payment</a>
@@ -510,29 +513,41 @@
               <a href="#">Contact Us</a>
             </li>
           </ul>
-          <ul class="page-footer__list">
-            <li>
-              <a href="#" aria-label="Facebook">
-                <span>Facebook</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" aria-label="Instagram">
-                <span>Instagram</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" aria-label="Pinterest">
-                <span>Pinterest</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" aria-label="Twitter">
-                <span>Twitter</span>
-              </a>
-            </li>
-          </ul>
-        </div>
+        </ul>
+        <ul class="page-footer__list footer__list--socials">
+          <li>
+            <a href="#" aria-label="Facebook">
+              <svg class="page-footer__icon" width="15" height="15">
+                <use href="./img/sprite.svg#facebook"></use>
+              </svg>
+              <span>Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Instagram">
+              <svg class="page-footer__icon" width="15" height="15">
+                <use href="./img/sprite.svg#instagram"></use>
+              </svg>
+              <span>Instagram</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Pinterest">
+              <svg class="page-footer__icon" width="15" height="15">
+                <use href="./img/sprite.svg#pinterest"></use>
+              </svg>
+              <span>Pinterest</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Twitter">
+              <svg class="page-footer__icon" width="15" height="15">
+                <use href="./img/sprite.svg#twitter"></use>
+              </svg>
+              <span>Twitter</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </footer>
   </body>

@@ -2,14 +2,24 @@
   background-color: $basic-black;
 }
 
+.page-footer__container {
+  display: flex;
+  padding: 89px 98px 74px;
+}
+
 .page-footer h3 {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 15px;
   font-family: "Cormorant Garamond", "Times New Roman", "Times", serif;
   font-weight: 700;
   font-size: 34px;
   line-height: 130%;
   letter-spacing: 0.03em;
   color: $basic-white;
+}
+
+.page-footer__email {
+  position: relative;
 }
 
 .page-footer p {
@@ -20,12 +30,16 @@
 }
 
 .page-footer input {
-  padding: 0;
+  padding: 15px 70px 15px 5px;
+  width: 100%;
   font-family: "Poppins", "Courier New", "Courier", monospace;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
   color: $dark-font;
+  border: none;
+  border-bottom: 1px solid $basic-white;
+  background-color: inherit;
 
   &::placeholder {
     color: $light-font;
@@ -33,7 +47,11 @@
 }
 
 .page-footer button {
+  position: absolute;
+  right: 0;
+  top: 13px;
   padding: 0;
+  padding-right: 42px;
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
@@ -42,10 +60,27 @@
   color: $basic-white;
 }
 
+.page-footer__arrow {
+  position: absolute;
+  right: 0;
+  top: 6px;
+  transform: rotate(-180deg);
+  stroke: $basic-white;
+}
+
+.page-footer__links {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+}
+
 .page-footer__list {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.page-footer__icon {
+  fill: $basic-white;
 }
 
 .page-footer__list a {
