@@ -1,5 +1,5 @@
 .new-jewelery {
-  display: flex;
+  display: none;
   flex-direction: column;
   padding: 120px 98px 65px;
 
@@ -17,7 +17,6 @@
 .new-jewelery__slider {
   display: flex;
   justify-content: space-between;
-
 
   @media (max-width: $tablet-width) {
     padding-bottom: 43px;
@@ -60,6 +59,10 @@
 
   @media (max-width: 1170px) {
     width: 938px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 677px;
   }
 
   @media (max-width: $mobile-width) {

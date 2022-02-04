@@ -18,6 +18,10 @@ body {
   font-family: "Poppins", "Courier New", "Courier", monospace;
 }
 
+main {
+  position: relative;
+}
+
 *,
 *::after,
 *::before {
