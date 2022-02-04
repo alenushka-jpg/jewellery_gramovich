@@ -29,6 +29,12 @@
     column-gap: 16px;
     row-gap: 20px
   }
+
+  @media (max-width: $mobile-width) {
+    grid-template-columns: 133px 133px;
+    grid-template-rows: 133px 87px 87px;
+    max-width: 290px;
+  }
 }
 
 .follow__item {
@@ -75,6 +81,27 @@
     &--big-size {
       width: 231px;
       height: 240px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    &--big-size {
+      width: 133px;
+    }
+
+    &:nth-child(4n),
+    &:nth-child(5n) {
+      display: none;
+    }
+
+    &:nth-child(6n) {
+      grid-column: 1/2;
+      grid-row: 3/4;
+    }
+
+    &:nth-child(7n) {
+      grid-column: 2/3;
+      grid-row: 3/4;
     }
   }
 }
