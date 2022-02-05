@@ -5,6 +5,25 @@
 .page-footer__container {
   display: flex;
   padding: 89px 98px 74px;
+
+  @media (max-width: 1260px) {
+    padding-left: 43px;
+    padding-right: 43px;
+  }
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+}
+
+.page-footer__subscription {
+  margin-right: 90px;
+
+  @media (max-width: $tablet-width) {
+    margin-right: 0;
+    margin-bottom: 48px;
+  }
 }
 
 .page-footer h3 {
@@ -20,6 +39,10 @@
 
 .page-footer__email {
   position: relative;
+
+  @media (max-width: $tablet-width) {
+    width: 82%;
+  }
 }
 
 .page-footer p {
@@ -27,10 +50,11 @@
   font-size: 16px;
   color: $light-font;
   line-height: 130%;
+  text-align: start;
 }
 
 .page-footer input {
-  padding: 15px 70px 15px 5px;
+  padding: 15px 70px 15px 0;
   width: 100%;
   font-family: "Poppins", "Courier New", "Courier", monospace;
   font-weight: 500;
@@ -70,20 +94,43 @@
 
 .page-footer__links {
   display: grid;
-  grid-template-columns: repeat(3, max-content);
+  grid-template-columns: repeat(3, min-content);
+
+  @media (max-width: $tablet-width) {
+    grid-template-columns: min-content;
+  }
 }
 
 .page-footer__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  &--info {
+    margin-right: 67px;
+  }
+
+  &--about-us {
+    margin-right: 103px;
+  }
+}
+
+.page-footer__list li {
+  margin-bottom: 30px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 22px;
+  }
 }
 
 .page-footer__icon {
+  margin-right: 15px;
   fill: $basic-white;
 }
 
 .page-footer__list a {
+  display: flex;
+  align-items: center;
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
