@@ -1,3 +1,30 @@
+.filter form {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.filter--open form{
+  @media (max-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.filter__button {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+    padding: 23px 0;
+    margin-bottom: 50px;
+    width: 100%;
+    background-color: $primary;
+    border: 1px solid $primary;
+    text-align: center;
+    color: $basic-white;
+  }
+}
+
 .filter fieldset {
   padding: 22px 25px 16px;
   margin: 0;
@@ -9,14 +36,7 @@
   }
 }
 
-.filter ul {
-  padding: 0;
-  margin: 0;
-  color: $dark-font;
-  list-style: none;
-}
-
-.filter button {
+.filter__accordion-button {
   position: relative;
   width: 100%;
   padding: 0;
@@ -28,6 +48,13 @@
   border: none;
   background-color: inherit;
   text-align: start;
+}
+
+.filter ul {
+  padding: 0;
+  margin: 0;
+  color: $dark-font;
+  list-style: none;
 }
 
 .filter__svg {
@@ -154,34 +181,4 @@
   margin-bottom: 25px;
   color: $basic-white;
   background-color: $primary;
-}
-
-.catalog__breadcrumbs{
-  display: grid;
-  grid-template-columns: 250px 1fr;
-  column-gap: 50px;
-  border-top: 1px solid $light-bottom;
-  padding: 40px 98px 71px;
-
-  @media (max-width: 1290px) {
-    column-gap: 10px;
-    padding-left: 58px;
-    padding-right: 58px;
-  }
-}
-
-.catalog__slider {
-  grid-column: 2/3;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.catalog__slider button {
-  padding: 0;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 130%;
-  background-color: inherit;
-  border: none;
 }
