@@ -9,24 +9,38 @@
     <link rel="preload" href="./fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="./fonts/poppins-regular.woff" as="font" type="font/woff" crossorigin="">
   </head>
-
-  <body class="no-js">
-    <h1 class="visually-hidden">Jewellery Shop</h1>
-    <header class="page-header">
+  <body>
+    <h1 class="visually-hidden">Jewelry Store catalog</h1>
+    <header class="page-header container">
       <div class="page-header__top">
+        <button class="page-header__burger" aria-label="Open menu">
+          <svg width="25" height="16">
+            <use href="./img/sprite.svg#burger"></use>
+          </svg>
+        </button>
         <div class="page-header__search">
           <label class="visually-hidden" for="search-input">Search</label>
           <input type="text" id="search-input" minlength="1" maxlength="100" placeholder="Type here to search">
+          <svg width="16" height="16">
+            <use href="./img/sprite.svg#search"></use>
+          </svg>
         </div>
-        <a class="logo" href="">
-          <img src="./img/logo.svg" alt="">
+        <a class="page-header__logo" href="#">
+          <svg width="66" height="66" >
+            <use href="./img/sprite.svg#logo"></use>
+          </svg>
         </a>
-        <div class="header__buttons">
+        <div class="page-header__buttons">
           <button type="button">Login</button>
           <button type="button">Cart 0</button>
         </div>
+        <button class="page-header__basket" type="button" aria-label="Shopping cart">
+          <svg width="18" height="16" fill="none">
+            <use href="./img/sprite.svg#basket"></use>
+          </svg>
+        </button>
       </div>
-      <nav class="main-nav">
+      <nav class="page-header__main-nav">
         <ul class="">
           <li>
             <a href="">What’s new</a>
@@ -45,6 +59,48 @@
           </li>
         </ul>
       </nav>
+      <div class="page-header__popup">
+        <div class="page-header__popup-navigation">
+          <div class="page-header__input">
+            <label class="visually-hidden" for="search-input-menu">Search</label>
+            <input type="text" id="search-input-menu" minlength="1" maxlength="100" class="js-input-search">
+            <svg width="16" height="16">
+              <use href="./img/sprite.svg#search"></use>
+            </svg>
+          </div>
+          <ul class="page-header__list page-header__list--types">
+            <li>
+              <a href="#">What’s new</a>
+            </li>
+            <li>
+              <a href="#">Chokers</a>
+            </li>
+            <li>
+              <a href="#">Necklaces</a>
+            </li>
+            <li>
+              <a href="#">Rings</a>
+            </li>
+            <li>
+              <a href="#">Earrings</a>
+            </li>
+          </ul>
+          <ul class="page-header__list page-header__list--information">
+            <li>
+              <a href="#">About CH</a>
+            </li>
+            <li>
+              <a href="#">Stores & Hours</a>
+            </li>
+            <li>
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
+          <div class="page-header__list page-header__list--login">
+            <button>Login</button>
+          </div>
+        </div>
+      </div>
     </header>
     <main class="catalog">
       <section class="promo">
@@ -294,10 +350,9 @@
         <button type="button">Next</button>
       </div>
     </main>
-
     <footer class="page-footer">
-      <div class="container">
-        <section class="page-footer__inbox">
+      <div class="page-footer__container container">
+        <section class="page-footer__subscription">
           <h3>The good stuff in your inbox</h3>
           <p>News and updates from CH.
             No spam, we promise.</p>
@@ -306,61 +361,76 @@
             <input type="email" placeholder="Your E-mail" id="email-input" minlength="1" maxlength="100">
             <button type="button">
               <span>Sign Up</span>
+              <svg class="page-footer__arrow" width="29" height="9">
+                <use href="./img/sprite.svg#arrow"></use>
+              </svg>
             </button>
           </div>
         </section>
-        <div class="page-footer__lists">
-          <ul class="page-footer__list">
+        <div class="page-footer__links">
+          <ul class="page-footer__list page-footer__list--info">
             <li>
-              <a href="#">Ordering & Payment</a>
+              <a href="#">Ordering&nbsp;&&nbsp;Payment</a>
             </li>
             <li>
-              <a href="#">Terms & Conditions</a>
+              <a href="#">Terms&nbsp;&&nbsp;Conditions</a>
             </li>
             <li>
-              <a href="#">Returns & Exchanges</a>
+              <a href="#">Returns&nbsp;&&nbsp;Exchanges</a>
             </li>
             <li>
               <a href="#">Delivery</a>
             </li>
           </ul>
-          <ul class="page-footer__list">
+          <ul class="page-footer__list page-footer__list--about-us">
             <li>
-              <a href="#">About CH</a>
+              <a href="#">About&nbsp;CH</a>
             </li>
             <li>
-              <a href="#">Stores & Hours</a>
+              <a href="#">Stores&nbsp;&&nbsp;Hours</a>
             </li>
             <li>
               <a href="#">Jobs</a>
             </li>
             <li>
-              <a href="#">Contact Us</a>
+              <a href="#">Contact&nbsp;Us</a>
             </li>
           </ul>
-          <ul class="page-footer__list">
-            <li>
-              <a href="#" aria-label="Facebook">
-                <span>Facebook</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" aria-label="Instagram">
-                <span>Instagram</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" aria-label="Pinterest">
-                <span>Pinterest</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" aria-label="Twitter">
-                <span>Twitter</span>
-              </a>
-            </li>
-          </ul>
-        </div>
+        </ul>
+        <ul class="page-footer__list page-footer__list--social">
+          <li>
+            <a href="#" aria-label="Facebook">
+              <svg class="page-footer__icon" width="15" height="15">
+                <use href="./img/sprite.svg#facebook"></use>
+              </svg>
+              <span>Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Instagram">
+              <svg class="page-footer__icon" width="15" height="15">
+                <use href="./img/sprite.svg#instagram"></use>
+              </svg>
+              <span>Instagram</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Pinterest">
+              <svg class="page-footer__icon" width="15" height="15">
+                <use href="./img/sprite.svg#pinterest"></use>
+              </svg>
+              <span>Pinterest</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Twitter">
+              <svg class="page-footer__icon" width="15" height="15">
+                <use href="./img/sprite.svg#twitter"></use>
+              </svg>
+              <span>Twitter</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </footer>
   </body>
