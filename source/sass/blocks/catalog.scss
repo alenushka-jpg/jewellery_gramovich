@@ -1,23 +1,27 @@
-.catalog__filter fieldset {
-  padding: 0;
-  border: 0;
-}
-
-.catalog__filter button {
-  padding: 0;
-  font-family: "Poppins","Courier New","Courier",monospace;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 130%;
-  color: $dark-font;
-  border: none;
-  background-color: inherit;
+.catalog__container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  column-gap: 54px;
+  padding: 80px 20px;
+  max-width: 1170px;
 }
 
 .catalog__list ul {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+.catalog__promo h2 {
+  font-size: 34px;
+}
+
+.catalog__promo p {
+  font-size: 22px;
+
+  @media (max-width: $tablet-width) {
+    padding: 0 37px;
+  }
 }
 
 .catalog__list h3 {
