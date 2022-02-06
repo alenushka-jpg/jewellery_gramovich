@@ -9,6 +9,7 @@
   var header = document.querySelector('.page-header');
   var burger = document.querySelector('.page-header__burger');
   var navigationPopup = document.querySelector('.page-header__popup');
+  var body = document.querySelector('.body');
 
   // Открывает модальное окно логин
 
@@ -21,11 +22,11 @@
   }
 
   function bodyHidden() {
-    document.body.style.overflow = 'hidden';
+    body.classList.add('body--hidden')
   }
 
-  function visibleBody() {
-    document.body.style.overflow = 'visible';
+  function bodyVisible() {
+    body.classList.remove('body--hidden')
   }
 
   function onOpenClick() {
@@ -36,7 +37,7 @@
 
   function onCloseClick() {
     closeLoginModal();
-    visibleBody()
+    bodyHidden()
   }
 
   for (var i = 0; i < loginButtons.length; i++) {
@@ -53,10 +54,14 @@
     navigationPopup.classList.toggle('page-header__popup--open');
   }
 
+  function showHeader() {
+    header.classList.toggle('page-header--open');
+  }
+
   function onClickToggle() {
     showNavigation();
-    header.classList.toggle('page-header--open');
-    bodyHidden();
+    showHeader();
+    bodyVisible
   }
 
   burger.addEventListener('click', onClickToggle);
@@ -65,7 +70,8 @@
   window.addEventListener('keydown', function (event) {
     if (event.key === 'Escape') {
       onCloseClick();
-      onClickToggle()
+      onClickToggle();
+      showHeader();
     }
   });
 

@@ -86,3 +86,10 @@ p {
     background-color: rgba(29,22,19,.6);
   }
 }
+
+.body {
+
+  &--hidden{
+    overflow: hidden;
+  }
+}
