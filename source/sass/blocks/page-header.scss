@@ -134,6 +134,12 @@
   display: none;
 
   @media (max-width: $tablet-width) {
+    position: fixed;
+    top: 122px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
     padding: 10px 15px 50px;
     background-color: $primary;
 
@@ -150,6 +156,17 @@
       color: rgba($basic-white, 0.75);
     }
   }
+
+  @media (max-width: $mobile-width) {
+    top: 90px;
+  }
+}
+
+.page-header__popup-navigation {
+  display: block;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
 }
 
 .page-header__input {
