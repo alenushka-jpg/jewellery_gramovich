@@ -1,0 +1,162 @@
+.login-modal {
+  display: none;
+  position: fixed;
+  overflow-y: scroll;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+
+  &--open {
+    display: block;
+
+    .overlay {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      bottom: 0;
+      background-color: rgba(29,22,19,.6);
+      min-height: 110%;
+    }
+  }
+}
+
+.login-modal__window {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 430px;
+  background-color: $light-background;
+  box-shadow: 0px 5px 32px rgba($shadow, 0.24);
+  z-index: 5;
+
+  @media (max-width: $tablet-width) {
+    width: 442px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 270px;
+  }
+}
+
+.login-modal__window img {
+  display: block;
+  width: 430px;
+  height: 138px;
+
+  @media (max-width: $mobile-width) {
+    width: 270px;
+    height: 84px;
+  }
+}
+
+.login-modal__window form {
+  position: relative;
+}
+
+.login-modal__window button[type="submit"] {
+  display: block;
+  padding: 22px 0;
+  margin-bottom: 20px;
+  width: 100%;
+  font-family: "Poppins", "Courier New", "Courier", monospace;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: $basic-white;
+  background-color: $primary;
+  border: 1px solid $primary;
+}
+
+.login-modal__window button[name="close"] {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 25px;
+  height: 25px;
+  border: none;
+  background-color: transparent;
+  z-index: 10;
+}
+
+.login-modal__content {
+  padding: 60px 45px;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 51px;
+    padding-right: 51px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 45px 15px;
+  }
+}
+
+.login-modal__content h3 {
+  margin: 0;
+  font-family: "Cormorant Garamond", "Times New Roman", "Times", serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 130%;
+  text-align: center;
+}
+
+.login-modal__content a {
+  position: absolute;
+  bottom: 153px;
+  right: 0;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: $light-font;
+}
+
+.login-modal__input:first-child {
+  margin-bottom: 33px;
+}
+
+
+.login-modal__input:nth-child(3n-1) {
+  margin-bottom: 68px;
+}
+
+.login-modal__input input {
+  padding: 6px 0;
+  width: 100%;
+  font-family: "Poppins","Courier New","Courier",monospace;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  border: none;
+  border-bottom: 1px solid $dark-font;
+  background-color: inherit;
+  outline: none;
+}
+
+.login-modal__sign-up {
+  text-align: center;
+}
+
+.login-modal__sign-up button {
+  padding: 0;
+  font-family: "Poppins", "Courier New", "Courier", monospace;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  border: none;
+  color: $light-font;
+  background-color: transparent;
+}
+
+.login-modal__sign-up span {
+  color: $dark-font;
+}

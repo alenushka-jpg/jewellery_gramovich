@@ -550,5 +550,40 @@
         </ul>
       </div>
     </footer>
+    <div class="login-modal login-modal--open">
+      <div class="overlay"></div>
+      <div class="login-modal__window">
+        <button type="button" name="close" aria-label="Close modal login window">
+          <svg width="14" height="14">
+            <use href="./img/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <picture>
+          <source type="image/webp" srcset="./img/login@2x.webp 2x">
+          <source type="image/jpeg" srcset="./img/login@2x.jpg 2x">
+          <img src="./img/login.jpg" height="138" style="width: 100%" alt="picture with jewelry">
+        </picture>
+        <div class="login-modal__content">
+          <h3>Log In</h3>
+          <form action="https://echo.htmlacademy.ru/" method="post">
+            <div class="login-modal__input">
+              <label class="visually-hidden" for="email-input">Email</label>
+              <input type="email" id="email-input" minlength="1" maxlength="100"  placeholder="Your E-mail" required>
+            </div>
+            <div class="login-modal__input">
+              <label class="visually-hidden" for="password-input">Password</label>
+              <input type="text" class="js-password-popup" id="password-input" minlength="1" maxlength="100" placeholder="Password" required>
+            </div>
+            <a href="#">Forgot your password?</a>
+            <button type="submit">Log In</button>
+            <div class="login-modal__sign-up">
+              <button>
+                Don’t have an account? <span>Sign Up</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
