@@ -3,6 +3,10 @@
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 40px;
   column-gap: 30px;
+
+  @media (max-width: $mobile-width) {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .product-cards li {
@@ -19,6 +23,11 @@
   @media (max-width: 1290px) {
     width: 206px;
     height: 208px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 130px;
+    height: 136px;
   }
 }
 
