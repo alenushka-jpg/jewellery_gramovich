@@ -63,13 +63,19 @@
 }
 
 .filter__form {
-  position: relative;
-  margin-bottom: 50px;
-  min-width: 423px;
-  max-height: 90%;
-  background-color: $basic-white;
-  z-index: 15;
-  overflow-y: scroll;
+  @media (max-width: $tablet-width) {
+    position: relative;
+    margin-bottom: 50px;
+    min-width: 423px;
+    max-height: 90%;
+    background-color: $basic-white;
+    z-index: 15;
+    overflow-y: scroll;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: 280px;
+  }
 }
 
 
@@ -87,6 +93,10 @@
     padding: 22px 40px 16px 21px;
     border-right: none;
     border-left: none;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 30px 20px;
   }
 }
 
@@ -129,6 +139,11 @@
     width: 23px;
     height: 12px;
   }
+
+  @media (max-width: $tablet-width) {
+    width: 20px;
+    height: 10px;
+  }
 }
 
 .filter__accordion {
@@ -158,6 +173,12 @@
     &--price {
       width: 304px;
       margin-left: 9px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    &--price {
+      width: 250px;
     }
   }
 }
@@ -240,6 +261,10 @@
 
   @media (max-width: $tablet-width) {
     padding: 0 40px 40px 25px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 0 20px 30px;
   }
 }
 
