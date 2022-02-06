@@ -25,6 +25,54 @@
   }
 }
 
+.filter__overlay {
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+.filter__window {
+  position: absolute;
+  top: 21px;
+  left: 0;
+  z-index: 10;
+}
+
+.filter__button-close {
+  position: absolute;
+  top: -14px;
+  right: -19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  background-color: $basic-black;
+  border: none;
+  border-radius: 50%;
+  z-index: 20;
+}
+
+.filter__button-close svg {
+  fill: $basic-white;
+}
+
+.filter__form {
+  position: relative;
+  margin-bottom: 50px;
+  min-width: 423px;
+  max-height: 90%;
+  background-color: $basic-white;
+  z-index: 15;
+  overflow-y: scroll;
+}
+
+
 .filter fieldset {
   padding: 22px 25px 16px;
   margin: 0;
@@ -33,6 +81,12 @@
 
   &:not(:last-of-type) {
     border-bottom: none;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 22px 40px 16px 21px;
+    border-right: none;
+    border-left: none;
   }
 }
 
@@ -48,6 +102,10 @@
   border: none;
   background-color: inherit;
   text-align: start;
+
+  @media (max-width: $tablet-width) {
+    font-size: 18px;
+  }
 }
 
 .filter ul {
@@ -66,6 +124,11 @@
   &--active {
     transform: rotate(-180deg);
   }
+
+  @media (max-width: $tablet-width) {
+    width: 23px;
+    height: 12px;
+  }
 }
 
 .filter__accordion {
@@ -75,21 +138,26 @@
     display: none;
   }
 
-  &--price {
-    padding-bottom: 34px;
-    padding-top: 25px;
-  }
-
   &--active {
     display: block;
     margin-top: 18px;
-
-    &:last-child {
-      margin-top: 0;
-    }
+    padding-left: 10px;
 
     .filter__range-handlers {
       display: block;
+    }
+  }
+
+  &--price {
+    padding-bottom: 34px;
+    padding-top: 25px;
+    margin-top: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    &--price {
+      width: 304px;
+      margin-left: 9px;
     }
   }
 }
@@ -169,6 +237,10 @@
 
 .filter__form-buttons {
   margin-top: 35px;
+
+  @media (max-width: $tablet-width) {
+    padding: 0 40px 40px 25px;
+  }
 }
 
 .filter__form-buttons button {
