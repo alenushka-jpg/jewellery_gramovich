@@ -72,6 +72,11 @@ p {
   &--right {
     transform: rotate(-180deg);
   }
+
+  @media (max-width: $tablet-width) {
+    width: 36px;
+    height: 16px;
+  }
 }
 
 .overlay {
@@ -88,7 +93,6 @@ p {
 }
 
 .body {
-
   &--hidden{
     overflow: hidden;
   }

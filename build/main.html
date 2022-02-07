@@ -16,7 +16,7 @@
     <header class="page-header container">
       <div class="page-header__top">
         <button class="page-header__burger" aria-label="Open menu">
-          <svg width="25" height="16">
+          <svg width="30" height="18">
             <use href="./img/sprite.svg#burger"></use>
           </svg>
         </button>
@@ -37,7 +37,7 @@
           <button type="button">Cart 0</button>
         </div>
         <button class="page-header__basket" type="button" aria-label="Shopping cart">
-          <svg width="18" height="16" fill="none">
+          <svg width="20" height="18" fill="none">
             <use href="./img/sprite.svg#basket"></use>
           </svg>
         </button>
@@ -306,8 +306,7 @@
             </div>
             <div class="blog__article ">
               <span>September 30, 2019</span>
-              <p>How to care for
-                your jewellery</p>
+              <p>How to care for your jewellery</p>
               <a href="#">
                 <p>Read Article</p>
               </a>
@@ -316,8 +315,7 @@
           <div class="blog__tile blog__tile--second">
             <div class="blog__article">
               <span>September 23, 2019</span>
-              <p>Power of
-                crystals </p>
+              <p>Power of crystals</p>
               <a href="#">
                 <p>Read Article</p>
               </a>
@@ -325,9 +323,10 @@
             <div class="blog__image">
               <picture>
                 <!-- 285 х 300 без ретины, 678 х 600 -->
+                <source type="image/webp" media="(max-width: 768px)" srcset="./img/blog-img-2-tablet.webp 1x, ./img/blog-img-2-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="./img/blog-img-2.webp 1x, ./img/blog-img-2@2x.webp 2x">
-                <source type="image/jpeg" srcset="./img/blog-img-2.jpg 1x, ./img/blog-img-2@2x.jpg 2x">
-                <img src="./img/blog-img-2.jpg" height="300" width="285" alt="jewerly">
+                <source media="(max-width: 768px)" srcset="./img/blog-img-2-tablet.jpg 1x, ./img/blog-img-2-tablet@2x.jpg 2x">
+                <img src="./img/blog-img-2.jpg" srcset="./img/blog-img-2@2x.jpg 2x" height="300" width="285" alt="jewerly">
               </picture>
             </div>
           </div>

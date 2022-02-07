@@ -9,6 +9,10 @@
   color: $basic-white;
   text-align: center;
   background-color: $primary;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 80px;
+  }
 }
 
 .promo img {

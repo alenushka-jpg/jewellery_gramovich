@@ -1,17 +1,29 @@
 .follow {
   padding-top: 40px;
   padding-bottom: 131px;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 80px;
+  }
 }
 
 .follow__title {
   margin-bottom: 59px;
   text-align: center;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 61px;
+  }
 }
 
 .follow h2 {
   margin-bottom: 30px;
   font-family: "Cormorant Garamond", "Times New Roman", "Times", serif;
   letter-spacing: 0.03em;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .follow p {

@@ -4,6 +4,16 @@
   justify-content: space-between;
   width: 118px;
   margin: 0 auto;
+
+  @media (max-width: $tablet-width) {
+    width: 120px;
+  }
+}
+
+.breadcrumbs button {
+  height: auto;
+  width: auto;
+  margin-top: 0;
 }
 
 .breadcrumbs__button {

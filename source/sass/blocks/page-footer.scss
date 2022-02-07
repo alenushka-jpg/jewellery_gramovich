@@ -13,6 +13,8 @@
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
+    padding-top: 49px;
+    padding-bottom: 31px;
   }
 
   @media (max-width: $mobile-width) {
@@ -25,7 +27,7 @@
 
   @media (max-width: $tablet-width) {
     margin-right: 0;
-    margin-bottom: 48px;
+    margin-bottom: 41px;
   }
 }
 
@@ -140,6 +142,16 @@
 
   &--about-us {
     padding-right: 107px;
+  }
+
+  @media (max-width: $tablet-width) {
+    &--info {
+      padding-right: 90px;
+    }
+
+    &--about-us {
+      padding-right: 87px;
+    }
   }
 
   @media (max-width: $mobile-width) {

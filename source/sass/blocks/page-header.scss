@@ -22,12 +22,12 @@
   border-bottom: 1px solid $light-bottom;
 
   @media (max-width: $tablet-width) {
-    padding: 30px 38px 23px;
+    padding: 29px 44px 25px 42px;
     border-bottom: none;
   }
 
   @media (max-width: $mobile-width) {
-    padding: 20px 15px 13px;
+    padding: 12px 14px 8px 13px;
   }
 }
 
@@ -93,6 +93,10 @@
   grid-template-columns: repeat(2, max-content);
   height: 100%;
   margin-left: 80px;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .page-header__buttons button {
@@ -141,6 +145,10 @@
 
 .page-header__logo {
   margin-right: 14px;
+
+  @media (max-width: $tablet-width) {
+    margin-right: 9px;
+  }
 }
 
 .page-header__main-nav a {
