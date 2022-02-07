@@ -58,6 +58,7 @@
 .page-header__search {
   position: relative;
   padding-left: 29px;
+  margin-bottom: 29px;
 
   svg {
     position: absolute;
@@ -87,17 +88,30 @@
   border: none;
 }
 
+.page-header__buttons {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  height: 100%;
+  margin-left: 80px;
+}
 
-.page-header__buttons button{
+.page-header__buttons button {
+  display: block;
+  margin-right: 37px;
+  margin-bottom: 28px;
   font-family: "Poppins", "Courier New", "Courier", monospace;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
   color: $dark-font;
+
+  &:nth-of-type(2n) {
+    margin-right: 0;
+  }
 }
 
 .page-header__main-nav {
-  padding: 18px 18px 10px;
+  padding: 18px;
   display: flex;
   justify-content: center;
 
@@ -115,11 +129,18 @@
 .page-header__main-nav ul {
   display: grid;
   grid-template-columns: repeat(5, min-content);
-  column-gap: 34px;
+  column-gap: 35px;
+  min-width: 493px;
+  margin-left: 13px;
 }
 
 .page-header a {
+  display: block;
   text-decoration: none;
+}
+
+.page-header__logo {
+  margin-right: 14px;
 }
 
 .page-header__main-nav a {

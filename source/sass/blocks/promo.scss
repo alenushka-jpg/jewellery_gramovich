@@ -1,13 +1,14 @@
 .promo {
   position: relative;
-  background-color: $primary;
-  min-height: 463px;
-  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  padding: 0 98px;
+  min-height: 463px;
+  width: 100%;
   color: $basic-white;
   text-align: center;
-  justify-content: center;
+  background-color: $primary;
 }
 
 .promo img {
@@ -31,9 +32,12 @@
 .promo h2 {
   font-weight: 700;
   font-size: 45px;
+  letter-spacing: 0.03em;
+  transform: translateY(4px);
 }
 
 .promo p {
   font-style: italic;
   font-size: 38px;
+  transform: translateY(-4px);
 }

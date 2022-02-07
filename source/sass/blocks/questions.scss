@@ -1,10 +1,11 @@
 .questions {
-  padding: 100px 15px;
+  padding: 94px 15px 70px;
 }
 
 .questions ul {
   padding: 0 100px;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1170px;
   list-style: none;
 
   @media (max-width: $tablet-width) {
@@ -17,7 +18,7 @@
 }
 
 .questions__item {
-  padding: 45px 50px 43px 38px;
+  padding: 43px 50px 43px 43px;
   border: 1px solid $primary;
 
   @media (max-width: $mobile-width) {
@@ -31,7 +32,7 @@
 
 .questions h3 {
   margin-top: 0;
-  margin-bottom: 60px;
+  margin-bottom: 49px;
   font-family: "Cormorant Garamond", "Times New Roman", "Times", serif;
   font-weight: 700;
   font-size: 34px;
@@ -84,9 +85,9 @@
 
 .questions p {
   display: none;
-  width: 55%;
-  padding-top: 35px;
-  padding-right: 15px;
+  width: 60%;
+  padding-top: 7px;
+  padding-left: 8px;
   font-size: 16px;
   line-height: 130%;
   text-align: start;

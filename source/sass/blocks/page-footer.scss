@@ -4,7 +4,7 @@
 
 .page-footer__container {
   display: flex;
-  padding: 89px 98px 74px;
+  padding: 90px 95px 71px;
 
   @media (max-width: 1260px) {
     padding-left: 43px;
@@ -21,7 +21,7 @@
 }
 
 .page-footer__subscription {
-  margin-right: 90px;
+  margin-right: 96px;
 
   @media (max-width: $tablet-width) {
     margin-right: 0;
@@ -31,17 +31,22 @@
 
 .page-footer h3 {
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
   font-family: "Cormorant Garamond", "Times New Roman", "Times", serif;
   font-weight: 700;
   font-size: 34px;
   line-height: 130%;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.026em;
   color: $basic-white;
 }
 
 .page-footer__email {
   position: relative;
+  width: 500px;
+
+  @media (max-width: 1290px) {
+    width: 300px;
+  }
 
   @media (max-width: $tablet-width) {
     width: 82%;
@@ -53,6 +58,8 @@
 }
 
 .page-footer p {
+  padding-left: 4px;
+  margin-bottom: 23px;
   font-weight: 400;
   font-size: 16px;
   color: $light-font;
@@ -65,7 +72,7 @@
 }
 
 .page-footer input {
-  padding: 15px 70px 15px 0;
+  padding: 21px 70px 9px 3px;
   width: 100%;
   font-family: "Poppins", "Courier New", "Courier", monospace;
   font-weight: 500;
@@ -83,10 +90,11 @@
 
 .page-footer button {
   position: absolute;
-  right: 0;
-  top: 13px;
+  right: -3px;
+  top: 21px;
   padding: 0;
   padding-right: 42px;
+  font-family: "Poppins", "Courier New", "Courier", monospace;
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
@@ -98,7 +106,7 @@
 .page-footer__arrow {
   position: absolute;
   right: 0;
-  top: 6px;
+  top: 4px;
   transform: rotate(-180deg);
   stroke: $basic-white;
 }
@@ -106,6 +114,7 @@
 .page-footer__links {
   display: grid;
   grid-template-columns: repeat(3, min-content);
+  padding-top: 5px;
 
   @media (max-width: $mobile-width) {
     grid-template-columns: min-content;
@@ -113,7 +122,7 @@
 }
 
 .page-footer__list li {
-  margin-bottom: 30px;
+  margin-bottom: 22px;
 
   @media (max-width: $tablet-width) {
     margin-bottom: 22px;
@@ -126,11 +135,11 @@
   list-style: none;
 
   &--info {
-    padding-right: 67px;
+    padding-right: 72px;
   }
 
   &--about-us {
-    padding-right: 103px;
+    padding-right: 107px;
   }
 
   @media (max-width: $mobile-width) {

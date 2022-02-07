@@ -29,20 +29,24 @@
 }
 
 .filter__overlay {
-  position: fixed;
-  overflow: auto;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 5;
+  @media (max-width: $tablet-width) {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+  }
 }
 
 .filter__window {
-  position: absolute;
-  top: 21px;
-  left: 0;
-  z-index: 10;
+  @media (max-width: $tablet-width) {
+    position: absolute;
+    top: 21px;
+    left: 0;
+    z-index: 10;
+  }
 }
 
 .filter__button-close {

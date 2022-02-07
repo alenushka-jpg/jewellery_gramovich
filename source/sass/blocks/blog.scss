@@ -20,7 +20,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
-  margin-top: 62px;
+  margin-top: 60px;
 
   @media (max-width: $tablet-width) {
     grid-template-columns: 1fr;
@@ -150,6 +150,14 @@
   vertical-align: baseline;
 }
 
+.blog__title h2 {
+  margin-bottom: 20px;
+}
+
+.blog__title p {
+  padding-bottom: 4px;
+}
+
 .blog a {
   display: inline-block;
   text-decoration: none;
@@ -180,7 +188,7 @@
 }
 
 .blog__article span {
-  margin: 0 0 13px;
+  margin: 0 0 11px;
   font-size: 14px;
   color: $light-font;
 }
@@ -195,6 +203,7 @@
 }
 
 .blog__article p:last-child {
+  padding-bottom: 4px;
   font-family: "Poppins","Courier New", "Courier", monospace;
   font-weight: 500;
   font-size: 16px;

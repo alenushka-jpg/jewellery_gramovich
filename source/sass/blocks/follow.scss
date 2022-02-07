@@ -1,16 +1,21 @@
 .follow {
-  padding-bottom: 132px;
+  padding-top: 40px;
+  padding-bottom: 131px;
 }
 
 .follow__title {
-  margin-bottom: 70px;
+  margin-bottom: 59px;
   text-align: center;
 }
 
 .follow h2 {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   font-family: "Cormorant Garamond", "Times New Roman", "Times", serif;
   letter-spacing: 0.03em;
+}
+
+.follow p {
+  padding-bottom: 4px;
 }
 
 .follow ul {
@@ -65,6 +70,38 @@
   &:nth-child(6n) {
     grid-column: 3/4;
     grid-row: 2/3;
+  }
+
+  &--middle-size {
+    width: 230px;
+    height: 230px;
+  }
+
+  &--small-size {
+    width: 230px;
+    height: 150px;
+  }
+
+  &--big-size {
+    width: 399px;
+    height: 412px;
+  }
+
+  @media (max-width: 1260px) {
+    &--middle-size {
+      width: 133px;
+      height: 139px;
+    }
+
+    &--small-size {
+      width: 133px;
+      height: 92px;
+    }
+
+    &--big-size {
+      width: 231px;
+      height: 251px;
+    }
   }
 
   @media (max-width: $tablet-width) {
