@@ -19,6 +19,14 @@
       margin-right: 32px;
     }
   }
+
+  @media (max-width: $tablet-width) {
+    &--catalog {
+      width: 136px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
 }
 
 .breadcrumbs button {

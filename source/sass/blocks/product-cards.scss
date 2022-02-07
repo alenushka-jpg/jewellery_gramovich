@@ -6,6 +6,7 @@
 
   @media (max-width: $mobile-width) {
     grid-template-columns: 1fr 1fr;
+    row-gap: 27px;
   }
 }
 
@@ -16,13 +17,19 @@
   &:last-child h3 {
     margin-left: 7px;
   }
+
+  @media (max-width: $mobile-width) {
+    &:first-child h3,
+    &:last-child h3 {
+      margin-left: 0;
+    }
+  }
 }
 
 .product-cards img {
   display: block;
   width: 270px;
   height: 272px;
-  margin: 0 auto;
   margin: 0 auto 19px;
 
   @media (max-width: 1290px) {
@@ -33,9 +40,14 @@
   @media (max-width: $mobile-width) {
     width: 130px;
     height: 136px;
+    margin: 0 auto 17px;
   }
 }
 
 .product-cards h3 {
   margin-bottom: 9px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 4px;
+  }
 }

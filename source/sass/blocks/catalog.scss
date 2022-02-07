@@ -12,14 +12,11 @@
 
   @media (max-width: $tablet-width) {
     grid-template-columns: 1fr;
-    padding-top: 50px;
-    padding-left: 45px;
-    padding-right: 45px;
+    padding: 50px 45px 35px;
   }
 
   @media (max-width: $mobile-width) {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 40px 15px 0;
   }
 }
 
@@ -35,6 +32,10 @@
   @media (max-width: $tablet-width) {
     padding-left: 97px;
   }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 20px;
+  }
 }
 
 .catalog__promo h2 {
@@ -49,6 +50,10 @@
 
   @media (max-width: $tablet-width) {
     padding: 0 37px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0;
   }
 }
 
@@ -81,6 +86,12 @@
   @media (max-width: $tablet-width) {
     padding-left: 45px;
     padding-right: 45px;
+    border-top: none;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 45px 45px 65px 35px;
+    column-gap: 0;
   }
 }
 
@@ -103,4 +114,10 @@
   background-color: inherit;
   font-family: inherit;
   border: none;
+}
+
+.catalog__slider > button {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
 }
