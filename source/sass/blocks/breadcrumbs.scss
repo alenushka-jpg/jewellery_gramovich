@@ -5,6 +5,12 @@
   width: 118px;
   margin: 0 auto;
 
+  &--catalog {
+    width: 96px;
+    margin-left: 0;
+    margin-right: 31px;
+  }
+
   @media (max-width: $tablet-width) {
     width: 120px;
   }

@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 250px 1fr;
   column-gap: 50px;
-  padding: 80px 98px;
+  padding: 80px 98px 35px;
 
   @media (max-width: 1290px) {
     column-gap: 10px;
@@ -28,7 +28,14 @@
   list-style: none;
 }
 
+.catalog__promo {
+  min-height: 261px;
+}
+
 .catalog__promo h2 {
+  margin-bottom: 6px;
+  transform: none;
+  letter-spacing: 0;
   font-size: 34px;
 }
 
@@ -58,7 +65,7 @@
   grid-template-columns: 250px 1fr;
   column-gap: 50px;
   border-top: 1px solid $light-bottom;
-  padding: 40px 98px 71px;
+  padding: 36px 98px 75px;
 
   @media (max-width: 1290px) {
     column-gap: 10px;
@@ -89,5 +96,6 @@
   font-size: 16px;
   line-height: 130%;
   background-color: inherit;
+  font-family: inherit;
   border: none;
 }

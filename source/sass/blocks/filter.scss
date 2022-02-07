@@ -88,13 +88,17 @@
 
 
 .filter fieldset {
-  padding: 22px 25px 16px;
+  padding: 22px 25px 22px;
   margin: 0;
   border: 0;
   border: 1px solid $primary;
 
   &:not(:last-of-type) {
     border-bottom: none;
+  }
+
+  &:last-of-type {
+    padding-bottom: 16px;
   }
 
   @media (max-width: $tablet-width) {
@@ -164,7 +168,7 @@
   &--active {
     display: block;
     margin-top: 18px;
-    padding-left: 10px;
+    padding-left: 9px;
 
     .filter__range-handlers {
       display: block;
@@ -197,7 +201,7 @@
 
 .filter__label span {
   display: block;
-  padding: 5px 25px;
+  padding: 5px 25px 4px;
 
   &::after {
     content: "";
@@ -240,7 +244,7 @@
 
 .filter__range-handler {
   position: absolute;
-  top: -8px;
+  top: -6px;
   width: 34px;
   display: flex;
   flex-direction: column;
@@ -249,11 +253,15 @@
   cursor: pointer;
 
   &--left {
-    right: calc(100% - 17px);
+    right: calc(100% - 9px);
   }
 
   &--right {
-    left: calc(100% - 17px);
+    left: calc(100% - 23px);
+  }
+
+  p {
+    margin-top: 5px;
   }
 }
 
