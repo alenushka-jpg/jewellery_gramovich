@@ -13,6 +13,11 @@
 
   @media (max-width: $tablet-width) {
     width: 120px;
+
+    &--catalog {
+      width: 96px;
+      margin-right: 32px;
+    }
   }
 }
 

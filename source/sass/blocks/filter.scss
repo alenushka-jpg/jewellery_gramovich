@@ -18,9 +18,13 @@
 
   @media (max-width: $tablet-width) {
     display: block;
-    padding: 23px 0;
+    padding: 24px 0 21px;
     margin-bottom: 50px;
     width: 100%;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    font-family: inherit;
     background-color: $primary;
     border: 1px solid $primary;
     text-align: center;
@@ -116,7 +120,7 @@
   position: relative;
   width: 100%;
   padding: 0;
-  font-family: "Poppins","Courier New","Courier",monospace;
+  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;

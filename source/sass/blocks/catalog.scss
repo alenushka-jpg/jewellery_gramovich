@@ -12,6 +12,7 @@
 
   @media (max-width: $tablet-width) {
     grid-template-columns: 1fr;
+    padding-top: 50px;
     padding-left: 45px;
     padding-right: 45px;
   }
@@ -30,6 +31,10 @@
 
 .catalog__promo {
   min-height: 261px;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 97px;
+  }
 }
 
 .catalog__promo h2 {
