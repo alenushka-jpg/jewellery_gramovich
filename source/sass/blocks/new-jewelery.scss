@@ -14,6 +14,7 @@
   }
 
   @media (max-width: $mobile-width) {
+    padding-top: 59px;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -46,6 +47,12 @@
   @media (max-width: $tablet-width) {
     margin-top: 12px;
     width: 36px;
+  }
+}
+
+.new-jewelery__slider button {
+  @media (max-width: $mobile-width) {
+    display: none;
   }
 }
 
@@ -95,6 +102,8 @@
 
   @media (max-width: $mobile-width) {
     width: 290px;
+    margin-top: 25px;
+    margin-bottom: 14px;
   }
 }
 
@@ -115,6 +124,12 @@
 
     &:first-child h3 {
       padding-left: 17px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    &:first-child h3 {
+      padding-left: 0;
     }
   }
 }
@@ -154,6 +169,10 @@
   line-height: 130%;
   color: $dark-font;
   text-align: center;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 16px;
+  }
 }
 
 .new-jewelery__catalog p {

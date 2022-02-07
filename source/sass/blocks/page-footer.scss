@@ -19,6 +19,7 @@
 
   @media (max-width: $mobile-width) {
     padding: 60px 15px 60px;
+    padding-top: 50px;
   }
 }
 
@@ -40,6 +41,11 @@
   line-height: 130%;
   letter-spacing: 0.026em;
   color: $basic-white;
+
+  @media (max-width: $mobile-width) {
+    padding-right: 53px;
+    margin-bottom: 13px;
+  }
 }
 
 .page-footer__email {
@@ -69,7 +75,9 @@
   text-align: start;
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 37px;
+    margin-bottom: 21px;
+    padding-left: 0;
+    padding-right: 50px;
   }
 }
 
@@ -88,14 +96,17 @@
   &::placeholder {
     color: $light-font;
   }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 0;
+  }
 }
 
 .page-footer button {
   position: absolute;
   right: -3px;
   top: 21px;
-  padding: 0;
-  padding-right: 42px;
+  padding: 0 42px 0 0;
   font-family: "Poppins", "Courier New", "Courier", monospace;
   font-weight: 500;
   font-size: 16px;
@@ -103,6 +114,10 @@
   border: none;
   background-color: inherit;
   color: $basic-white;
+
+  @media (max-width: $mobile-width) {
+    padding-right: 45px;
+  }
 }
 
 .page-footer__arrow {
@@ -156,16 +171,16 @@
 
   @media (max-width: $mobile-width) {
     &--info {
-      margin-bottom: 30px;
+      margin-bottom: 15px;
     }
 
     &--about-us {
-      margin-bottom: 30px;
+      margin-bottom: 23px;
     }
 
     &--social {
       display: flex;
-      width: 162px;
+      width: 177px;
       justify-content: space-between;
     }
 
@@ -182,6 +197,11 @@
   @media (max-width: $mobile-width) {
     width: 20px;
     height: 20px;
+
+    &--facebook {
+      width: 12px;
+      height: 21px;
+    }
   }
 }
 

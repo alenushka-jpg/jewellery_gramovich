@@ -27,7 +27,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    padding: 12px 14px 8px 13px;
+    padding: 19px 14px 15px 13px;
   }
 }
 
@@ -70,6 +70,11 @@
 
 .page-header__logo svg {
   stroke: $primary;
+
+  @media (max-width: $mobile-width) {
+    width: 52px;
+    height: 52px;
+  }
 }
 
 .page-header button {

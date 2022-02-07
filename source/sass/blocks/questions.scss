@@ -5,6 +5,10 @@
     padding-top: 44px;
     padding-bottom: 35px;
   }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 35px;
+  }
 }
 
 .questions ul {
@@ -31,7 +35,15 @@
   }
 
   @media (max-width: $mobile-width) {
-    padding: 22px 25px 25px 24px;
+    padding: 15px 25px 21px 24px;
+  }
+}
+
+.questions__item:last-child {
+  @media (max-width: $mobile-width) {
+    button {
+      padding-right: 32px;
+    }
   }
 }
 
@@ -49,6 +61,10 @@
   letter-spacing: 0.03em;
   text-align: center;
   color: $dark-font;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 29px;
+  }
 }
 
 .questions button {
@@ -61,6 +77,10 @@
   background-color: inherit;
   border: none;
   outline: none;
+
+  @media (max-width: $mobile-width) {
+    padding: 0 57px 0 0;
+  }
 }
 
 .questions__arrow-icon {
@@ -106,6 +126,13 @@
     padding-top: 26px;
     padding-left: 0;
     width: 95%;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 86%;
+    padding-top: 16px;
+    font-size: 14px;
+    line-height: 140%;
   }
 }
 
