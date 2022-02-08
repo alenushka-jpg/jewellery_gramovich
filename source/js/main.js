@@ -120,6 +120,15 @@
     });
   });
 
+  // Аккордеон фильтр
+  var filterButtons = document.querySelectorAll('.filter__accordion-button');
+
+  filterButtons.forEach(function (array) {
+    array.addEventListener('click', function() {
+      var panel = this.nextElementSibling;
+      panel.classList.toggle('filter__accordion--active');
+    });
+  });
 
   // Открывает фильтр
 
