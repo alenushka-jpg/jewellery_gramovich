@@ -163,3 +163,25 @@
 .login-modal__sign-up span {
   color: $dark-font;
 }
+
+.login-modal--page {
+  position: static;
+  display: flex;
+  justify-content: center;
+  background-color: $light-background;
+
+  .login-modal__window {
+    position: static;
+    transform: none;
+  }
+
+  .login-modal__window button[name="close"] {
+    display: none;
+  }
+
+  .login-modal__logo {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+  }
+}
