@@ -10,6 +10,10 @@
   var burger = document.querySelector('.page-header__burger');
   var navigationPopup = document.querySelector('.page-header__popup');
   var body = document.querySelector('.body');
+  var filterButton = document.querySelector('.filter__button');
+  var filterClose = document.querySelector('.filter__button-close');
+  var filterOverlay = document.querySelector('.filter__overlay');
+  var filter = document.querySelector('.filter');
 
   // Открывает модальное окно логин
 
@@ -31,13 +35,24 @@
 
   function onOpenClick() {
     showLoginModal();
-    bodyHidden();
     name.focus();
+
+    if(loginModal != 'login-modal--open' && window.outerWidth >= 1023) {
+      bodyHidden();
+    }
   }
 
   function onCloseClick() {
     closeLoginModal();
-    bodyHidden()
+    bodyVisible();
+
+    if(loginModal != 'login-modal--open' && window.outerWidth >= 1023) {
+      bodyVisible()
+    }
+  }
+
+  function onCloseClickMobile() {
+    closeLoginModal();
   }
 
   for (var i = 0; i < loginButtons.length; i++) {
@@ -46,6 +61,10 @@
     element.addEventListener('click', function () {
       onOpenClick();
     });
+  }
+
+  if (closeLogin) {
+    closeLogin.addEventListener('click', onCloseClick);
   }
 
   //Открывает выпадающее меню
@@ -58,10 +77,16 @@
     header.classList.toggle('page-header--open');
   }
 
+  function bodyHiddenMobile() {
+    if(body != 'body') {
+      body.classList.toggle('body--hidden');
+    }
+  }
+
   function onClickToggle() {
     showNavigation();
     showHeader();
-    bodyVisible
+    bodyHiddenMobile();
   }
 
   burger.addEventListener('click', onClickToggle);
@@ -70,17 +95,58 @@
   window.addEventListener('keydown', function (event) {
     if (event.key === 'Escape') {
       onCloseClick();
-      onClickToggle();
-      showHeader();
     }
   });
 
   // Закрывает модалки при нажатии на overlay
   overlay.forEach(function (v) {
     v.addEventListener('click', function () {
+      if(loginModal != 'login-modal--open' && window.outerWidth <= 1023) {
+        onCloseClickMobile();
+      }
+
       onCloseClick();
+      onClickCloseFilter();
     });
   });
 
-  closeLogin.addEventListener('click', onCloseClick);
+  // Открывает фильтр
+
+  function showOverlay() {
+    filter.classList.add('filter--open');
+  }
+
+  function hiddenShowOverlay() {
+    filter.classList.remove('filter--open');
+  }
+
+  function showFilter() {
+    filterOverlay.classList.add('filter__overlay--open');
+  }
+
+  function closeFilter() {
+    filterOverlay.classList.remove('filter__overlay--open');
+  }
+
+  function onClickFilter() {
+    showFilter();
+    bodyHidden();
+    showOverlay()
+  }
+
+  function onClickCloseFilter() {
+    closeFilter();
+    bodyVisible();
+    hiddenShowOverlay()
+  }
+
+  filterButton.addEventListener('click', onClickFilter);
+  filterClose.addEventListener('click', onClickCloseFilter);
+
+    // Закрывает модалки при нажатии esc
+    window.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        onClickCloseFilter();
+      }
+    });
 })();

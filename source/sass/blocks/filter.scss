@@ -1,13 +1,6 @@
 .filter--open {
   @media (max-width: $tablet-width) {
-    display: block;
-
-    .filter__button-close {
-      display: flex;
-    }
-
-    .overlay,
-    .filter__form {
+    .overlay {
       display: block;
     }
   }
@@ -29,6 +22,7 @@
     border: 1px solid $primary;
     text-align: center;
     color: $basic-white;
+    z-index: 1000;
   }
 
   @media (max-width: $mobile-width) {
@@ -38,6 +32,7 @@
 
 .filter__overlay {
   @media (max-width: $tablet-width) {
+    display: none;
     position: fixed;
     overflow: auto;
     top: 0;
@@ -45,6 +40,10 @@
     width: 100%;
     height: 100%;
     z-index: 5;
+
+    &--open {
+      display: block;
+    }
   }
 }
 
@@ -54,6 +53,7 @@
     top: 21px;
     left: 0;
     z-index: 10;
+    box-shadow: 0px 5px 32px rgba($dark-font, 0.24);
   }
 }
 
@@ -71,6 +71,10 @@
   border: none;
   border-radius: 50%;
   z-index: 20;
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+  }
 }
 
 .filter__button-close svg {
@@ -79,21 +83,23 @@
 
 .filter__form {
   @media (max-width: $tablet-width) {
-    display: none;
+    display: block;
     position: relative;
-    margin-bottom: 50px;
     min-width: 423px;
     max-height: 90%;
     background-color: $basic-white;
     z-index: 15;
     overflow-y: scroll;
+
+    &--open {
+      display: block;
+    }
   }
 
   @media (max-width: $mobile-width) {
     min-width: 280px;
   }
 }
-
 
 .filter fieldset {
   padding: 22px 25px 22px;
@@ -287,7 +293,7 @@
     padding: 0 40px 40px 25px;
   }
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $mobile-width) {
     padding: 0 20px 30px;
   }
 }

@@ -9,7 +9,7 @@
     <link rel="preload" href="./fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="./fonts/poppins-regular.woff" as="font" type="font/woff" crossorigin="">
   </head>
-  <body>
+  <body class="body">
     <h1 class="visually-hidden">Jewelry Store catalog</h1>
     <header class="page-header container">
       <div class="page-header__top">
@@ -31,7 +31,7 @@
           </svg>
         </a>
         <div class="page-header__buttons">
-          <button type="button">Login</button>
+          <button class="js-open-login" type="button">Login</button>
           <button type="button">Cart 0</button>
         </div>
         <button class="page-header__basket" type="button" aria-label="Shopping cart">
@@ -97,7 +97,7 @@
             </li>
           </ul>
           <div class="page-header__list page-header__list--login">
-            <button>Login</button>
+            <button class="js-open-login" type="button">Login</button>
           </div>
         </div>
       </div>
@@ -111,7 +111,6 @@
           <source type="image/webp" media="(max-width:1023px)" srcset="./img/intro-catalog-tablet.webp 1x, ./img/intro-catalog-tablet@2x.webp 2x">
           <!-- 1366 x 261 без ретины, 2732 х 522 c ретиной -->
           <source type="image/webp" srcset="./img/intro-catalog-desktop.webp 1x, ./img/intro-catalog-desktop@2x.webp 2x">
-
           <!-- 320 х 261 без ретины, 640 х 522 c ретиной -->
           <source media="(max-width:767px)" srcset="./img/intro-catalog-mobile.jpg 1x, ./img/intro-catalog-mobile@2x.jpg 2x">
           <!-- 768 х 261 без ретины, 1536 х 522 c ретиной -->
@@ -465,6 +464,42 @@
         </ul>
       </div>
     </footer>
+    <div class="login-modal">
+      <div class="overlay"></div>
+      <div class="login-modal__window">
+        <button class="js-close-login" type="button" name="close" aria-label="Close modal login window">
+          <svg width="14" height="14">
+            <use href="./img/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <picture>
+          <source type="image/webp" srcset="./img/login@2x.webp 2x">
+          <source type="image/jpeg" srcset="./img/login@2x.jpg 2x">
+          <img src="./img/login.jpg" height="138" style="width: 100%" alt="picture with jewelry">
+        </picture>
+        <div class="login-modal__content">
+          <h3>Log In</h3>
+          <form action="https://echo.htmlacademy.ru/" method="post">
+            <div class="login-modal__input">
+              <label class="visually-hidden" for="email-input">Email</label>
+              <input type="email" id="email-input" name="email-name" minlength="1" maxlength="100"  placeholder="Your E-mail" required>
+            </div>
+            <div class="login-modal__input">
+              <label class="visually-hidden" for="password-input">Password</label>
+              <input type="text" class="js-password-popup" id="password-input" minlength="1" maxlength="100" placeholder="Password" required>
+            </div>
+            <a href="#">Forgot your password?</a>
+            <button type="submit">Log In</button>
+            <div class="login-modal__sign-up">
+              <button>
+                Don’t have an account? <span>Sign Up</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
   </body>
 </html>
 
