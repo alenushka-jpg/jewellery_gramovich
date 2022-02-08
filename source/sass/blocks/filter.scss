@@ -53,7 +53,7 @@
     top: 21px;
     left: 0;
     z-index: 10;
-    box-shadow: 0px 5px 32px rgba($dark-font, 0.24);
+    box-shadow: 0 5px 32px rgba($dark-font, 0.24);
   }
 }
 
@@ -104,7 +104,6 @@
 .filter fieldset {
   padding: 22px 25px 22px;
   margin: 0;
-  border: 0;
   border: 1px solid $primary;
 
   &:not(:last-of-type) {
@@ -238,7 +237,7 @@
   opacity: 0;
 }
 
-.filter__input:checked+span::after {
+.filter__input:checked + span::after {
   background-color: $primary;
 }
 
@@ -263,7 +262,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: all .2s;
   cursor: pointer;
 
   &--left {
@@ -304,7 +302,7 @@
   border: 1px solid $primary;
 }
 
-.filter__form-buttons button[type=submit] {
+.filter__form-buttons button[type="submit"] {
   margin-bottom: 25px;
   color: $basic-white;
   background-color: $primary;

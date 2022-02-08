@@ -26,18 +26,18 @@
   }
 
   function bodyHidden() {
-    body.classList.add('body--hidden')
+    body.classList.add('body--hidden');
   }
 
   function bodyVisible() {
-    body.classList.remove('body--hidden')
+    body.classList.remove('body--hidden');
   }
 
   function onOpenClick() {
     showLoginModal();
     name.focus();
 
-    if(loginModal != 'login-modal--open' && window.outerWidth >= 1023) {
+    if (loginModal !== 'login-modal--open' && window.outerWidth >= 1023) {
       bodyHidden();
     }
   }
@@ -46,8 +46,8 @@
     closeLoginModal();
     bodyVisible();
 
-    if(loginModal != 'login-modal--open' && window.outerWidth >= 1023) {
-      bodyVisible()
+    if (loginModal !== 'login-modal--open' && window.outerWidth >= 1023) {
+      bodyVisible();
     }
   }
 
@@ -67,7 +67,7 @@
     closeLogin.addEventListener('click', onCloseClick);
   }
 
-  //Открывает выпадающее меню
+  // Открывает выпадающее меню
 
   function showNavigation() {
     navigationPopup.classList.toggle('page-header__popup--open');
@@ -78,7 +78,7 @@
   }
 
   function bodyHiddenMobile() {
-    if(body != 'body') {
+    if (body !== 'body') {
       body.classList.toggle('body--hidden');
     }
   }
@@ -101,7 +101,7 @@
   // Закрывает модалки при нажатии на overlay
   overlay.forEach(function (v) {
     v.addEventListener('click', function () {
-      if(loginModal != 'login-modal--open' && window.outerWidth <= 1023) {
+      if (loginModal !== 'login-modal--open' && window.outerWidth <= 1023) {
         onCloseClickMobile();
       }
 
@@ -131,22 +131,22 @@
   function onClickFilter() {
     showFilter();
     bodyHidden();
-    showOverlay()
+    showOverlay();
   }
 
   function onClickCloseFilter() {
     closeFilter();
     bodyVisible();
-    hiddenShowOverlay()
+    hiddenShowOverlay();
   }
 
   filterButton.addEventListener('click', onClickFilter);
   filterClose.addEventListener('click', onClickCloseFilter);
 
-    // Закрывает модалки при нажатии esc
-    window.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') {
-        onClickCloseFilter();
-      }
-    });
+  // Закрывает модалки при нажатии esc
+  window.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      onClickCloseFilter();
+    }
+  });
 })();

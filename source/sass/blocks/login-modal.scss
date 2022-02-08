@@ -18,7 +18,7 @@
       left: 0;
       width: 100%;
       bottom: 0;
-      background-color: rgba(29,22,19,.6);
+      background-color: rgba($basic-black, 0.6);
       min-height: 110%;
     }
   }
@@ -31,7 +31,7 @@
   transform: translateX(-50%);
   width: 430px;
   background-color: $light-background;
-  box-shadow: 0px 5px 32px rgba($shadow, 0.24);
+  box-shadow: 0 5px 32px rgba($shadow, 0.24);
   z-index: 5;
 
   @media (max-width: $tablet-width) {
@@ -134,7 +134,7 @@
 .login-modal__input input {
   padding: 6px 0;
   width: 100%;
-  font-family: "Poppins","Courier New","Courier",monospace;
+  font-family: "Poppins", "Courier New", "Courier", monospace;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
