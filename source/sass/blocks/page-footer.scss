@@ -213,6 +213,12 @@
   line-height: 130%;
   color: $basic-white;
   text-decoration: none;
+
+  &:hover,
+  &:hover svg {
+    color: rgba($basic-white, 0.6);
+    fill: rgba($basic-white, 0.6);
+  }
 }
 
 .page-footer__list span {

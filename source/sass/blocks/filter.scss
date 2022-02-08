@@ -306,4 +306,8 @@
   margin-bottom: 25px;
   color: $basic-white;
   background-color: $primary;
+
+  &:hover {
+    background-color: rgba($primary, 0.7);
+  }
 }

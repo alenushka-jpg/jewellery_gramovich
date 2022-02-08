@@ -110,6 +110,17 @@
     });
   });
 
+
+  // Аккордеон вопросы
+  var questionsButtons = document.querySelectorAll('.js-questions-button');
+
+  questionsButtons.forEach(function (item) {
+    item.addEventListener('click', function() {
+      item.parentNode.classList.toggle('questions__item--open');
+    });
+  });
+
+
   // Открывает фильтр
 
   function showOverlay() {
@@ -140,8 +151,13 @@
     hiddenShowOverlay();
   }
 
-  filterButton.addEventListener('click', onClickFilter);
-  filterClose.addEventListener('click', onClickCloseFilter);
+  if (filterButton) {
+    filterButton.addEventListener('click', onClickFilter);
+  }
+
+  if (filterClose) {
+    filterClose.addEventListener('click', onClickCloseFilter);
+  }
 
   // Закрывает модалки при нажатии esc
   window.addEventListener('keydown', function (e) {
