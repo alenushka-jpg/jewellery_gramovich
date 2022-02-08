@@ -115,7 +115,7 @@
           <!-- 768 х 261 без ретины, 1536 х 522 c ретиной -->
           <source media="(max-width:1023px)" srcset="./img/intro-catalog-tablet.jpg 1x, ./img/intro-catalog-tablet@2x.jpg 2x">
           <!-- 1366 x 261 без ретины, 2732 х 522 c ретиной -->
-          <img src="./img/intro-catalog-desktop.jpg" srcset="./img/intro-catalog-desktop@2x.jpg 2x" alt="jewerly set" height="261" width="100%">
+          <img src="./img/intro-catalog-desktop.jpg" srcset="./img/intro-catalog-desktop@2x.jpg 2x" alt="jewerly set" height="261" style="width: 100%">
         </picture>
         <h2>ALL JEWELLERY</h2>
         <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
@@ -133,7 +133,7 @@
                   </svg>
                 </button>
                 <div class="filter__form">
-                  <form action="">
+                  <form action="https://echo.htmlacademy.ru/" method="post">
                     <fieldset>
                       <button class="filter__accordion-button" type="button">
                         <span>Product</span>
@@ -238,7 +238,8 @@
                             </div>
                           </div>
                         </div>
-                    </div></fieldset>
+                      </div>
+                    </fieldset>
                     <div class="filter__form-buttons">
                       <button class="filter__accordion-button" type="submit">
                         <span>Apply</span>
@@ -387,8 +388,8 @@
           <p>News and updates from CH.
             No spam, we promise.</p>
           <div class="page-footer__email">
-            <label for="email-input" class="visually-hidden">Email</label>
-            <input type="email" placeholder="Your E-mail" id="email-input" minlength="1" maxlength="100">
+            <label for="email-sub" class="visually-hidden">Email</label>
+            <input type="email" placeholder="Your E-mail" id="email-sub" minlength="1" maxlength="100">
             <button type="button">
               <span>Sign Up</span>
               <svg class="page-footer__arrow" width="29" height="9">
@@ -426,8 +427,7 @@
               <a href="#">Contact&nbsp;Us</a>
             </li>
           </ul>
-        
-        <ul class="page-footer__list page-footer__list--social">
+          <ul class="page-footer__list page-footer__list--social">
           <li>
             <a href="#" aria-label="Facebook">
               <svg class="page-footer__icon page-footer__icon--facebook" width="15" height="15">
@@ -460,9 +460,10 @@
               <span>Twitter</span>
             </a>
           </li>
-        </ul>
+          </ul>
+        </div>
       </div>
-    </div></footer>
+    </footer>
     <div class="login-modal">
       <div class="overlay"></div>
       <div class="login-modal__window">
