@@ -14,15 +14,48 @@
   var filterClose = document.querySelector('.filter__button-close');
   var filterOverlay = document.querySelector('.filter__overlay');
   var filter = document.querySelector('.filter');
+  var questionsButtons = document.querySelectorAll('.js-questions-button');
+  var filterButtons = document.querySelectorAll('.filter__accordion-button');
+
+  var bodyMain = document.querySelector('.body__main');
+  var links = bodyMain.querySelectorAll('a');
+  var inputs = bodyMain.querySelectorAll('input');
+  var buttons = bodyMain.querySelectorAll('button');
+  var labels = bodyMain.querySelectorAll('label');
+
+  function setBlur(e) {
+    e.forEach(function (v) {
+      v.setAttribute('tabindex', '-1');
+    });
+  }
+
+  function removeBlur(e) {
+    e.forEach(function (v) {
+      v.removeAttribute('tabindex');
+    });
+  }
 
   // Открывает модальное окно логин
 
   function showLoginModal() {
     loginModal.classList.add('login-modal--open');
+
+    setBlur(links);
+    setBlur(inputs);
+    setBlur(buttons);
+    setBlur(labels);
+
+    // if (loginModal !== 'login-modal--open') {
+
+    // }
   }
 
   function closeLoginModal() {
     loginModal.classList.remove('login-modal--open');
+    removeBlur(links);
+    removeBlur(inputs);
+    removeBlur(buttons);
+    removeBlur(labels);
   }
 
   function bodyHidden() {
@@ -110,9 +143,7 @@
     });
   });
 
-
   // Аккордеон вопросы
-  var questionsButtons = document.querySelectorAll('.js-questions-button');
 
   questionsButtons.forEach(function (item) {
     item.addEventListener('click', function() {
@@ -121,7 +152,6 @@
   });
 
   // Аккордеон фильтр
-  var filterButtons = document.querySelectorAll('.filter__accordion-button');
 
   filterButtons.forEach(function (array) {
     array.addEventListener('click', function() {
