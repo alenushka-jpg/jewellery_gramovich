@@ -466,10 +466,10 @@
         </div>
       </footer>
     </div>
-    <div class="login-modal">
+    <section class="login-modal">
       <div class="overlay"></div>
       <div class="login-modal__window">
-        <button class="js-close-login" type="button" name="close" tabindex="6" aria-label="Close modal login window">
+        <button class="js-close-login" type="button" name="close" aria-label="Close modal login window">
           <svg width="14" height="14">
             <use href="./img/sprite.svg#close"></use>
           </svg>
@@ -484,23 +484,26 @@
           <form action="https://echo.htmlacademy.ru/" method="post">
             <div class="login-modal__input">
               <label class="visually-hidden" for="email-input">Email</label>
-              <input type="email" id="email-input" name="email-name" minlength="1" maxlength="100"  placeholder="Your E-mail" tabindex="1" required>
+              <input class="js-email-login" type="email" id="email-input" name="email-name" minlength="1" maxlength="100"  placeholder="Your E-mail" required>
             </div>
             <div class="login-modal__input">
               <label class="visually-hidden" for="password-input">Password</label>
-              <input type="password" class="js-password-popup" id="password-input" minlength="1" maxlength="100" placeholder="Password" tabindex="2" required>
+              <input class="js-email-password" type="password" class="js-password-popup" id="password-input" minlength="1" maxlength="100" placeholder="Password" required>
             </div>
-            <a href="#" tabindex="3">Forgot your password?</a>
-            <button type="submit" tabindex="4">Log In</button>
+            <a href="#">Forgot your password?</a>
+            <button class="js-login-submit" type="submit">Log In</button>
             <div class="login-modal__sign-up">
-              <button type="button" tabindex="5">
+              <button>
                 Don’t have an account? <span>Sign Up</span>
               </button>
+            </div>
+            <div class="login-modal__result js-result-modal">
+              <p>Вы успешно залогинились!</p>
             </div>
           </form>
         </div>
       </div>
-    </div>
+    </section>
     <script src="./js/main.js"></script>
   </body>
 </html>
