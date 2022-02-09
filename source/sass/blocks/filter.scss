@@ -316,21 +316,23 @@
   }
 }
 
-.filter__input {
+.filter__label input {
   position: absolute;
   left: 0;
   top: 7px;
+  display: block;
   width: 14px;
   height: 15px;
   margin: 0;
   opacity: 0;
+  cursor: pointer;
 }
 
-.filter__input:checked + span::after {
+.filter__label input:checked + span::after {
   background-color: $primary;
 }
 
-.filter__input:focus + span {
+.filter__label input:focus + span {
   outline: 2px solid $basic-black;
   outline-offset: 2px;
 
@@ -406,8 +408,6 @@
       left: calc(100% - 12px);
     }
   }
-
-
 }
 
 .filter__range-handler div {

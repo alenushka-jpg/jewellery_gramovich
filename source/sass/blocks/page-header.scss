@@ -84,6 +84,7 @@
 }
 
 .page-header__search input {
+  display: block;
   padding: 0;
   font-family: "Poppins", "Courier New", "Courier", monospace;
   font-weight: 500;
@@ -218,6 +219,7 @@
 }
 
 .page-header__input input {
+  display: block;
   padding: 0;
   height: 40px;
   width: 100%;

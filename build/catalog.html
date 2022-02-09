@@ -8,12 +8,12 @@
     <link rel="preload" href="./fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="./fonts/poppins-regular.woff" as="font" type="font/woff" crossorigin="">
   </head>
-  <body class="body">
+  <body class="body no-js">
     <div class="body__main">
       <h1 class="visually-hidden">Jewelry Store catalog</h1>
       <header class="page-header container">
         <div class="page-header__top">
-          <button class="page-header__burger" aria-label="Open menu">
+          <button class="page-header__burger" type="button" aria-label="Open menu">
             <svg width="25" height="16">
               <use href="./img/sprite.svg#burger"></use>
             </svg>
@@ -25,7 +25,7 @@
               <use href="./img/sprite.svg#search"></use>
             </svg>
           </div>
-          <a class="page-header__logo" href="#">
+          <a class="page-header__logo" href="main.html">
             <svg width="66" height="66">
               <use href="./img/sprite.svg#logo"></use>
             </svg>
@@ -41,21 +41,21 @@
           </button>
         </div>
         <nav class="page-header__main-nav">
-          <ul class="">
+          <ul>
             <li>
-              <a href="">What’s new</a>
+              <a href="#">What’s new</a>
             </li>
             <li>
-              <a href="">Chokers</a>
+              <a href="#">Chokers</a>
             </li>
             <li>
-              <a href="">Necklaces</a>
+              <a href="#">Necklaces</a>
             </li>
             <li>
-              <a href="">Rings</a>
+              <a href="#">Rings</a>
             </li>
             <li>
-              <a href="">Earrings</a>
+              <a href="#">Earrings</a>
             </li>
           </ul>
         </nav>
@@ -145,28 +145,32 @@
                         <div class="filter__accordion filter__accordion--active">
                           <ul>
                             <li>
-                              <label class="filter__label">
-                                <input class="filter__input" name="name" type="checkbox" checked="">
+                              <div class="filter__label">
+                                <label for="filter-check-1"></label>
+                                <input class="filter__input" id="filter-check-1" name="name" type="checkbox" checked="">
                                 <span>Necklaces</span>
-                              </label>
+                              </div>
                             </li>
                             <li>
-                              <label class="filter__label">
-                                <input class="filter__input" name="name" type="checkbox" checked="">
+                              <div class="filter__label">
+                                <label for="filter-check-2"></label>
+                                <input class="filter__input" id="filter-check-2" name="name" type="checkbox" checked="">
                                 <span>Chokers</span>
-                              </label>
+                              </div>
                             </li>
                             <li>
-                              <label class="filter__label">
-                                <input class="filter__input" name="name" type="checkbox">
+                              <div class="filter__label">
+                                <label for="filter-check-3"> </label>
+                                <input class="filter__input" id="filter-check-3" name="name" type="checkbox">
                                 <span>Rings</span>
-                              </label>
+                              </div>
                             </li>
                             <li>
-                              <label class="filter__label">
-                                <input class="filter__input" name="name" type="checkbox" checked="">
+                              <div class="filter__label">
+                                <label for="filter-check-4"></label>
+                                <input class="filter__input" id="filter-check-4" name="name" type="checkbox" checked="">
                                 <span>Earrings</span>
-                              </label>
+                              </div>
                             </li>
                           </ul>
                         </div>
@@ -181,16 +185,18 @@
                         <div class="filter__accordion">
                           <ul>
                             <li>
-                              <label class="filter__label">
-                                <input class="filter__input" name="type" type="checkbox">
+                              <div class="filter__label">
+                                <label for="filter-check-5"></label>
+                                <input class="filter__input" id="filter-check-5" name="type" type="checkbox">
                                 <span>Gold</span>
-                              </label>
+                              </div>
                             </li>
                             <li>
-                              <label class="filter__label">
-                                <input class="filter__input" name="type" type="checkbox">
+                              <div class="filter__label">
+                                <label for="filter-check-6"> </label>
+                                <input class="filter__input" id="filter-check-6" name="type" type="checkbox">
                                 <span>Silver</span>
-                              </label>
+                              </div>
                             </li>
                           </ul>
                         </div>
@@ -205,16 +211,18 @@
                         <div class="filter__accordion">
                           <ul>
                             <li>
-                              <label class="filter__label">
-                                <input class="filter__input" name="type" type="checkbox">
+                              <div class="filter__label">
+                                <label id="filter-check-4"></label>
+                                <input class="filter__input" id="filter-check-4" name="type" type="checkbox">
                                 <span>Pink flamingo</span>
-                              </label>
+                              </div>
                             </li>
                             <li>
-                              <label class="filter__label">
-                                <input class="filter__input" name="type" type="checkbox">
+                              <div class="filter__label">
+                                <label id="filter-check-4"></label>
+                                <input class="filter__input" id="filter-check-4" name="type" type="checkbox">
                                 <span>Dreams</span>
-                              </label>
+                              </div>
                             </li>
                           </ul>
                         </div>
@@ -493,7 +501,7 @@
             <a href="#">Forgot your password?</a>
             <button class="js-login-submit" type="submit">Log In</button>
             <div class="login-modal__sign-up">
-              <button>
+              <button type="button">
                 Don’t have an account? <span>Sign Up</span>
               </button>
             </div>
