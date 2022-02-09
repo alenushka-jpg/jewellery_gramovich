@@ -55,6 +55,10 @@
     z-index: 10;
     box-shadow: 0 5px 32px rgba($dark-font, 0.24);
   }
+
+  @media (max-width: $mobile-width) {
+    top: 38px;
+  }
 }
 
 .filter__button-close {
@@ -74,6 +78,11 @@
 
   @media (max-width: $tablet-width) {
     display: flex;
+  }
+
+  @media (max-width: $mobile-width) {
+    top: -15px;
+    right: -10px;
   }
 }
 
@@ -97,13 +106,17 @@
   }
 
   @media (max-width: $mobile-width) {
-    min-width: 280px;
+    min-width: 270px;
   }
 }
 
 .filter__form form {
   @media (max-width: $tablet-width) {
     padding-top: 6px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 0;
   }
 }
 
@@ -134,7 +147,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    padding: 30px 20px;
+    padding: 23px 20px;
   }
 }
 
@@ -175,6 +188,8 @@
   @media (max-width: $mobile-width) {
     width: 20px;
     height: 10px;
+    top: 30px;
+    right: 18px;
   }
 }
 
@@ -212,6 +227,10 @@
   }
 
   @media (max-width: $mobile-width) {
+    &--active {
+      padding: 0 30px 18px;
+    }
+
     &--price {
       width: 250px;
     }
@@ -249,6 +268,18 @@
       padding-right: 52px
     }
   }
+
+  @media (max-width: $mobile-width) {
+    &:first-child .filter__accordion-button {
+      padding-bottom: 19px;
+    }
+
+    &:last-of-type .filter__accordion--active {
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 57px;
+    }
+  }
 }
 
 .filter__label {
@@ -276,6 +307,13 @@
     font-size: 16px;
     line-height: 130%;
   }
+
+  @media (max-width: $mobile-width) {
+    &::after {
+      width: 18px;
+      height: 18px;
+    }
+  }
 }
 
 .filter__input {
@@ -290,6 +328,15 @@
 
 .filter__input:checked + span::after {
   background-color: $primary;
+}
+
+.filter__input:focus + span {
+  outline: 2px solid $basic-black;
+  outline-offset: 2px;
+
+  &::after {
+    border-color: $primary;
+  }
 }
 
 .filter__control-range {
@@ -307,6 +354,11 @@
 
   @media (max-width: $tablet-width) {
     width: 58%;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 55%;
+    transform: translateX(46px);
   }
 }
 
@@ -342,6 +394,20 @@
       left: calc(100% - 15px);
     }
   }
+
+  @media (max-width: $mobile-width) {
+    top: -7px;
+
+    &--left {
+      right: calc(100% - 10px);
+    }
+
+    &--right {
+      left: calc(100% - 12px);
+    }
+  }
+
+
 }
 
 .filter__range-handler div {
@@ -365,7 +431,8 @@
   }
 
   @media (max-width: $mobile-width) {
-    padding: 0 20px 30px;
+    padding: 0 20px 22px;
+    margin-top: 29px;
   }
 }
 
@@ -387,6 +454,10 @@
 
   &:hover {
     background-color: rgba($primary, 0.7);
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 21px;
   }
 }
 

@@ -28,6 +28,15 @@
   var buttons = bodyMain.querySelectorAll('button');
   var labels = bodyMain.querySelectorAll('label');
 
+  var breadcrumbs = document.querySelector('.catalog__slider');
+  var buttonsBread = breadcrumbs.querySelectorAll('button');
+
+  var pageFooter = document.querySelector('.page-footer');
+  var linksFooter = pageFooter.querySelectorAll('a');
+  var buttonFooter = pageFooter.querySelector('button');
+  var inputFooter = pageFooter.querySelector('input');
+  var labelFooter = pageFooter.querySelector('label');
+
   function setBlur(e) {
     e.forEach(function (v) {
       v.setAttribute('tabindex', '-1');
@@ -39,6 +48,7 @@
       v.removeAttribute('tabindex');
     });
   }
+
 
   // Открывает модальное окно логин
 
@@ -215,10 +225,12 @@
 
   function showFilter() {
     filterOverlay.classList.add('filter__overlay--open');
+    setBlur(buttonsBread);
   }
 
   function closeFilter() {
     filterOverlay.classList.remove('filter__overlay--open');
+    removeBlur(buttonsBread);
   }
 
   function onClickFilter() {
