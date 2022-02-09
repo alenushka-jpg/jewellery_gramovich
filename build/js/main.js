@@ -16,7 +16,6 @@
   var filter = document.querySelector('.filter');
   var questionsButtons = document.querySelectorAll('.js-questions-button');
   var filterButtons = document.querySelectorAll('.filter__accordion-button');
-  var filterArrows = document.querySelectorAll('.filter__svg');
 
   var emailLogin = document.querySelector('.js-email-login');
   var passwordLogin = document.querySelector('.js-email-password');

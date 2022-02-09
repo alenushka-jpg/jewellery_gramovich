@@ -50,7 +50,7 @@
 .filter__window {
   @media (max-width: $tablet-width) {
     position: absolute;
-    top: 21px;
+    top: 27px;
     left: 0;
     z-index: 10;
     box-shadow: 0 5px 32px rgba($dark-font, 0.24);
@@ -59,8 +59,8 @@
 
 .filter__button-close {
   position: absolute;
-  top: -14px;
-  right: -19px;
+  top: -9px;
+  right: -16px;
   display: none;
   align-items: center;
   justify-content: center;
@@ -85,7 +85,7 @@
   @media (max-width: $tablet-width) {
     display: block;
     position: relative;
-    min-width: 423px;
+    min-width: 442px;
     max-height: 90%;
     background-color: $basic-white;
     z-index: 15;
@@ -101,22 +101,9 @@
   }
 }
 
-.filter fieldset {
-  padding: 0;
-  margin: 0;
-  border: 1px solid $primary;
-
-  &:not(:last-of-type) {
-    border-bottom: none;
-  }
-
-  &:last-of-type .filter__accordion-button {
-    padding-bottom: 16px;
-  }
-
+.filter__form form {
   @media (max-width: $tablet-width) {
-    border-right: none;
-    border-left: none;
+    padding-top: 6px;
   }
 }
 
@@ -142,7 +129,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    padding: 22px 40px 16px 21px;
+    padding: 34px 40px 34px 40px;
     font-size: 18px;
   }
 
@@ -158,6 +145,16 @@
   list-style: none;
 }
 
+.filter li {
+  @media (max-width: $tablet-width) {
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 8px;
+    }
+  }
+}
+
 .filter__svg {
   position: absolute;
   top: 26px;
@@ -171,9 +168,11 @@
   @media (max-width: $tablet-width) {
     width: 23px;
     height: 12px;
+    top: 40px;
+    right: 40px;
   }
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $mobile-width) {
     width: 20px;
     height: 10px;
   }
@@ -202,8 +201,12 @@
   }
 
   @media (max-width: $tablet-width) {
+    &--active {
+      padding: 0 52px 26px;
+    }
+
     &--price {
-      width: 304px;
+      width: 396px;
       margin-left: 9px;
     }
   }
@@ -215,6 +218,39 @@
   }
 }
 
+.filter fieldset {
+  padding: 0;
+  margin: 0;
+  border: 1px solid $primary;
+
+  &:not(:last-of-type) {
+    border-bottom: none;
+  }
+
+  &:last-of-type .filter__accordion-button {
+    padding-bottom: 16px;
+  }
+
+  @media (max-width: $tablet-width) {
+    border-right: none;
+    border-left: none;
+
+    &:first-child .filter__accordion-button {
+      padding-bottom: 19px;
+    }
+
+    &:last-of-type .filter__accordion-button {
+      padding-bottom: 34px;
+    }
+
+    &:last-of-type .filter__accordion--active {
+      padding-bottom: 68px;
+      padding-left: 43px;
+      padding-right: 52px
+    }
+  }
+}
+
 .filter__label {
   position: relative;
 }
@@ -222,6 +258,8 @@
 .filter__label span {
   display: block;
   padding: 5px 25px 4px;
+  font-size: 14px;
+  line-height: 130%;
 
   &::after {
     content: "";
@@ -231,6 +269,12 @@
     width: 15px;
     height: 15px;
     border: 1px solid $primary;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-left: 28px;
+    font-size: 16px;
+    line-height: 130%;
   }
 }
 
@@ -260,6 +304,10 @@
   height: 1px;
   background-color: $primary;
   transform: translateX(51px);
+
+  @media (max-width: $tablet-width) {
+    width: 58%;
+  }
 }
 
 .filter__range-handler {
@@ -282,6 +330,18 @@
   p {
     margin-top: 5px;
   }
+
+  @media (max-width: $tablet-width) {
+    top: -9px;
+
+    &--left {
+      right: calc(100% - 18px);
+    }
+
+    &--right {
+      left: calc(100% - 15px);
+    }
+  }
 }
 
 .filter__range-handler div {
@@ -289,13 +349,19 @@
   height: 15px;
   background-color: $primary;
   border-radius: 50%;
+
+  @media (max-width: $tablet-width) {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .filter__form-buttons {
   margin-top: 35px;
 
   @media (max-width: $tablet-width) {
-    padding: 0 40px 40px 25px;
+    padding: 0 40px 40px;
+    margin-top: 40px;
   }
 
   @media (max-width: $mobile-width) {
@@ -305,6 +371,11 @@
 
 .filter__form-buttons button {
   padding: 23px;
+  width: 100%;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
   text-align: center;
   border: 1px solid $primary;
 }
@@ -316,5 +387,13 @@
 
   &:hover {
     background-color: rgba($primary, 0.7);
+  }
+}
+
+.filter__form-buttons button[type="reset"] {
+  background-color: $basic-white;
+
+  &:hover {
+    background-color: rgba($primary, 0.3);
   }
 }
