@@ -174,7 +174,7 @@
     right: 0;
     bottom: 0;
     z-index: 10;
-    padding: 10px 15px 50px;
+    padding: 14px 45px 50px;
     background-color: $primary;
 
     &--open {
@@ -206,6 +206,10 @@
 .page-header__input {
   position: relative;
   margin-bottom: 36px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 46px;
+  }
 }
 
 .page-header__input input {
@@ -222,6 +226,10 @@
   left: 16px;
   top: 13px;
   fill: $basic-white;
+
+  @media (max-width: $tablet-width) {
+    left: 12px;
+  }
 }
 
 .page-header__list {
@@ -229,6 +237,7 @@
 
   @media (max-width: $tablet-width) {
     &--types {
+      margin-bottom: 41px;
       font-size: 24px;
       line-height: 36px;
 
