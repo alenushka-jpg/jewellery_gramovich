@@ -17,6 +17,11 @@
   var questionsButtons = document.querySelectorAll('.js-questions-button');
   var filterButtons = document.querySelectorAll('.filter__accordion-button');
 
+  var emailLogin = document.querySelector('.js-email-login');
+  var passwordLogin = document.querySelector('.js-email-password');
+  var resultModal = document.querySelector('.js-result-modal');
+  var submitbutton = document.querySelector('.js-login-submit');
+
   var bodyMain = document.querySelector('.body__main');
   var links = bodyMain.querySelectorAll('a');
   var inputs = bodyMain.querySelectorAll('input');
@@ -39,15 +44,10 @@
 
   function showLoginModal() {
     loginModal.classList.add('login-modal--open');
-
     setBlur(links);
     setBlur(inputs);
     setBlur(buttons);
     setBlur(labels);
-
-    // if (loginModal !== 'login-modal--open') {
-
-    // }
   }
 
   function closeLoginModal() {
@@ -56,6 +56,46 @@
     removeBlur(inputs);
     removeBlur(buttons);
     removeBlur(labels);
+  }
+
+
+  function validation(email, password) {
+    var valid = true;
+    var newLocal = email.trim() === 0 || password === true;
+
+    if (newLocal) {
+      valid = false;
+    } else {
+      submitbutton.addEventListener('click', showQuestionsResult);
+    }
+
+    return valid;
+  }
+
+  function showQuestionsResult() {
+    resultModal.style.display = 'flex';
+  }
+
+  function localStorageData(data) {
+    localStorage.setItem('email', data.userEmail);
+  }
+
+  function onSubmitModalForm(e) {
+    e.preventDefault();
+    var userEmail = emailLogin.value;
+    var userPassword = passwordLogin.value;
+
+    if (validation(userEmail, userPassword)) {
+      resultModal.style.display = 'flex';
+
+      localStorageData ({
+        userEmail: userEmail
+      })
+    }
+  }
+
+  if (loginModal) {
+    loginModal.addEventListener('submit', onSubmitModalForm);
   }
 
   function bodyHidden() {
