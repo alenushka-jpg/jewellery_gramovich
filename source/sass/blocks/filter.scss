@@ -102,7 +102,7 @@
 }
 
 .filter fieldset {
-  padding: 22px 25px 22px;
+  padding: 0;
   margin: 0;
   border: 1px solid $primary;
 
@@ -110,25 +110,20 @@
     border-bottom: none;
   }
 
-  &:last-of-type {
+  &:last-of-type .filter__accordion-button {
     padding-bottom: 16px;
   }
 
   @media (max-width: $tablet-width) {
-    padding: 22px 40px 16px 21px;
     border-right: none;
     border-left: none;
-  }
-
-  @media (max-width: $mobile-width) {
-    padding: 30px 20px;
   }
 }
 
 .filter__accordion-button {
   position: relative;
   width: 100%;
-  padding: 0;
+  padding: 22px 25px 22px;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -138,8 +133,21 @@
   background-color: inherit;
   text-align: start;
 
+  &:hover {
+    background-color: rgba($primary, 0.1);
+  }
+
+  &:active {
+    background-color: rgba($primary, 0.3);
+  }
+
   @media (max-width: $tablet-width) {
+    padding: 22px 40px 16px 21px;
     font-size: 18px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 30px 20px;
   }
 }
 
@@ -152,8 +160,8 @@
 
 .filter__svg {
   position: absolute;
-  top: 5px;
-  right: 0;
+  top: 26px;
+  right: 25px;
   fill: none;
 
   &--active {
@@ -180,8 +188,7 @@
 
   &--active {
     display: block;
-    margin-top: 18px;
-    padding-left: 9px;
+    padding: 0 35px 29px;
 
     .filter__range-handlers {
       display: block;
@@ -189,8 +196,8 @@
   }
 
   &--price {
-    padding-bottom: 34px;
-    padding-top: 25px;
+    padding-bottom: 45px;
+    padding-top: 15px;
     margin-top: 0;
   }
 
