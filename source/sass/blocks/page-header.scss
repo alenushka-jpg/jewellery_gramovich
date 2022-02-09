@@ -130,7 +130,6 @@
 
 .page-header ul {
   padding: 0;
-  margin: 0;
   list-style: none;
 }
 
@@ -193,6 +192,8 @@
 
   @media (max-width: $mobile-width) {
     top: 90px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -209,6 +210,10 @@
 
   @media (max-width: $tablet-width) {
     margin-bottom: 46px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 34px;
   }
 }
 
@@ -234,6 +239,8 @@
 
 .page-header__list {
   font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 0;
 
   @media (max-width: $tablet-width) {
     &--types {
@@ -260,6 +267,12 @@
 
     &--login button {
       margin-top: 27px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    &--types {
+      margin-bottom: 32px;
     }
   }
 }
