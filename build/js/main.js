@@ -320,9 +320,9 @@
     if (validation(userEmail, userPassword)) {
       resultModal.style.display = 'flex';
 
-      localStorageData ({
+      localStorageData({
         userEmail: userEmail
-      })
+      });
     }
   }
 
@@ -409,7 +409,7 @@
   // Аккордеон вопросы
 
   questionsButtons.forEach(function (item) {
-    item.addEventListener('click', function() {
+    item.addEventListener('click', function () {
       item.parentNode.classList.toggle('questions__item--open');
     });
   });
@@ -417,12 +417,12 @@
   // Аккордеон фильтр
 
   filterButtons.forEach(function (array) {
-    array.addEventListener('click', function() {
+    array.addEventListener('click', function () {
       var panel = this.nextElementSibling;
-      var element = array.lastElementChild;
+      var lastElement = array.lastElementChild;
 
       panel.classList.toggle('filter__accordion--active');
-      element.classList.toggle('filter__svg--active');
+      lastElement.classList.toggle('filter__svg--active');
     });
   });
 

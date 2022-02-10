@@ -159,6 +159,10 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
+
+  @media (max-width: $mobile-width) {
+    object-fit: contain;
+  }
 }
 
 .blog__title {
