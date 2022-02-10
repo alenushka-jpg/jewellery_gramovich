@@ -286,7 +286,7 @@
   position: relative;
 }
 
-.filter__label span {
+.filter__label label {
   display: block;
   padding: 5px 25px 4px;
   font-size: 14px;
@@ -328,11 +328,11 @@
   cursor: pointer;
 }
 
-.filter__label input:checked + span::after {
+.filter__label input:checked + label::after {
   background-color: $primary;
 }
 
-.filter__label input:focus + span {
+.filter__label input:focus + label {
   outline: 2px solid $basic-black;
   outline-offset: 2px;
 

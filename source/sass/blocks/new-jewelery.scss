@@ -56,6 +56,10 @@
   }
 }
 
+.new-jewelery__slider button.disabled svg {
+  stroke: rgba($primary, 0.5);
+}
+
 .new-jewelery__title {
   text-align: center;
 }

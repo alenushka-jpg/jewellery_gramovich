@@ -126,7 +126,7 @@
         </section>
         <section class="new-jewelery container">
           <div class="new-jewelery__slider">
-            <button type="button">
+            <button class="js-slider-prev" type="button">
               <svg class="arrow-icon" width="30" height="13">
                 <use href="./img/sprite.svg#arrow"></use>
               </svg>
@@ -137,14 +137,14 @@
                 <p>Shop Now</p>
               </a>
             </div>
-            <button type="button">
+            <button class="js-slider-next" type="button">
               <svg class="arrow-icon arrow-icon--right" width="30" height="13">
                 <use href="./img/sprite.svg#arrow"></use>
               </svg>
             </button>
           </div>
           <div class="new-jewelery__catalog">
-            <ul>
+            <ul class="js-slider-images">
               <li>
                 <a href="#">
                   <picture>
@@ -278,13 +278,10 @@
                 </a>
               </li>
             </ul>
-            <div class="breadcrumbs">
+            <div class="breadcrumbs js-slider-pagination">
               <button class="breadcrumbs__button breadcrumbs__button--active" type="button">1</button>
               <button class="breadcrumbs__button" type="button">2</button>
               <button class="breadcrumbs__button" type="button">3</button>
-              <button class="breadcrumbs__button" type="button">4</button>
-              <button class="breadcrumbs__button" type="button">5</button>
-              <button class="breadcrumbs__button" type="button">6</button>
             </div>
           </div>
         </section>
@@ -556,7 +553,7 @@
         </div>
       </footer>
     </div>
-    <section class="login-modal">
+    <section class="login-modal login-modal--open">
       <div class="overlay"></div>
       <div class="login-modal__window">
         <button class="js-close-login" type="button" name="close" aria-label="Close modal login window">

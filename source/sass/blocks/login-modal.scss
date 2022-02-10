@@ -116,6 +116,11 @@
   font-size: 12px;
   line-height: 18px;
   color: $light-font;
+
+  @media (max-width: $mobile-width) {
+    bottom: 202px;
+    right: 14px;
+  }
 }
 
 .login-modal__input:first-child {
@@ -189,7 +194,6 @@
   display: none;
   width: 100%;
   height: 100%;
-  display: flex;
   background-color: rgba($primary, 0.6);
   color: $basic-white;
   justify-content: center;

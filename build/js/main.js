@@ -35,7 +35,11 @@
   var linksFooter = pageFooter.querySelectorAll('a');
   var buttonFooter = pageFooter.querySelector('button');
   var inputFooter = pageFooter.querySelector('input');
-  var labelFooter = pageFooter.querySelector('label');
+
+  var prevSlideButton = document.querySelector('.js-slider-prev');
+  var nextSlideButton = document.querySelector('.js-slider-next');
+  var slidesImages = document.querySelector('.js-slider-images');
+  var sliderPagination = document.querySelector('.js-slider-pagination');
 
   function setBlur(e) {
     e.forEach(function (v) {
@@ -49,11 +53,11 @@
     });
   }
 
-
   // Открывает модальное окно логин
 
   function showLoginModal() {
     loginModal.classList.add('login-modal--open');
+    name.focus();
     setBlur(links);
     setBlur(inputs);
     setBlur(buttons);
@@ -68,6 +72,13 @@
     removeBlur(labels);
   }
 
+  function onOpenClick() {
+    showLoginModal();
+
+    if (loginModal !== 'login-modal--open' && window.outerWidth >= 1023) {
+      bodyHidden();
+    }
+  }
 
   function validation(email, password) {
     var valid = true;
@@ -116,26 +127,19 @@
     body.classList.remove('body--hidden');
   }
 
-  function onOpenClick() {
-    showLoginModal();
-    name.focus();
-
-    if (loginModal !== 'login-modal--open' && window.outerWidth >= 1023) {
-      bodyHidden();
-    }
-  }
-
   function onCloseClick() {
-    closeLoginModal();
-    bodyVisible();
-
-    if (loginModal !== 'login-modal--open' && window.outerWidth >= 1023) {
+    if (loginModal === 'login-modal--open' && window.outerWidth >= 1023) {
       bodyVisible();
     }
+
+    closeLoginModal();
+    bodyVisible();
   }
 
   function onCloseClickMobile() {
-    closeLoginModal();
+    if (navigationPopup !== 'page-header__popup--open' && loginModal !== 'login-modal--open') {
+      closeLoginModal();
+    }
   }
 
   for (var i = 0; i < loginButtons.length; i++) {
@@ -184,10 +188,7 @@
   // Закрывает модалки при нажатии на overlay
   overlay.forEach(function (v) {
     v.addEventListener('click', function () {
-      if (loginModal !== 'login-modal--open' && window.outerWidth <= 1023) {
-        onCloseClickMobile();
-      }
-
+      onCloseClickMobile();
       onCloseClick();
       onClickCloseFilter();
     });
@@ -226,11 +227,19 @@
   function showFilter() {
     filterOverlay.classList.add('filter__overlay--open');
     setBlur(buttonsBread);
+    setBlur(linksFooter);
+    buttonFooter.setAttribute('tabindex', '-1');
+    inputFooter.setAttribute('tabindex', '-1');
   }
 
   function closeFilter() {
-    filterOverlay.classList.remove('filter__overlay--open');
-    removeBlur(buttonsBread);
+    if (filterOverlay) {
+      filterOverlay.classList.remove('filter__overlay--open');
+      removeBlur(buttonsBread);
+      removeBlur(linksFooter);
+      buttonFooter.removeAttribute('tabindex');
+      inputFooter.removeAttribute('tabindex');
+    }
   }
 
   function onClickFilter() {
