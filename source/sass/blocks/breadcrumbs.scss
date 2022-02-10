@@ -20,9 +20,12 @@
     }
   }
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $mobile-width) {
+    width: 49px;
+
     &--catalog {
       width: 136px;
+
       margin-right: auto;
       margin-left: auto;
     }
@@ -43,8 +46,29 @@
   background-color: inherit;
   color: $light-font;
   border: none;
+
+  @media (max-width: $mobile-width) {
+    display: none;
+
+    &:last-child {
+      position: relative;
+      display: block;
+      padding-left: 25px;
+    }
+
+    &:last-child::after {
+      content: "of";
+      position: absolute;
+      top: 0;
+      left: 5px;
+    }
+  }
 }
 
 .breadcrumbs button.active {
   color: $dark-font;
+
+  @media (max-width: $mobile-width) {
+    display: block;
+  }
 }
