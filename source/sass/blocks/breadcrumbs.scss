@@ -2,7 +2,7 @@
   display: flex;
   justify-items: center;
   justify-content: space-between;
-  width: 118px;
+  width: 48px;
   margin: 0 auto;
 
   &--catalog {
@@ -35,7 +35,7 @@
   margin-top: 0;
 }
 
-.breadcrumbs__button {
+.breadcrumbs button {
   padding: 0;
   font-weight: 500;
   font-size: 16px;
@@ -43,8 +43,8 @@
   background-color: inherit;
   color: $light-font;
   border: none;
+}
 
-  &--active {
-    color: $dark-font;
-  }
+.breadcrumbs button.active {
+  color: $dark-font;
 }
