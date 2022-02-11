@@ -114,15 +114,15 @@
 
     function disableSliderButton() {
       if (currentPage === 1) {
-        prevSlideButton.classList.add('disabled');
+        prevSlideButton.classList.add('button-disabled');
       } else {
-        prevSlideButton.classList.remove('disabled');
+        prevSlideButton.classList.remove('button-disabled');
       }
 
       if (currentPage === pages.length) {
-        nextSlideButton.classList.add('disabled');
+        nextSlideButton.classList.add('button-disabled');
       } else {
-        nextSlideButton.classList.remove('disabled');
+        nextSlideButton.classList.remove('button-disabled');
       }
     }
 
