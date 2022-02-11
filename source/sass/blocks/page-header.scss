@@ -168,10 +168,24 @@
   white-space: nowrap;
 }
 
+.no-js .page-header__popup {
+  display: block;
+}
+
 .page-header__popup {
   display: none;
   background-color: $primary;
   padding: 14px 45px 50px;
+
+  .page-header__list--information a {
+    color: rgba($basic-white, 0.75);
+  }
+
+  a,
+  button {
+    color: $basic-white;
+  }
+
 
   @media (max-width: $tablet-width) {
     position: fixed;
@@ -183,15 +197,6 @@
 
     &--open {
       display: block;
-    }
-
-    a,
-    button {
-      color: $basic-white;
-    }
-
-    .page-header__list--information a {
-      color: rgba($basic-white, 0.75);
     }
   }
 
@@ -248,32 +253,29 @@
   margin-top: 0;
   margin-bottom: 0;
 
-  @media (max-width: $tablet-width) {
-    &--types {
-      margin-bottom: 41px;
-      font-size: 24px;
-      line-height: 36px;
+  &--types {
+    margin-bottom: 41px;
+    font-size: 24px;
+    line-height: 36px;
 
-      li {
-        margin-bottom: 21px;
-      }
+    li {
+      margin-bottom: 21px;
     }
+  }
+  &--information,
+  &--login button {
+    font-size: 18px;
+    line-height: 130%;
+  }
 
-    &--information,
-    &--login button {
-      font-size: 18px;
-      line-height: 130%;
+  &--information {
+    li {
+      margin-bottom: 18px;
     }
+  }
 
-    &--information {
-      li {
-        margin-bottom: 18px;
-      }
-    }
-
-    &--login button {
-      margin-top: 27px;
-    }
+  &--login button {
+    margin-top: 27px;
   }
 
   @media (max-width: $mobile-width) {

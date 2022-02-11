@@ -1,6 +1,9 @@
 'use strict';
 
 (function () {
+  var body = document.querySelector('.body');
+  body.classList.remove('no-js');
+
   var loginButtons = document.querySelectorAll('.js-open-login');
   var loginModal = document.querySelector('.login-modal');
   var closeLogin = document.querySelector('.js-close-login');
@@ -9,7 +12,6 @@
   var header = document.querySelector('.page-header');
   var burger = document.querySelector('.page-header__burger');
   var navigationPopup = document.querySelector('.page-header__popup');
-  var body = document.querySelector('.body');
 
   var filter = document.querySelector('.filter');
   var filterButton = document.querySelector('.filter__button');
