@@ -9,6 +9,10 @@
     width: 96px;
     margin-left: 0;
     margin-right: 31px;
+
+    .breadcrumbs__button--active {
+      color: $dark-font;
+    }
   }
 
   @media (max-width: $tablet-width) {
@@ -62,7 +66,8 @@
   }
 }
 
-.breadcrumbs button.active {
+.breadcrumbs button.active,
+.breadcrumbs__button--active {
   color: $dark-font;
 
   @media (max-width: $mobile-width) {
