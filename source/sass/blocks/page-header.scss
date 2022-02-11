@@ -1,17 +1,19 @@
 .page-header {
   width: 100%;
 
-  &--open {
-    background-color: $primary;
+  @media (max-width: $tablet-width) {
+    &--open {
+      background-color: $primary;
 
-    .page-header__burger svg,
-    .page-header__basket svg {
-      stroke: $basic-white;
-    }
+      .page-header__burger svg,
+      .page-header__basket svg {
+        stroke: $basic-white;
+      }
 
-    .page-header__logo svg {
-      fill: $basic-white;
-      stroke: $basic-white;
+      .page-header__logo svg {
+        fill: $basic-white;
+        stroke: $basic-white;
+      }
     }
   }
 }
@@ -168,6 +170,8 @@
 
 .page-header__popup {
   display: none;
+  background-color: $primary;
+  padding: 14px 45px 50px;
 
   @media (max-width: $tablet-width) {
     position: fixed;
@@ -176,8 +180,6 @@
     right: 0;
     bottom: 0;
     z-index: 10;
-    padding: 14px 45px 50px;
-    background-color: $primary;
 
     &--open {
       display: block;
