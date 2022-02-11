@@ -2,8 +2,6 @@
 
 (function () {
   var body = document.querySelector('.body');
-  body.classList.remove('no-js');
-
   var loginButtons = document.querySelectorAll('.js-open-login');
   var loginModal = document.querySelector('.login-modal');
   var closeLogin = document.querySelector('.js-close-login');
