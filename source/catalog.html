@@ -102,286 +102,288 @@
           </div>
         </div>
       </header>
-      <main class="catalog">
-        <section class="promo catalog__promo">
-          <picture>
-            <!-- 320 х 261 без ретины, 640 х 522 c ретиной -->
-            <source type="image/webp" media="(max-width:767px)" srcset="./img/intro-catalog-mobile.webp 1x, ./img/intro-catalog-mobile@2x.webp 2x">
-            <!-- 768 х 261 без ретины, 1536 х 522 c ретиной -->
-            <source type="image/webp" media="(max-width:1023px)" srcset="./img/intro-catalog-tablet.webp 1x, ./img/intro-catalog-tablet@2x.webp 2x">
-            <!-- 1366 x 261 без ретины, 2732 х 522 c ретиной -->
-            <source type="image/webp" srcset="./img/intro-catalog-desktop.webp 1x, ./img/intro-catalog-desktop@2x.webp 2x">
-            <!-- 320 х 261 без ретины, 640 х 522 c ретиной -->
-            <source media="(max-width:767px)" srcset="./img/intro-catalog-mobile.jpg 1x, ./img/intro-catalog-mobile@2x.jpg 2x">
-            <!-- 768 х 261 без ретины, 1536 х 522 c ретиной -->
-            <source media="(max-width:1023px)" srcset="./img/intro-catalog-tablet.jpg 1x, ./img/intro-catalog-tablet@2x.jpg 2x">
-            <!-- 1366 x 261 без ретины, 2732 х 522 c ретиной -->
-            <img src="./img/intro-catalog-desktop.jpg" srcset="./img/intro-catalog-desktop@2x.jpg 2x" alt="jewerly set" height="261" style="width: 100%">
-          </picture>
-          <h2>ALL JEWELLERY</h2>
-          <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
-        </section>
-        <section class="catalog__store">
-          <div class="catalog__container container">
-            <div class="catalog__filter filter">
-              <button class="filter__button" type="button">Filter</button>
-              <div class="filter__overlay">
-                <div class="overlay"></div>
-                <div class="filter__window">
-                  <button class="filter__button-close" type="button">
-                    <svg width="14" height="14">
-                      <use href="./img/sprite.svg#close"></use>
-                    </svg>
-                  </button>
-                  <div class="filter__form">
-                    <form action="https://echo.htmlacademy.ru/" method="post">
-                      <fieldset>
-                        <button class="filter__accordion-button" type="button">
-                          <span>Product</span>
-                          <svg class="filter__svg filter__svg--active" width="17" height="10">
-                            <use href="./img/sprite.svg#short-arrow"></use>
-                          </svg>
-                        </button>
-                        <div class="filter__accordion filter__accordion--active">
-                          <ul>
-                            <li>
-                              <div class="filter__label">
-                                <input id="filter-check-1" name="name" type="checkbox" checked>
-                                <label for="filter-check-1">Necklaces</label>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="filter__label">
-                                <input id="filter-check-2" name="name" type="checkbox" checked>
-                                <label for="filter-check-2">Chokers</label>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="filter__label">
-                                <input id="filter-check-3" name="name" type="checkbox">
-                                <label for="filter-check-3">Rings</label>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="filter__label">
-                                <input id="filter-check-4" name="name" type="checkbox" checked>
-                                <label for="filter-check-4">Earrings</label>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </fieldset>
-                      <fieldset>
-                        <button class="filter__accordion-button" type="button">
-                          <span>Material</span>
-                          <svg class="filter__svg" width="17" height="10">
-                            <use href="./img/sprite.svg#short-arrow"></use>
-                          </svg>
-                        </button>
-                        <div class="filter__accordion">
-                          <ul>
-                            <li>
-                              <div class="filter__label">
-                                <input id="filter-check-5" name="type" type="checkbox">
-                                <label for="filter-check-5">Gold</label>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="filter__label">
-                                <input id="filter-check-6" name="type" type="checkbox">
-                                <label for="filter-check-6">Silver</label>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </fieldset>
-                      <fieldset>
-                        <button class="filter__accordion-button" type="button">
-                          <span>Collection</span>
-                          <svg class="filter__svg" width="17" height="10">
-                            <use href="./img/sprite.svg#short-arrow"></use>
-                          </svg>
-                        </button>
-                        <div class="filter__accordion">
-                          <ul>
-                            <li>
-                              <div class="filter__label">
-                                <input id="filter-check-7" name="type" type="checkbox">
-                                <label for="filter-check-7">Pink flamingo</label>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="filter__label">
-                                <input id="filter-check-8" name="type" type="checkbox">
-                                <label for="filter-check-8">Dreams</label>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </fieldset>
-                      <fieldset>
-                        <button class="filter__accordion-button" type="button">
-                          <span>Price</span>
-                          <svg class="filter__svg filter__svg--active" width="17" height="10">
-                            <use href="./img/sprite.svg#short-arrow"></use>
-                          </svg>
-                        </button>
-                        <div class="filter__accordion filter__accordion--price filter__accordion--active">
-                          <div class="filter__control-range">
-                            <div class="filter__range-handlers">
-                              <div class="filter__range-handler filter__range-handler--left">
-                                <div></div>
-                                <p>$ 55</p>
-                              </div>
-                              <div class="filter__range-handler filter__range-handler--right">
-                                <div></div>
-                                <p>$&nbsp;155</p>
+      <div class="content">
+        <main class="catalog">
+          <section class="promo catalog__promo">
+            <picture>
+              <!-- 320 х 261 без ретины, 640 х 522 c ретиной -->
+              <source type="image/webp" media="(max-width:767px)" srcset="./img/intro-catalog-mobile.webp 1x, ./img/intro-catalog-mobile@2x.webp 2x">
+              <!-- 768 х 261 без ретины, 1536 х 522 c ретиной -->
+              <source type="image/webp" media="(max-width:1023px)" srcset="./img/intro-catalog-tablet.webp 1x, ./img/intro-catalog-tablet@2x.webp 2x">
+              <!-- 1366 x 261 без ретины, 2732 х 522 c ретиной -->
+              <source type="image/webp" srcset="./img/intro-catalog-desktop.webp 1x, ./img/intro-catalog-desktop@2x.webp 2x">
+              <!-- 320 х 261 без ретины, 640 х 522 c ретиной -->
+              <source media="(max-width:767px)" srcset="./img/intro-catalog-mobile.jpg 1x, ./img/intro-catalog-mobile@2x.jpg 2x">
+              <!-- 768 х 261 без ретины, 1536 х 522 c ретиной -->
+              <source media="(max-width:1023px)" srcset="./img/intro-catalog-tablet.jpg 1x, ./img/intro-catalog-tablet@2x.jpg 2x">
+              <!-- 1366 x 261 без ретины, 2732 х 522 c ретиной -->
+              <img src="./img/intro-catalog-desktop.jpg" srcset="./img/intro-catalog-desktop@2x.jpg 2x" alt="jewerly set" height="261" style="width: 100%">
+            </picture>
+            <h2>ALL JEWELLERY</h2>
+            <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
+          </section>
+          <section class="catalog__store">
+            <div class="catalog__container container">
+              <div class="catalog__filter filter">
+                <button class="filter__button" type="button">Filter</button>
+                <div class="filter__overlay">
+                  <div class="overlay"></div>
+                  <div class="filter__window">
+                    <button class="filter__button-close" type="button">
+                      <svg width="14" height="14">
+                        <use href="./img/sprite.svg#close"></use>
+                      </svg>
+                    </button>
+                    <div class="filter__form">
+                      <form action="https://echo.htmlacademy.ru/" method="post">
+                        <fieldset>
+                          <button class="filter__accordion-button" type="button">
+                            <span>Product</span>
+                            <svg class="filter__svg filter__svg--active" width="17" height="10">
+                              <use href="./img/sprite.svg#short-arrow"></use>
+                            </svg>
+                          </button>
+                          <div class="filter__accordion filter__accordion--active">
+                            <ul>
+                              <li>
+                                <div class="filter__label">
+                                  <input id="filter-check-1" name="name" type="checkbox" checked>
+                                  <label for="filter-check-1">Necklaces</label>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="filter__label">
+                                  <input id="filter-check-2" name="name" type="checkbox" checked>
+                                  <label for="filter-check-2">Chokers</label>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="filter__label">
+                                  <input id="filter-check-3" name="name" type="checkbox">
+                                  <label for="filter-check-3">Rings</label>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="filter__label">
+                                  <input id="filter-check-4" name="name" type="checkbox" checked>
+                                  <label for="filter-check-4">Earrings</label>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </fieldset>
+                        <fieldset>
+                          <button class="filter__accordion-button" type="button">
+                            <span>Material</span>
+                            <svg class="filter__svg" width="17" height="10">
+                              <use href="./img/sprite.svg#short-arrow"></use>
+                            </svg>
+                          </button>
+                          <div class="filter__accordion">
+                            <ul>
+                              <li>
+                                <div class="filter__label">
+                                  <input id="filter-check-5" name="type" type="checkbox">
+                                  <label for="filter-check-5">Gold</label>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="filter__label">
+                                  <input id="filter-check-6" name="type" type="checkbox">
+                                  <label for="filter-check-6">Silver</label>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </fieldset>
+                        <fieldset>
+                          <button class="filter__accordion-button" type="button">
+                            <span>Collection</span>
+                            <svg class="filter__svg" width="17" height="10">
+                              <use href="./img/sprite.svg#short-arrow"></use>
+                            </svg>
+                          </button>
+                          <div class="filter__accordion">
+                            <ul>
+                              <li>
+                                <div class="filter__label">
+                                  <input id="filter-check-7" name="type" type="checkbox">
+                                  <label for="filter-check-7">Pink flamingo</label>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="filter__label">
+                                  <input id="filter-check-8" name="type" type="checkbox">
+                                  <label for="filter-check-8">Dreams</label>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </fieldset>
+                        <fieldset>
+                          <button class="filter__accordion-button" type="button">
+                            <span>Price</span>
+                            <svg class="filter__svg filter__svg--active" width="17" height="10">
+                              <use href="./img/sprite.svg#short-arrow"></use>
+                            </svg>
+                          </button>
+                          <div class="filter__accordion filter__accordion--price filter__accordion--active">
+                            <div class="filter__control-range">
+                              <div class="filter__range-handlers">
+                                <div class="filter__range-handler filter__range-handler--left">
+                                  <div></div>
+                                  <p>$ 55</p>
+                                </div>
+                                <div class="filter__range-handler filter__range-handler--right">
+                                  <div></div>
+                                  <p>$&nbsp;155</p>
+                                </div>
                               </div>
                             </div>
                           </div>
+                        </fieldset>
+                        <div class="filter__form-buttons">
+                          <button type="submit">
+                            <span>Apply</span>
+                          </button>
+                          <button type="reset">
+                            <span>Clear All</span>
+                          </button>
                         </div>
-                      </fieldset>
-                      <div class="filter__form-buttons">
-                        <button type="submit">
-                          <span>Apply</span>
-                        </button>
-                        <button type="reset">
-                          <span>Clear All</span>
-                        </button>
-                      </div>
-                    </form>
+                      </form>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="catalog__list product-cards">
-              <ul>
-                <li>
-                  <picture>
-                    <source type="image/webp" srcset="./img/double-pearl-earrings.webp 1x, ./img/double-pearl-earrings@2x.webp 2x">
-                    <!-- 270 x 272 без ретины, 540 x 544 c ретиной -->
-                    <img src="./img/double-pearl-earrings.jpg" srcset="./img/double-pearl-earrings@2x.jpg 2x" width="270" height="272" alt="jewerly set">
-                  </picture>
-                  <h3>Double pearl earrings </h3>
-                  <p>$ 115</p>
-                </li>
-                <li>
-                  <picture>
-                    <source type="image/webp" srcset="./img/black-choker-gold-bead.webp 1x, ./img/black-choker-gold-bead@2x.webp 2x">
-                    <!-- 270 x 272 без ретины, 540 x 544 c ретиной -->
-                    <img src="./img/black-choker-gold-bead.jpg" srcset="./img/black-choker-gold-bead@2x.jpg 2x" width="270" height="272" alt="jewerly set">
-                  </picture>
-                  <h3>Choker with gold bead</h3>
-                  <p>$ 55</p>
-                </li>
-                <li>
-                  <picture>
-                    <source type="image/webp" srcset="./img/dainty-gold-necklace.webp 1x, ./img/dainty-gold-necklace@2x.webp 2x">
-                    <!-- 270 x 272 без ретины, 540 x 544 c ретиной -->
-                    <img src="./img/dainty-gold-necklace.jpg" srcset="./img/dainty-gold-necklace@2x.jpg 2x" width="270" height="272" alt="jewerly set">
-                  </picture>
-                  <h3>Gold layered necklace</h3>
-                  <p>$ 155</p>
-                </li>
-                <li>
-                  <picture>
-                    <source type="image/webp" srcset="./img/blue-gemstone-pendant.webp 1x, ./img/blue-gemstone-pendant@2x.webp 2x">
-                    <!-- 270 x 272 без ретины, 540 x 544 c ретиной -->
-                    <img src="./img/blue-gemstone-pendant.jpg" srcset="./img/blue-gemstone-pendant@2x.jpg 2x" width="270" height="272" alt="jewerly set">
-                  </picture>
-                  <h3>Blue gemstone pendant</h3>
-                  <p>$ 105</p>
-                </li>
-                <li>
-                  <picture>
-                    <source type="image/webp" srcset="./img/boho-earrings.webp 1x, ./img/boho-earrings@2x.webp 2x">
-                    <!-- 270 x 272 без ретины, 540 x 544 c ретиной -->
-                    <img src="./img/boho-earrings.jpg" srcset="./img/boho-earrings@2x.jpg 2x" width="270" height="272" alt="jewerly set">
-                  </picture>
-                  <h3>Boho earrings</h3>
-                  <p>$ 75</p>
-                </li>
-                <li>
-                  <picture>
-                    <source type="image/webp" srcset="./img/bird-necklace.webp 1x, ./img/bird-necklace@2x.webp 2x">
-                    <!-- 270 x 272 без ретины, 540 x 544 c ретиной -->
-                    <img src="./img/bird-necklace.jpg" srcset="./img/double-pearl-earrings@2x.jpg 2x" width="270" height="272" alt="jewerly set">
-                  </picture>
-                  <h3>Gold bird necklace</h3>
-                  <p>$ 135</p>
-                </li>
-                <li>
-                  <picture>
-                    <source type="image/webp" srcset="./img/black-leather-choker-necklace.webp 1x, ./img/black-leather-choker-necklace@2x.webp 2x">
-                    <!-- 270 x 272 без ретины, 540 x 544 c ретиной -->
-                    <img src="./img/black-leather-choker-necklace.jpg" srcset="./img/black-leather-choker-necklace@2x.jpg 2x" width="270" height="272" alt="jewerly set">
-                  </picture>
-                  <h3>Black leather choker</h3>
-                  <p>$ 85</p>
-                </li>
-                <li>
-                  <picture>
-                    <source type="image/webp" srcset="./img/purple-gemstone-necklace.webp 1x, ./img/purple-gemstone-necklace@2x.webp 2x">
-                    <!-- 270 x 272 без ретины, 540 x 544 c ретиной -->
-                    <img src="./img/purple-gemstone-necklace.jpg" srcset="./img/purple-gemstone-necklace@2x.jpg 2x" width="270" height="272" alt="jewerly set">
-                  </picture>
-                  <h3>Necklace with amethyst</h3>
-                  <p>$ 145</p>
-                </li>
-                <li>
-                  <picture>
-                    <source type="image/webp" srcset="./img/elephant-earrings.webp 1x, ./img/elephant-earrings@2x.webp 2x">
-                    <!-- 270 x 272 без ретины, 540 x 544 c ретиной -->
-                    <img src="./img/elephant-earrings.jpg" srcset="./img/elephant-earrings@2x.jpg 2x" width="270" height="272" alt="jewerly set">
-                  </picture>
-                  <h3>Elephant earrings</h3>
-                  <p>$ 95</p>
-                </li>
-                <li>
-                  <picture>
-                    <source type="image/webp" srcset="./img/threader-necklace-closeup.webp 1x, ./img/threader-necklace-closeup@2x.webp 2x">
-                    <!-- 270 x 272 без ретины, 540 x 544 c ретиной -->
-                    <img src="./img/threader-necklace-closeup.jpg" srcset="./img/threader-necklace-closeup@2x.jpg 2x" width="270" height="272" alt="jewerly set">
-                  </picture>
-                  <h3>Threader necklace</h3>
-                  <p>$ 115</p>
-                </li>
-                <li>
-                  <picture>
-                    <source type="image/webp" srcset="./img/origami-crane-necklace.webp 1x, ./img/origami-crane-necklace@2x.webp 2x">
-                    <!-- 270 x 272 без ретины, 540 x 544 c ретиной -->
-                    <img src="./img/origami-crane-necklace.jpg" srcset="./img/origami-crane-necklace@2x.jpg 2x" width="270" height="272" alt="jewerly set">
-                  </picture>
-                  <h3>Origami crane necklace</h3>
-                  <p>$ 105</p>
-                </li>
-                <li>
-                  <picture>
-                    <source type="image/webp" srcset="./img/marble-earrings.webp 1x, ./img/marble-earrings@2x.webp 2x">
-                    <!-- 270 x 272 без ретины, 540 x 544 c ретиной -->
-                    <img src="./img/marble-earrings.jpg" srcset="./img/marble-earrings@2x.jpg 2x" width="270" height="272" alt="jewerly set">
-                  </picture>
-                  <h3>Marble earrings</h3>
-                  <p>$ 95</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="catalog__breadcrumbs">
-            <div class="catalog__slider">
-              <button type="button">Previous</button>
-              <div class="breadcrumbs breadcrumbs--catalog">
-                <button class="breadcrumbs__button breadcrumbs__button--active" type="button">1</button>
-                <button class="breadcrumbs__button" type="button">2</button>
-                <button class="breadcrumbs__button" type="button">3</button>
-                <button class="breadcrumbs__button" type="button">4</button>
-                <button class="breadcrumbs__button" type="button">5</button>
+              <div class="catalog__list product-cards">
+                <ul>
+                  <li>
+                    <picture>
+                      <source type="image/webp" srcset="./img/double-pearl-earrings.webp 1x, ./img/double-pearl-earrings@2x.webp 2x">
+                      <!-- 270 x 272 без ретины, 540 x 544 c ретиной -->
+                      <img src="./img/double-pearl-earrings.jpg" srcset="./img/double-pearl-earrings@2x.jpg 2x" width="270" height="272" alt="jewerly set">
+                    </picture>
+                    <h3>Double pearl earrings </h3>
+                    <p>$ 115</p>
+                  </li>
+                  <li>
+                    <picture>
+                      <source type="image/webp" srcset="./img/black-choker-gold-bead.webp 1x, ./img/black-choker-gold-bead@2x.webp 2x">
+                      <!-- 270 x 272 без ретины, 540 x 544 c ретиной -->
+                      <img src="./img/black-choker-gold-bead.jpg" srcset="./img/black-choker-gold-bead@2x.jpg 2x" width="270" height="272" alt="jewerly set">
+                    </picture>
+                    <h3>Choker with gold bead</h3>
+                    <p>$ 55</p>
+                  </li>
+                  <li>
+                    <picture>
+                      <source type="image/webp" srcset="./img/dainty-gold-necklace.webp 1x, ./img/dainty-gold-necklace@2x.webp 2x">
+                      <!-- 270 x 272 без ретины, 540 x 544 c ретиной -->
+                      <img src="./img/dainty-gold-necklace.jpg" srcset="./img/dainty-gold-necklace@2x.jpg 2x" width="270" height="272" alt="jewerly set">
+                    </picture>
+                    <h3>Gold layered necklace</h3>
+                    <p>$ 155</p>
+                  </li>
+                  <li>
+                    <picture>
+                      <source type="image/webp" srcset="./img/blue-gemstone-pendant.webp 1x, ./img/blue-gemstone-pendant@2x.webp 2x">
+                      <!-- 270 x 272 без ретины, 540 x 544 c ретиной -->
+                      <img src="./img/blue-gemstone-pendant.jpg" srcset="./img/blue-gemstone-pendant@2x.jpg 2x" width="270" height="272" alt="jewerly set">
+                    </picture>
+                    <h3>Blue gemstone pendant</h3>
+                    <p>$ 105</p>
+                  </li>
+                  <li>
+                    <picture>
+                      <source type="image/webp" srcset="./img/boho-earrings.webp 1x, ./img/boho-earrings@2x.webp 2x">
+                      <!-- 270 x 272 без ретины, 540 x 544 c ретиной -->
+                      <img src="./img/boho-earrings.jpg" srcset="./img/boho-earrings@2x.jpg 2x" width="270" height="272" alt="jewerly set">
+                    </picture>
+                    <h3>Boho earrings</h3>
+                    <p>$ 75</p>
+                  </li>
+                  <li>
+                    <picture>
+                      <source type="image/webp" srcset="./img/bird-necklace.webp 1x, ./img/bird-necklace@2x.webp 2x">
+                      <!-- 270 x 272 без ретины, 540 x 544 c ретиной -->
+                      <img src="./img/bird-necklace.jpg" srcset="./img/double-pearl-earrings@2x.jpg 2x" width="270" height="272" alt="jewerly set">
+                    </picture>
+                    <h3>Gold bird necklace</h3>
+                    <p>$ 135</p>
+                  </li>
+                  <li>
+                    <picture>
+                      <source type="image/webp" srcset="./img/black-leather-choker-necklace.webp 1x, ./img/black-leather-choker-necklace@2x.webp 2x">
+                      <!-- 270 x 272 без ретины, 540 x 544 c ретиной -->
+                      <img src="./img/black-leather-choker-necklace.jpg" srcset="./img/black-leather-choker-necklace@2x.jpg 2x" width="270" height="272" alt="jewerly set">
+                    </picture>
+                    <h3>Black leather choker</h3>
+                    <p>$ 85</p>
+                  </li>
+                  <li>
+                    <picture>
+                      <source type="image/webp" srcset="./img/purple-gemstone-necklace.webp 1x, ./img/purple-gemstone-necklace@2x.webp 2x">
+                      <!-- 270 x 272 без ретины, 540 x 544 c ретиной -->
+                      <img src="./img/purple-gemstone-necklace.jpg" srcset="./img/purple-gemstone-necklace@2x.jpg 2x" width="270" height="272" alt="jewerly set">
+                    </picture>
+                    <h3>Necklace with amethyst</h3>
+                    <p>$ 145</p>
+                  </li>
+                  <li>
+                    <picture>
+                      <source type="image/webp" srcset="./img/elephant-earrings.webp 1x, ./img/elephant-earrings@2x.webp 2x">
+                      <!-- 270 x 272 без ретины, 540 x 544 c ретиной -->
+                      <img src="./img/elephant-earrings.jpg" srcset="./img/elephant-earrings@2x.jpg 2x" width="270" height="272" alt="jewerly set">
+                    </picture>
+                    <h3>Elephant earrings</h3>
+                    <p>$ 95</p>
+                  </li>
+                  <li>
+                    <picture>
+                      <source type="image/webp" srcset="./img/threader-necklace-closeup.webp 1x, ./img/threader-necklace-closeup@2x.webp 2x">
+                      <!-- 270 x 272 без ретины, 540 x 544 c ретиной -->
+                      <img src="./img/threader-necklace-closeup.jpg" srcset="./img/threader-necklace-closeup@2x.jpg 2x" width="270" height="272" alt="jewerly set">
+                    </picture>
+                    <h3>Threader necklace</h3>
+                    <p>$ 115</p>
+                  </li>
+                  <li>
+                    <picture>
+                      <source type="image/webp" srcset="./img/origami-crane-necklace.webp 1x, ./img/origami-crane-necklace@2x.webp 2x">
+                      <!-- 270 x 272 без ретины, 540 x 544 c ретиной -->
+                      <img src="./img/origami-crane-necklace.jpg" srcset="./img/origami-crane-necklace@2x.jpg 2x" width="270" height="272" alt="jewerly set">
+                    </picture>
+                    <h3>Origami crane necklace</h3>
+                    <p>$ 105</p>
+                  </li>
+                  <li>
+                    <picture>
+                      <source type="image/webp" srcset="./img/marble-earrings.webp 1x, ./img/marble-earrings@2x.webp 2x">
+                      <!-- 270 x 272 без ретины, 540 x 544 c ретиной -->
+                      <img src="./img/marble-earrings.jpg" srcset="./img/marble-earrings@2x.jpg 2x" width="270" height="272" alt="jewerly set">
+                    </picture>
+                    <h3>Marble earrings</h3>
+                    <p>$ 95</p>
+                  </li>
+                </ul>
               </div>
-              <button type="button">Next</button>
             </div>
-          </div>
-        </section>
-      </main>
+            <div class="catalog__breadcrumbs">
+              <div class="catalog__slider">
+                <button type="button">Previous</button>
+                <div class="breadcrumbs breadcrumbs--catalog">
+                  <button class="breadcrumbs__button breadcrumbs__button--active" type="button">1</button>
+                  <button class="breadcrumbs__button" type="button">2</button>
+                  <button class="breadcrumbs__button" type="button">3</button>
+                  <button class="breadcrumbs__button" type="button">4</button>
+                  <button class="breadcrumbs__button" type="button">5</button>
+                </div>
+                <button type="button">Next</button>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
       <footer class="page-footer">
         <div class="page-footer__container container">
           <section class="page-footer__subscription">
