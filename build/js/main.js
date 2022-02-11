@@ -418,7 +418,7 @@
 
   filterButtons.forEach(function (array) {
     array.addEventListener('click', function () {
-      var panel = this.nextElementSibling;
+      var panel = array.nextElementSibling;
       var lastElement = array.lastElementChild;
 
       panel.classList.toggle('filter__accordion--active');
