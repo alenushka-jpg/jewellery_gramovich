@@ -342,17 +342,17 @@
     if (loginModal !== 'login-modal--open' && window.outerWidth >= 1023) {
       bodyVisible();
     }
-    // else {
-    //   bodyHidden();
-    // }
 
     closeLoginModal();
-    // bodyVisible();
   }
+
 
   function onCloseClickMobile() {
     closeLoginModal();
     // bodyHiddenMobile();
+    if (navigationPopup !== 'page-header__popup--open' && loginModal !== 'login-modal--open') {
+      bodyHidden();
+    }
   }
 
   for (var i = 0; i < loginButtons.length; i++) {
@@ -377,16 +377,16 @@
     header.classList.toggle('page-header--open');
   }
 
-  // function bodyHiddenMobile() {
-  //   if (body !== 'body') {
-  //     body.classList.toggle('body--hidden');
-  //   }
-  // }
+  function bodyHiddenMobile() {
+    if (body !== 'body') {
+      body.classList.toggle('body--hidden');
+    }
+  }
 
   function onClickToggle() {
     showNavigation();
     showHeader();
-    // bodyHiddenMobile();
+    bodyHiddenMobile();
   }
 
   burger.addEventListener('click', onClickToggle);
@@ -447,6 +447,7 @@
     setBlur(linksFooter);
     buttonFooter.setAttribute('tabindex', '-1');
     inputFooter.setAttribute('tabindex', '-1');
+
   }
 
   function closeFilter() {
@@ -461,13 +462,13 @@
 
   function onClickFilter() {
     showFilter();
-    // bodyHidden();
+    bodyHidden();
     showOverlay();
   }
 
   function onClickCloseFilter() {
     closeFilter();
-    // bodyVisible();
+    bodyVisible();
     hiddenShowOverlay();
   }
 
