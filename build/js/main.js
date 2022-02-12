@@ -11,6 +11,11 @@
   var burger = document.querySelector('.page-header__burger');
   var navigationPopup = document.querySelector('.page-header__popup');
 
+  var prevSlideButton = document.querySelector('.js-slider-prev');
+  var nextSlideButton = document.querySelector('.js-slider-next');
+  var slidesRack = document.querySelector('.js-rack');
+  var sliderPagination = document.querySelector('.js-slider-pagination');
+
   var filter = document.querySelector('.filter');
   var filterButton = document.querySelector('.filter__button');
   var filterClose = document.querySelector('.filter__button-close');
@@ -29,16 +34,16 @@
   var buttons = bodyMain.querySelectorAll('button');
   var labels = bodyMain.querySelectorAll('label');
 
+  var pageFooter = document.querySelector('.page-footer');
+  var linksFooter = pageFooter.querySelectorAll('a');
+  var buttonFooter = pageFooter.querySelector('button');
+  var inputFooter = pageFooter.querySelector('input');
+
   var breadcrumbs = document.querySelector('.catalog__slider');
 
   if (breadcrumbs) {
     var buttonsBread = breadcrumbs.querySelectorAll('button');
   }
-
-  var pageFooter = document.querySelector('.page-footer');
-  var linksFooter = pageFooter.querySelectorAll('a');
-  var buttonFooter = pageFooter.querySelector('button');
-  var inputFooter = pageFooter.querySelector('input');
 
   function setBlur(e) {
     e.forEach(function (v) {
@@ -53,11 +58,6 @@
   }
 
   // Слайдер
-  var prevSlideButton = document.querySelector('.js-slider-prev');
-  var nextSlideButton = document.querySelector('.js-slider-next');
-  var slidesRack = document.querySelector('.js-rack');
-  var sliderPagination = document.querySelector('.js-slider-pagination');
-
   var newInItems = [
     {width: '270', height: '284', href: '#', src: './img/purple-gemstone-necklace.jpg', srcset: './img/purple-gemstone-necklace.jpg 1x, ./img/purple-gemstone-necklace@2x.jpg 2x', webp: './img/purple-gemstone-necklace.webp 1x, ./img/purple-gemstone-necklace@2x.webp 2x', alt: 'Necklace with amethyst', title: 'Necklace with amethyst', price: '$ 145'},
     {width: '270', height: '284', href: '#', src: './img/layered-choker-necklace.jpg', srcset: './img/layered-choker-necklace.jpg 1x, ./img/layered-choker-necklace@2x.jpg 2x', webp: './img/layered-choker-necklace.webp 1x, ./img/layered-choker-necklace@2x.webp 2x', alt: 'Layered choker', title: 'Layered choker', price: '$ 115'},
@@ -341,17 +341,18 @@
   function onCloseClick() {
     if (loginModal !== 'login-modal--open' && window.outerWidth >= 1023) {
       bodyVisible();
-    } else {
-      bodyHidden();
     }
+    // else {
+    //   bodyHidden();
+    // }
 
     closeLoginModal();
-    bodyVisible();
+    // bodyVisible();
   }
 
   function onCloseClickMobile() {
     closeLoginModal();
-    bodyHiddenMobile();
+    // bodyHiddenMobile();
   }
 
   for (var i = 0; i < loginButtons.length; i++) {
@@ -376,16 +377,16 @@
     header.classList.toggle('page-header--open');
   }
 
-  function bodyHiddenMobile() {
-    if (body !== 'body') {
-      body.classList.toggle('body--hidden');
-    }
-  }
+  // function bodyHiddenMobile() {
+  //   if (body !== 'body') {
+  //     body.classList.toggle('body--hidden');
+  //   }
+  // }
 
   function onClickToggle() {
     showNavigation();
     showHeader();
-    bodyHiddenMobile();
+    // bodyHiddenMobile();
   }
 
   burger.addEventListener('click', onClickToggle);
@@ -460,13 +461,13 @@
 
   function onClickFilter() {
     showFilter();
-    bodyHidden();
+    // bodyHidden();
     showOverlay();
   }
 
   function onClickCloseFilter() {
     closeFilter();
-    bodyVisible();
+    // bodyVisible();
     hiddenShowOverlay();
   }
 
