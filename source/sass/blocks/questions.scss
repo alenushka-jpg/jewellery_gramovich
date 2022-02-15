@@ -30,6 +30,10 @@
   padding: 43px 50px 43px 43px;
   border: 1px solid $primary;
 
+  &:focus {
+    outline: 1px solid red;
+  }
+
   @media (max-width: $tablet-width) {
     padding-left: 49px;
   }

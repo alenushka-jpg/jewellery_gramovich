@@ -169,14 +169,10 @@
   white-space: nowrap;
 }
 
-.no-js .page-header__popup {
-  display: block;
-}
-
 .page-header__popup {
   display: none;
   background-color: $primary;
-  padding: 14px 45px 50px;
+  padding: 14px 45px 32px;
 
   .page-header__list--information a {
     color: rgba($basic-white, 0.75);
@@ -205,6 +201,14 @@
     top: 90px;
     padding-left: 15px;
     padding-right: 15px;
+  }
+}
+
+.no-js .page-header__popup {
+  display: block;
+
+  @media (max-width: $tablet-width) {
+    position: static;
   }
 }
 
