@@ -35,6 +35,11 @@
   var labels = bodyMain.querySelectorAll('label');
 
   var pageFooter = document.querySelector('.page-footer');
+  var pageFooterForm = document.querySelector('.page-footer__email');
+  var emailFooter = document.querySelector('.js-email-footer');
+  var submitSubscription = document.querySelector('.submit-subscription');
+  var subscriptionResult = document.querySelector('.page-footer__result');
+
   var linksFooter = pageFooter.querySelectorAll('a');
   var buttonFooter = pageFooter.querySelector('button');
   var inputFooter = pageFooter.querySelector('input');
@@ -346,7 +351,6 @@
     closeLoginModal();
   }
 
-
   function onCloseClickMobile() {
     closeLoginModal();
     // bodyHiddenMobile();
@@ -479,6 +483,44 @@
   if (filterClose) {
     filterClose.addEventListener('click', onClickCloseFilter);
   }
+
+  // function localStorageFooter(data) {
+  //   localStorage.setItem('email', data.subEmail);
+  // }
+
+  // function showSubsciptionResult() {
+  //   subscriptionResult.style.display = 'flex';
+  // }
+
+  // function validationFooter(subEmail) {
+  //   var valid = true;
+  //   var newLocal = subEmail.trim() === 0;
+
+  //   if (newLocal) {
+  //     valid = false;
+  //   } else {
+  //     submitSubscription.addEventListener('click', showSubsciptionResult);
+  //   }
+
+  //   return valid;
+  // }
+
+  // function localStorageData(data) {
+  //   localStorage.setItem('email', data.userEmail);
+  // }
+
+  // function onSubmitFormFooter(e) {
+  //   e.preventDefault();
+  //   var subEmail = emailFooter.value;
+
+  //   if (validationFooter(subEmail)) {
+  //     subscriptionResult.style.display = 'flex';
+  //   }
+  // }
+
+  // if (pageFooterForm) {
+  //   pageFooterForm.addEventListener('submit', onSubmitFormFooter);
+  // }
 
   // Закрывает модалки при нажатии esc
   window.addEventListener('keydown', function (e) {

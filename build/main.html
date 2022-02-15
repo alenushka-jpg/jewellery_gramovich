@@ -343,16 +343,17 @@
             <h3>The good stuff in your inbox</h3>
             <p>News and updates from CH.
               No spam, we promise.</p>
-            <div class="page-footer__email">
+            <form class="page-footer__email" action="https://echo.htmlacademy.ru/" method="post">
               <label for="email-sub" class="visually-hidden">Email</label>
-              <input type="email" placeholder="Your E-mail" id="email-sub" minlength="1" maxlength="100">
-              <button type="button">
+              <input class="js-email-footer" type="email" placeholder="Your E-mail" id="email-sub" minlength="1" maxlength="100">
+              <button class="submit-subscription" type="button">
                 <span>Sign Up</span>
                 <svg class="page-footer__arrow" width="30" height="13">
                   <use href="./img/sprite.svg#arrow"></use>
                 </svg>
               </button>
-            </div>
+              <div class="page-footer__result">You have subscribed to us! Thank you.</div>
+            </form>
           </section>
           <div class="page-footer__links">
             <ul class="page-footer__list page-footer__list--info">
