@@ -343,13 +343,7 @@
       bodyVisible();
     }
 
-
-    // else {
-    //   bodyHidden();
-    // }
-
     closeLoginModal();
-    // bodyVisible();
   }
 
 

@@ -83,13 +83,13 @@
 
 .page-footer input {
   display: block;
-  padding: 21px 70px 9px 3px;
+  padding: 21px 114px 9px 3px;
   width: 100%;
   font-family: "Poppins", "Courier New", "Courier", monospace;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
-  color: $dark-font;
+  color: $basic-white;
   border: none;
   border-bottom: 1px solid $basic-white;
   background-color: inherit;
@@ -115,6 +115,11 @@
   border: none;
   background-color: inherit;
   color: $basic-white;
+  cursor: pointer;
+
+  &:hover {
+    color: rgba($basic-white, 0.6);
+  }
 
   @media (max-width: $mobile-width) {
     padding-right: 45px;
