@@ -30,6 +30,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 430px;
+  height: 586px;
   background-color: $light-background;
   box-shadow: 0 5px 32px rgba($shadow, 0.24);
   z-index: 5;
@@ -40,6 +41,19 @@
 
   @media (max-width: $mobile-width) {
     width: 270px;
+    height: 470px;
+  }
+}
+
+.login-modal__window svg {
+  @media (max-width: $tablet-width) {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 14px;
+    height: 14px;
   }
 }
 
@@ -57,7 +71,7 @@
 .login-modal__window button[type="submit"] {
   display: block;
   padding: 22px 0;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   width: 100%;
   font-family: inherit;
   font-weight: 500;
@@ -71,8 +85,8 @@
 
 .login-modal__window button[name="close"] {
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 15px;
+  top: 17px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,10 +97,15 @@
   background-color: transparent;
   z-index: 10;
   cursor: pointer;
+
+  @media (max-width: $mobile-width) {
+    right: 9px;
+    top: 10px;
+  }
 }
 
 .login-modal__content {
-  padding: 60px 45px;
+  padding: 51px 45px;
 
   @media (max-width: $tablet-width) {
     padding-left: 51px;
@@ -94,22 +113,28 @@
   }
 
   @media (max-width: $mobile-width) {
-    padding: 45px 15px;
+    padding: 36px 15px;
   }
 }
 
 .login-modal__content h3 {
   margin: 0;
+  margin-bottom: 27px;
   font-family: "Cormorant Garamond", "Times New Roman", "Times", serif;
   font-weight: 700;
   font-size: 34px;
   line-height: 130%;
   text-align: center;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 22px;
+    font-size: 24px;
+  }
 }
 
 .login-modal__content a {
   position: absolute;
-  bottom: 214px;
+  bottom: 204px;
   right: 45px;
   text-decoration: none;
   font-weight: 500;
@@ -118,18 +143,26 @@
   color: $light-font;
 
   @media (max-width: $mobile-width) {
-    bottom: 202px;
+    bottom: 178px;
     right: 14px;
   }
 }
 
 .login-modal__input:first-child {
   margin-bottom: 33px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 27px;
+  }
 }
 
 
 .login-modal__input:nth-child(3n-1) {
   margin-bottom: 68px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 58px;
+  }
 }
 
 .login-modal__input input {

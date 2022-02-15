@@ -72,7 +72,7 @@
 }
 
 .page-header__logo svg {
-  stroke: $primary;
+  fill: $primary;
 
   @media (max-width: $mobile-width) {
     width: 52px;
@@ -143,6 +143,7 @@
   grid-template-columns: repeat(5, min-content);
   column-gap: 35px;
   min-width: 493px;
+  margin: 0;
   margin-left: 13px;
 }
 
