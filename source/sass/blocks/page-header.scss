@@ -21,7 +21,6 @@
 .page-header__top {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 30px 100px 13px 98px;
   border-bottom: 1px solid $light-bottom;
 
@@ -61,13 +60,14 @@
 
 .page-header__search {
   position: relative;
+  padding-top: 12px;
   padding-left: 29px;
   margin-bottom: 29px;
 
   svg {
     position: absolute;
-    left: 0;
-    top: 3px;
+    left: -1px;
+    top: 14px;
   }
 }
 
