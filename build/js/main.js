@@ -488,39 +488,39 @@
   //   localStorage.setItem('email', data.subEmail);
   // }
 
-  function showSubsciptionResult() {
-    subscriptionResult.style.display = 'flex';
-  }
+  // function showSubsciptionResult() {
+  //   subscriptionResult.style.display = 'flex';
+  // }
 
-  function validationFooter(subEmail) {
-    var valid = true;
-    var newLocal = subEmail.trim() === 0;
+  // function validationFooter(subEmail) {
+  //   var valid = true;
+  //   var newLocal = subEmail.trim() === 0;
 
-    if (newLocal) {
-      valid = false;
-    } else {
-      submitSubscription.addEventListener('click', showSubsciptionResult);
-    }
+  //   if (newLocal) {
+  //     valid = false;
+  //   } else {
+  //     submitSubscription.addEventListener('click', showSubsciptionResult);
+  //   }
 
-    return valid;
-  }
+  //   return valid;
+  // }
 
-  function localStorageData(data) {
-    localStorage.setItem('email', data.userEmail);
-  }
+  // function localStorageData(data) {
+  //   localStorage.setItem('email', data.userEmail);
+  // }
 
-  function onSubmitFormFooter(e) {
-    e.preventDefault();
-    var subEmail = emailFooter.value;
+  // function onSubmitFormFooter(e) {
+  //   e.preventDefault();
+  //   var subEmail = emailFooter.value;
 
-    if (validationFooter(subEmail)) {
-      subscriptionResult.style.display = 'flex';
-    }
-  }
+  //   if (validationFooter(subEmail)) {
+  //     subscriptionResult.style.display = 'flex';
+  //   }
+  // }
 
-  if (pageFooterForm) {
-    pageFooterForm.addEventListener('submit', onSubmitFormFooter);
-  }
+  // if (pageFooterForm) {
+  //   pageFooterForm.addEventListener('submit', onSubmitFormFooter);
+  // }
 
   // Закрывает модалки при нажатии esc
   window.addEventListener('keydown', function (e) {
