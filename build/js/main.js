@@ -34,11 +34,6 @@
   var buttons = bodyMain.querySelectorAll('button');
   var labels = bodyMain.querySelectorAll('label');
 
-  var pageFooter = document.querySelector('.page-footer');
-  var pageFooterForm = document.querySelector('.page-footer__email');
-  var emailFooter = document.querySelector('.js-email-footer');
-  var submitSubscription = document.querySelector('.submit-subscription');
-  var subscriptionResult = document.querySelector('.page-footer__result');
 
   var linksFooter = pageFooter.querySelectorAll('a');
   var buttonFooter = pageFooter.querySelector('button');
@@ -484,43 +479,40 @@
     filterClose.addEventListener('click', onClickCloseFilter);
   }
 
-  // function localStorageFooter(data) {
-  //   localStorage.setItem('email', data.subEmail);
-  // }
+  var pageFooter = document.querySelector('.page-footer');
+  var pageFooterForm = document.querySelector('.page-footer__email');
+  var emailFooter = document.querySelector('.js-email-footer');
+  var submitSubscription = document.querySelector('.submit-subscription');
+  var subscriptionResult = document.querySelector('.page-footer__result');
 
-  // function showSubsciptionResult() {
-  //   subscriptionResult.style.display = 'flex';
-  // }
+  function showSubsciptionResult() {
+    subscriptionResult.style.display = 'flex';
+  }
 
   // function validationFooter(subEmail) {
   //   var valid = true;
-  //   var newLocal = subEmail.trim() === 0;
 
-  //   if (newLocal) {
+  //   if (subEmail.trim() === 0) {
   //     valid = false;
   //   } else {
-  //     submitSubscription.addEventListener('click', showSubsciptionResult);
+
   //   }
 
   //   return valid;
   // }
 
-  // function localStorageData(data) {
-  //   localStorage.setItem('email', data.userEmail);
-  // }
+  submitSubscription.addEventListener('click', showSubsciptionResult);
 
   // function onSubmitFormFooter(e) {
   //   e.preventDefault();
-  //   var subEmail = emailFooter.value;
+  //   var subscriptionEmail = emailFooter.value;
 
-  //   if (validationFooter(subEmail)) {
+  //   if (validationFooter(subscriptionEmail)) {
   //     subscriptionResult.style.display = 'flex';
   //   }
   // }
 
-  // if (pageFooterForm) {
-  //   pageFooterForm.addEventListener('submit', onSubmitFormFooter);
-  // }
+  // submitSubscription.addEventListener('submit', onSubmitFormFooter);
 
   // Закрывает модалки при нажатии esc
   window.addEventListener('keydown', function (e) {
