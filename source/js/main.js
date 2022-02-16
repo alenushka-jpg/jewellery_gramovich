@@ -115,35 +115,6 @@
     var currentMode = window.outerWidth <= 1023 ? 'mobile' : 'desktop';
     createPagination();
 
-    var makeAllButCurrentSlideInert = function makeAllButCurrentSlideInert() {
-      var currentSlideEl = childNodes.slidesRack;
-
-      childNodes.slidesRack.each((slide) => {
-        if (slide !== currentSlideEl) {
-          slide.setAttribute("inert", "");
-        } else {
-          slide.removeAttribute("inert");
-        }
-      });
-    };
-
-    var swiperOptions = {
-      // …
-      on: {
-        init() {
-          makeAllButCurrentSlideInert.call(childNodes);
-        },
-        slideChange() {
-          makeAllButCurrentSlideInert.call(childNodes);
-        },
-        slideChangeTransitionEnd() {
-          var currentSlideEl = childNodes.slidesRack;
-          currentSlideEl.setAttribute("tabindex", "-1");
-          currentSlideEl.focus();
-        },
-      },
-    };
-
     function scrollNext() {
       scrollToPage(currentPage + 1);
     }
