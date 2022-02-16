@@ -34,7 +34,7 @@
   var buttons = bodyMain.querySelectorAll('button');
   var labels = bodyMain.querySelectorAll('label');
 
-
+  var pageFooter = document.querySelector('.page-footer');
   var linksFooter = pageFooter.querySelectorAll('a');
   var buttonFooter = pageFooter.querySelector('button');
   var inputFooter = pageFooter.querySelector('input');
@@ -73,6 +73,40 @@
     {width: '270', height: '284', href: '#', src: './img/galaxy-earrings.jpg', srcset: './img/galaxy-earrings.jpg 1x, ./img/galaxy-earrings@2x.jpg 2x', webp: './img/galaxy-earrings.webp 1x, ./img/galaxy-earrings@2x.webp 2x', alt: 'Galaxy earrings', title: 'Galaxy earrings', price: '$ 95'},
   ];
 
+  function createListEl(href, webp, src, srcset, title, price, width, height, alt) {
+    var liEl = document.createElement('li');
+    var linkEl = document.createElement('a');
+    var pictureEl = document.createElement('picture');
+    var imgEl = document.createElement('img');
+    var sourceElWebp = document.createElement('source');
+    var sourceElJpeg = document.createElement('source');
+    var titleEl = document.createElement('h3');
+    var priceEl = document.createElement('p');
+
+    linkEl.setAttribute('href', href);
+
+    sourceElWebp.setAttribute('srcset', webp);
+    sourceElWebp.setAttribute('type', 'image/webp');
+    sourceElJpeg.setAttribute('srcset', srcset);
+    sourceElJpeg.setAttribute('type', 'image/lpeg');
+
+    imgEl.setAttribute('src', src);
+    imgEl.setAttribute('alt', alt);
+    imgEl.setAttribute('width', width);
+    imgEl.setAttribute('height', height);
+    titleEl.textContent = title;
+    priceEl.textContent = price;
+
+    liEl.appendChild(linkEl);
+    linkEl.appendChild(pictureEl);
+    linkEl.appendChild(titleEl);
+    linkEl.appendChild(priceEl);
+    pictureEl.appendChild(sourceElWebp);
+    pictureEl.appendChild(sourceElJpeg);
+    pictureEl.appendChild(imgEl);
+    return liEl;
+  }
+
   function createSlider() {
     var currentPage = 1;
     var ITEM_PER_SLIDE_DESKTOP = 4;
@@ -80,6 +114,35 @@
     var pages = [];
     var currentMode = window.outerWidth <= 1023 ? 'mobile' : 'desktop';
     createPagination();
+
+    var makeAllButCurrentSlideInert = function makeAllButCurrentSlideInert() {
+      var currentSlideEl = childNodes.slidesRack;
+
+      childNodes.slidesRack.each((slide) => {
+        if (slide !== currentSlideEl) {
+          slide.setAttribute("inert", "");
+        } else {
+          slide.removeAttribute("inert");
+        }
+      });
+    };
+
+    var swiperOptions = {
+      // …
+      on: {
+        init() {
+          makeAllButCurrentSlideInert.call(childNodes);
+        },
+        slideChange() {
+          makeAllButCurrentSlideInert.call(childNodes);
+        },
+        slideChangeTransitionEnd() {
+          var currentSlideEl = childNodes.slidesRack;
+          currentSlideEl.setAttribute("tabindex", "-1");
+          currentSlideEl.focus();
+        },
+      },
+    };
 
     function scrollNext() {
       scrollToPage(currentPage + 1);
@@ -109,6 +172,7 @@
     nextSlideButton.addEventListener('click', function () {
       scrollNext();
       disableSliderButton();
+      swiperOptions;
     });
 
 
@@ -182,6 +246,7 @@
     }
 
     function onTouchEnd(e) {
+
       if (startTouchEventX === null) {
         return;
       }
@@ -224,40 +289,6 @@
 
   if (slidesRack) {
     renderSlides(newInItems);
-  }
-
-  function createListEl(href, webp, src, srcset, title, price, width, height, alt) {
-    var liEl = document.createElement('li');
-    var linkEl = document.createElement('a');
-    var pictureEl = document.createElement('picture');
-    var imgEl = document.createElement('img');
-    var sourceElWebp = document.createElement('source');
-    var sourceElJpeg = document.createElement('source');
-    var titleEl = document.createElement('h3');
-    var priceEl = document.createElement('p');
-
-    linkEl.setAttribute('href', href);
-
-    sourceElWebp.setAttribute('srcset', webp);
-    sourceElWebp.setAttribute('type', 'image/webp');
-    sourceElJpeg.setAttribute('srcset', srcset);
-    sourceElJpeg.setAttribute('type', 'image/lpeg');
-
-    imgEl.setAttribute('src', src);
-    imgEl.setAttribute('alt', alt);
-    imgEl.setAttribute('width', width);
-    imgEl.setAttribute('height', height);
-    titleEl.textContent = title;
-    priceEl.textContent = price;
-
-    liEl.appendChild(linkEl);
-    linkEl.appendChild(pictureEl);
-    linkEl.appendChild(titleEl);
-    linkEl.appendChild(priceEl);
-    pictureEl.appendChild(sourceElWebp);
-    pictureEl.appendChild(sourceElJpeg);
-    pictureEl.appendChild(imgEl);
-    return liEl;
   }
 
   if (prevSlideButton && nextSlideButton && slidesRack && sliderPagination) {
@@ -478,41 +509,6 @@
   if (filterClose) {
     filterClose.addEventListener('click', onClickCloseFilter);
   }
-
-  var pageFooter = document.querySelector('.page-footer');
-  var pageFooterForm = document.querySelector('.page-footer__email');
-  var emailFooter = document.querySelector('.js-email-footer');
-  var submitSubscription = document.querySelector('.submit-subscription');
-  var subscriptionResult = document.querySelector('.page-footer__result');
-
-  function showSubsciptionResult() {
-    subscriptionResult.style.display = 'flex';
-  }
-
-  // function validationFooter(subEmail) {
-  //   var valid = true;
-
-  //   if (subEmail.trim() === 0) {
-  //     valid = false;
-  //   } else {
-
-  //   }
-
-  //   return valid;
-  // }
-
-  submitSubscription.addEventListener('click', showSubsciptionResult);
-
-  // function onSubmitFormFooter(e) {
-  //   e.preventDefault();
-  //   var subscriptionEmail = emailFooter.value;
-
-  //   if (validationFooter(subscriptionEmail)) {
-  //     subscriptionResult.style.display = 'flex';
-  //   }
-  // }
-
-  // submitSubscription.addEventListener('submit', onSubmitFormFooter);
 
   // Закрывает модалки при нажатии esc
   window.addEventListener('keydown', function (e) {
