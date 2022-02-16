@@ -85,6 +85,8 @@
 
     linkEl.setAttribute('href', href);
 
+    linkEl.setAttribute('tabindex', '-1');
+
     sourceElWebp.setAttribute('srcset', webp);
     sourceElWebp.setAttribute('type', 'image/webp');
     sourceElJpeg.setAttribute('srcset', srcset);
@@ -115,41 +117,23 @@
     var currentMode = window.outerWidth <= 1023 ? 'mobile' : 'desktop';
     createPagination();
 
-    var makeAllButCurrentSlideInert = function makeAllButCurrentSlideInert() {
-      var currentSlideEl = childNodes.slidesRack;
-
-      childNodes.slidesRack.each((slide) => {
-        if (slide !== currentSlideEl) {
-          slide.setAttribute("inert", "");
-        } else {
-          slide.removeAttribute("inert");
-        }
-      });
-    };
-
-    var swiperOptions = {
-      // …
-      on: {
-        init() {
-          makeAllButCurrentSlideInert.call(childNodes);
-        },
-        slideChange() {
-          makeAllButCurrentSlideInert.call(childNodes);
-        },
-        slideChangeTransitionEnd() {
-          var currentSlideEl = childNodes.slidesRack;
-          currentSlideEl.setAttribute("tabindex", "-1");
-          currentSlideEl.focus();
-        },
-      },
-    };
-
     function scrollNext() {
       scrollToPage(currentPage + 1);
     }
 
     function scrollPrev() {
       scrollToPage(currentPage - 1);
+    }
+
+    function addCardFocus() {
+      var elementsLink =  document.querySelectorAll('.js-rack > li > a');
+
+      elementsLink.forEach(function () {
+        for (var i = 1; i <= elementsLink[3]; i++) {
+          elem = elementsLink[i - 1];
+          elem.removeAttribute('tabindex');
+        }
+      });
     }
 
     function scrollToPage(pageNum) {
@@ -172,7 +156,7 @@
     nextSlideButton.addEventListener('click', function () {
       scrollNext();
       disableSliderButton();
-      swiperOptions;
+      addCardFocus();
     });
 
 
