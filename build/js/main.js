@@ -123,17 +123,17 @@
     function scrollPrev() {
       scrollToPage(currentPage - 1);
     }
+    // var slidesRack = document.querySelector('.js-rack');
+    var elementsLinks = slidesRack.querySelectorAll('a');
 
-    function addFocusElements() {
-      var viewportElement = slidesRack.getBoundingClientRect();
-      var viewportLinks = viewportElement.querySelectorAll('a');
+    var breadcrumbsButtons = document.querySelectorAll('.js-breadcrumbs-button');
 
-      viewportLinks.forEach(function () {
-        viewportLinks.removeAttribute('tabindex');
-      });
+    if (breadcrumbsButtons !== 'active') {
+      elementsLinks[0].removeAttribute('tabindex');
+      elementsLinks[1].removeAttribute('tabindex');
+      elementsLinks[2].removeAttribute('tabindex');
+      elementsLinks[3].removeAttribute('tabindex');
     }
-
-    addFocusElements();
 
     function scrollToPage(pageNum) {
       if (pageNum < 1 || pageNum > pages.length) {
