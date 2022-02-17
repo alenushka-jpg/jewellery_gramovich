@@ -84,7 +84,6 @@
     var priceEl = document.createElement('p');
 
     linkEl.setAttribute('href', href);
-
     linkEl.setAttribute('tabindex', '-1');
 
     sourceElWebp.setAttribute('srcset', webp);
@@ -125,16 +124,16 @@
       scrollToPage(currentPage - 1);
     }
 
-    function addCardFocus() {
-      var elementsLink =  document.querySelectorAll('.js-rack > li > a');
+    function addFocusElements() {
+      var viewportElement = slidesRack.getBoundingClientRect();
+      var viewportLinks = viewportElement.querySelectorAll('a');
 
-      elementsLink.forEach(function () {
-        for (var i = 1; i <= elementsLink[3]; i++) {
-          elem = elementsLink[i - 1];
-          elem.removeAttribute('tabindex');
-        }
+      viewportLinks.forEach(function () {
+        viewportLinks.removeAttribute('tabindex');
       });
     }
+
+    addFocusElements();
 
     function scrollToPage(pageNum) {
       if (pageNum < 1 || pageNum > pages.length) {
@@ -156,7 +155,6 @@
     nextSlideButton.addEventListener('click', function () {
       scrollNext();
       disableSliderButton();
-      addCardFocus();
     });
 
 

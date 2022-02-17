@@ -123,6 +123,10 @@
     margin-left: 0;
   }
 
+  &:focus-visible {
+    outline: -webkit-focus-ring-color auto 1px;
+  }
+
   @media (max-width: 1290px) {
     width: 206px;
   }
@@ -168,6 +172,10 @@
 .new-jewelery__catalog a {
   display: block;
   text-decoration: none;
+
+  &:focus-visible {
+    outline: -webkit-focus-ring-color auto 1px;
+  }
 }
 
 .new-jewelery__catalog h3 {
