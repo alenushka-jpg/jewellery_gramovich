@@ -1,43 +1,35 @@
-'use strict';
-
-(function () {
-  var body = document.querySelector('.body');
-  var loginButtons = document.querySelectorAll('.js-open-login');
-  var loginModal = document.querySelector('.login-modal');
-  var closeLogin = document.querySelector('.js-close-login');
-  var name = document.querySelector('[name=email-name]');
-  var overlay = document.querySelectorAll('.overlay');
-  var header = document.querySelector('.page-header');
-  var burger = document.querySelector('.page-header__burger');
-  var navigationPopup = document.querySelector('.page-header__popup');
-
-  var filter = document.querySelector('.filter');
-  var filterButton = document.querySelector('.filter__button');
-  var filterClose = document.querySelector('.filter__button-close');
-  var filterOverlay = document.querySelector('.filter__overlay');
-  var questionsButtons = document.querySelectorAll('.js-questions-button');
-  var filterButtons = document.querySelectorAll('.filter__accordion-button');
-
-  var emailLogin = document.querySelector('.js-email-login');
-  var passwordLogin = document.querySelector('.js-email-password');
-  var resultModal = document.querySelector('.js-result-modal');
-  var submitbutton = document.querySelector('.js-login-submit');
-
-  var bodyMain = document.querySelector('.body__main');
-  var links = bodyMain.querySelectorAll('a');
-  var inputs = bodyMain.querySelectorAll('input');
-  var buttons = bodyMain.querySelectorAll('button');
-  var labels = bodyMain.querySelectorAll('label');
-
-  var pageFooter = document.querySelector('.page-footer');
-  var linksFooter = pageFooter.querySelectorAll('a');
-  var buttonFooter = pageFooter.querySelector('button');
-  var inputFooter = pageFooter.querySelector('input');
-
-  var breadcrumbs = document.querySelector('.catalog__slider');
+const body = document.querySelector('.body');
+const loginButtons = document.querySelectorAll('.js-open-login');
+const loginModal = document.querySelector('.login-modal');
+const closeLogin = document.querySelector('.js-close-login');
+const name = document.querySelector('[name=email-name]');
+const overlay = document.querySelectorAll('.overlay');
+const header = document.querySelector('.page-header');
+const burger = document.querySelector('.page-header__burger');
+const navigationPopup = document.querySelector('.page-header__popup');
+const filter = document.querySelector('.filter');
+const filterButton = document.querySelector('.filter__button');
+const filterClose = document.querySelector('.filter__button-close');
+const filterOverlay = document.querySelector('.filter__overlay');
+const questionsButtons = document.querySelectorAll('.js-questions-button');
+const filterButtons = document.querySelectorAll('.filter__accordion-button');
+const emailLogin = document.querySelector('.js-email-login');
+const passwordLogin = document.querySelector('.js-email-password');
+const resultModal = document.querySelector('.js-result-modal');
+const submitbutton = document.querySelector('.js-login-submit');
+const bodyMain = document.querySelector('.body__main');
+const links = bodyMain.querySelectorAll('a');
+const inputs = bodyMain.querySelectorAll('input');
+const buttons = bodyMain.querySelectorAll('button');
+const labels = bodyMain.querySelectorAll('label');
+const pageFooter = document.querySelector('.page-footer');
+const linksFooter = pageFooter.querySelectorAll('a');
+const buttonFooter = pageFooter.querySelector('button');
+const inputFooter = pageFooter.querySelector('input');
+const breadcrumbs = document.querySelector('.catalog__slider');
 
   if (breadcrumbs) {
-    var buttonsBread = breadcrumbs.querySelectorAll('button');
+    const buttonsBread = breadcrumbs.querySelectorAll('button');
   }
 
   function setBlur(e) {
@@ -80,8 +72,8 @@
   }
 
   function validation(email, password) {
-    var valid = true;
-    var newLocal = email.trim() === 0 || password === true;
+    const valid = true;
+    const newLocal = email.trim() === 0 || password === true;
 
     if (newLocal) {
       valid = false;
@@ -102,8 +94,8 @@
 
   function onSubmitModalForm(e) {
     e.preventDefault();
-    var userEmail = emailLogin.value;
-    var userPassword = passwordLogin.value;
+    const userEmail = emailLogin.value;
+    const userPassword = passwordLogin.value;
 
     if (validation(userEmail, userPassword)) {
       resultModal.style.display = 'flex';
@@ -142,8 +134,8 @@
     }
   }
 
-  for (var i = 0; i < loginButtons.length; i++) {
-    var element = loginButtons[i];
+  for (const i = 0; i < loginButtons.length; i++) {
+    const element = loginButtons[i];
 
     element.addEventListener('click', function () {
       onOpenClick();
@@ -206,8 +198,8 @@
 
   filterButtons.forEach(function (array) {
     array.addEventListener('click', function () {
-      var panel = array.nextElementSibling;
-      var lastElement = array.lastElementChild;
+      const panel = array.nextElementSibling;
+      const lastElement = array.lastElementChild;
 
       panel.classList.toggle('filter__accordion--active');
       lastElement.classList.toggle('filter__svg--active');
@@ -273,4 +265,27 @@
       onClickCloseFilter();
     }
   });
-})();
+
+  const catalogSwiper = document.querySelector('.new-jewelery__catalog');
+  const breakpoint = window.matchMedia('(max-width: 768px)');
+  let swiper;
+
+  const initSwiper = () => {
+    if (swiper) {
+      swiper.destroy(true, true);
+    }
+
+    swiper = new Swiper(serviceSwiper, {
+      loop: true,
+      slidesPerView: 'auto',
+
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+        renderFraction: function (currentClass, totalClass) {
+          return '<span class="' + currentClass + '"></span>' +
+          '<span class="' + totalClass + '"></span>';
+        },
+      },
+    });
+  };
