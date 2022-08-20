@@ -32,239 +32,239 @@ var breadcrumbs = document.querySelector('.catalog__slider');
     var buttonsBread = breadcrumbs.querySelectorAll('button');
   }
 
-  // function setBlur(e) {
-  //   e.forEach(function (v) {
-  //     v.setAttribute('tabindex', '-1');
-  //   });
-  // }
+  function setBlur(e) {
+    e.forEach(function (v) {
+      v.setAttribute('tabindex', '-1');
+    });
+  }
 
-  // function removeBlur(e) {
-  //   e.forEach(function (v) {
-  //     v.removeAttribute('tabindex');
-  //   });
-  // }
+  function removeBlur(e) {
+    e.forEach(function (v) {
+      v.removeAttribute('tabindex');
+    });
+  }
 
-  // // Открывает модальное окно логин
+  // Открывает модальное окно логин
 
-  // function showLoginModal() {
-  //   loginModal.classList.add('login-modal--open');
-  //   name.focus();
-  //   setBlur(links);
-  //   setBlur(inputs);
-  //   setBlur(buttons);
-  //   setBlur(labels);
-  // }
+  function showLoginModal() {
+    loginModal.classList.add('login-modal--open');
+    name.focus();
+    setBlur(links);
+    setBlur(inputs);
+    setBlur(buttons);
+    setBlur(labels);
+  }
 
-  // function closeLoginModal() {
-  //   loginModal.classList.remove('login-modal--open');
-  //   removeBlur(links);
-  //   removeBlur(inputs);
-  //   removeBlur(buttons);
-  //   removeBlur(labels);
-  // }
+  function closeLoginModal() {
+    loginModal.classList.remove('login-modal--open');
+    removeBlur(links);
+    removeBlur(inputs);
+    removeBlur(buttons);
+    removeBlur(labels);
+  }
 
-  // function onOpenClick() {
-  //   showLoginModal();
+  function onOpenClick() {
+    showLoginModal();
 
-  //   if (loginModal !== 'login-modal--open' && window.outerWidth >= 1023) {
-  //     bodyHidden();
-  //   }
-  // }
+    if (loginModal !== 'login-modal--open' && window.outerWidth >= 1023) {
+      bodyHidden();
+    }
+  }
 
-  // function validation(email, password) {
-  //   var valid = true;
-  //   var newLocal = email.trim() === 0 || password === true;
+  function validation(email, password) {
+    var valid = true;
+    var newLocal = email.trim() === 0 || password === true;
 
-  //   if (newLocal) {
-  //     valid = false;
-  //   } else {
-  //     submitbutton.addEventListener('click', showQuestionsResult);
-  //   }
+    if (newLocal) {
+      valid = false;
+    } else {
+      submitbutton.addEventListener('click', showQuestionsResult);
+    }
 
-  //   return valid;
-  // }
+    return valid;
+  }
 
-  // function showQuestionsResult() {
-  //   resultModal.style.display = 'flex';
-  // }
+  function showQuestionsResult() {
+    resultModal.style.display = 'flex';
+  }
 
-  // function localStorageData(data) {
-  //   localStorage.setItem('email', data.userEmail);
-  // }
+  function localStorageData(data) {
+    localStorage.setItem('email', data.userEmail);
+  }
 
-  // function onSubmitModalForm(e) {
-  //   e.preventDefault();
-  //   var userEmail = emailLogin.value;
-  //   var userPassword = passwordLogin.value;
+  function onSubmitModalForm(e) {
+    e.preventDefault();
+    var userEmail = emailLogin.value;
+    var userPassword = passwordLogin.value;
 
-  //   if (validation(userEmail, userPassword)) {
-  //     resultModal.style.display = 'flex';
+    if (validation(userEmail, userPassword)) {
+      resultModal.style.display = 'flex';
 
-  //     localStorageData({
-  //       userEmail: userEmail
-  //     });
-  //   }
-  // }
+      localStorageData({
+        userEmail: userEmail
+      });
+    }
+  }
 
-  // if (loginModal) {
-  //   loginModal.addEventListener('submit', onSubmitModalForm);
-  // }
+  if (loginModal) {
+    loginModal.addEventListener('submit', onSubmitModalForm);
+  }
 
-  // function bodyHidden() {
-  //   body.classList.add('body--hidden');
-  // }
+  function bodyHidden() {
+    body.classList.add('body--hidden');
+  }
 
-  // function bodyVisible() {
-  //   body.classList.remove('body--hidden');
-  // }
+  function bodyVisible() {
+    body.classList.remove('body--hidden');
+  }
 
-  // function onCloseClick() {
-  //   if (loginModal !== 'login-modal--open' && window.outerWidth >= 1023) {
-  //     bodyVisible();
-  //   }
+  function onCloseClick() {
+    if (loginModal !== 'login-modal--open' && window.outerWidth >= 1023) {
+      bodyVisible();
+    }
 
-  //   closeLoginModal();
-  // }
+    closeLoginModal();
+  }
 
-  // function onCloseClickMobile() {
-  //   closeLoginModal();
-  //   // bodyHiddenMobile();
-  //   if (navigationPopup !== 'page-header__popup--open' && loginModal !== 'login-modal--open') {
-  //     bodyHidden();
-  //   }
-  // }
+  function onCloseClickMobile() {
+    closeLoginModal();
+    // bodyHiddenMobile();
+    if (navigationPopup !== 'page-header__popup--open' && loginModal !== 'login-modal--open') {
+      bodyHidden();
+    }
+  }
 
-  // for (var i = 0; i < loginButtons.length; i++){
-  //   var element = loginButtons[i];
+  for (var i = 0; i < loginButtons.length; i++){
+    var element = loginButtons[i];
 
-  //   element.addEventListener('click', function () {
-  //     onOpenClick();
-  //   });
-  // }
+    element.addEventListener('click', function () {
+      onOpenClick();
+    });
+  }
 
-  // if (closeLogin) {
-  //   closeLogin.addEventListener('click', onCloseClick);
-  // }
+  if (closeLogin) {
+    closeLogin.addEventListener('click', onCloseClick);
+  }
 
-  // // Открывает выпадающее меню
+  // Открывает выпадающее меню
 
-  // function showNavigation() {
-  //   navigationPopup.classList.toggle('page-header__popup--open');
-  // }
+  function showNavigation() {
+    navigationPopup.classList.toggle('page-header__popup--open');
+  }
 
-  // function showHeader() {
-  //   header.classList.toggle('page-header--open');
-  // }
+  function showHeader() {
+    header.classList.toggle('page-header--open');
+  }
 
-  // function bodyHiddenMobile() {
-  //   if (body !== 'body') {
-  //     body.classList.toggle('body--hidden');
-  //   }
-  // }
+  function bodyHiddenMobile() {
+    if (body !== 'body') {
+      body.classList.toggle('body--hidden');
+    }
+  }
 
-  // function onClickToggle() {
-  //   showNavigation();
-  //   showHeader();
-  //   bodyHiddenMobile();
-  // }
+  function onClickToggle() {
+    showNavigation();
+    showHeader();
+    bodyHiddenMobile();
+  }
 
-  // burger.addEventListener('click', onClickToggle);
+  burger.addEventListener('click', onClickToggle);
 
-  // // Закрывает модалки при нажатии esc
-  // window.addEventListener('keydown', function (event) {
-  //   if (event.key === 'Escape') {
-  //     onCloseClick();
-  //   }
-  // });
+  // Закрывает модалки при нажатии esc
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      onCloseClick();
+    }
+  });
 
-  // // Закрывает модалки при нажатии на overlay
-  // overlay.forEach(function (v) {
-  //   v.addEventListener('click', function () {
-  //     onCloseClickMobile();
-  //     onCloseClick();
-  //     onClickCloseFilter();
-  //   });
-  // });
+  // Закрывает модалки при нажатии на overlay
+  overlay.forEach(function (v) {
+    v.addEventListener('click', function () {
+      onCloseClickMobile();
+      onCloseClick();
+      onClickCloseFilter();
+    });
+  });
 
-  // // Аккордеон вопросы
+  // Аккордеон вопросы
 
-  // questionsButtons.forEach(function (item) {
-  //   item.addEventListener('click', function () {
-  //     item.parentNode.classList.toggle('questions__item--open');
-  //   });
-  // });
+  questionsButtons.forEach(function (item) {
+    item.addEventListener('click', function () {
+      item.parentNode.classList.toggle('questions__item--open');
+    });
+  });
 
-  // // Аккордеон фильтр
+  // Аккордеон фильтр
 
-  // filterButtons.forEach(function (array) {
-  //   array.addEventListener('click', function () {
-  //     var panel = array.nextElementSibling;
-  //     var lastElement = array.lastElementChild;
+  filterButtons.forEach(function (array) {
+    array.addEventListener('click', function () {
+      var panel = array.nextElementSibling;
+      var lastElement = array.lastElementChild;
 
-  //     panel.classList.toggle('filter__accordion--active');
-  //     lastElement.classList.toggle('filter__svg--active');
-  //   });
-  // });
+      panel.classList.toggle('filter__accordion--active');
+      lastElement.classList.toggle('filter__svg--active');
+    });
+  });
 
-  // // Открывает фильтр
+  // Открывает фильтр
 
-  // function showOverlay() {
-  //   if (filter) {
-  //     filter.classList.add('filter--open');
-  //   }
-  // }
+  function showOverlay() {
+    if (filter) {
+      filter.classList.add('filter--open');
+    }
+  }
 
-  // function hiddenShowOverlay() {
-  //   if (filter) {
-  //     filter.classList.remove('filter--open');
-  //   }
-  // }
+  function hiddenShowOverlay() {
+    if (filter) {
+      filter.classList.remove('filter--open');
+    }
+  }
 
-  // function showFilter() {
-  //   filterOverlay.classList.add('filter__overlay--open');
-  //   setBlur(buttonsBread);
-  //   setBlur(linksFooter);
-  //   buttonFooter.setAttribute('tabindex', '-1');
-  //   inputFooter.setAttribute('tabindex', '-1');
+  function showFilter() {
+    filterOverlay.classList.add('filter__overlay--open');
+    setBlur(buttonsBread);
+    setBlur(linksFooter);
+    buttonFooter.setAttribute('tabindex', '-1');
+    inputFooter.setAttribute('tabindex', '-1');
 
-  // }
+  }
 
-  // function closeFilter() {
-  //   if (filterOverlay) {
-  //     filterOverlay.classList.remove('filter__overlay--open');
-  //     removeBlur(buttonsBread);
-  //     removeBlur(linksFooter);
-  //     buttonFooter.removeAttribute('tabindex');
-  //     inputFooter.removeAttribute('tabindex');
-  //   }
-  // }
+  function closeFilter() {
+    if (filterOverlay) {
+      filterOverlay.classList.remove('filter__overlay--open');
+      removeBlur(buttonsBread);
+      removeBlur(linksFooter);
+      buttonFooter.removeAttribute('tabindex');
+      inputFooter.removeAttribute('tabindex');
+    }
+  }
 
-  // function onClickFilter() {
-  //   showFilter();
-  //   bodyHidden();
-  //   showOverlay();
-  // }
+  function onClickFilter() {
+    showFilter();
+    bodyHidden();
+    showOverlay();
+  }
 
-  // function onClickCloseFilter() {
-  //   closeFilter();
-  //   bodyVisible();
-  //   hiddenShowOverlay();
-  // }
+  function onClickCloseFilter() {
+    closeFilter();
+    bodyVisible();
+    hiddenShowOverlay();
+  }
 
-  // if (filterButton) {
-  //   filterButton.addEventListener('click', onClickFilter);
-  // }
+  if (filterButton) {
+    filterButton.addEventListener('click', onClickFilter);
+  }
 
-  // if (filterClose) {
-  //   filterClose.addEventListener('click', onClickCloseFilter);
-  // }
+  if (filterClose) {
+    filterClose.addEventListener('click', onClickCloseFilter);
+  }
 
-  // // Закрывает модалки при нажатии esc
-  // window.addEventListener('keydown', function (e) {
-  //   if (e.key === 'Escape') {
-  //     onClickCloseFilter();
-  //   }
-  // });
+  // Закрывает модалки при нажатии esc
+  window.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      onClickCloseFilter();
+    }
+  });
 
   // var catalogSwiper = document.querySelector('.new-jewelery__catalog');
   // var breakpoint = window.matchMedia('(max-width: 768px)');
