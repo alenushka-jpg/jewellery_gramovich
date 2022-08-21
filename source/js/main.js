@@ -266,26 +266,42 @@ var breadcrumbs = document.querySelector('.catalog__slider');
     }
   });
 
-  // var catalogSwiper = document.querySelector('.new-jewelery__catalog');
-  // var breakpoint = window.matchMedia('(max-width: 768px)');
-  // let swiper;
+  var catalogSwiper = document.querySelector('.new-jewelery__catalog');
+  var breakpoint = window.matchMedia('(min-width: 768px)');
 
-  // var initSwiper = () => {
-  //   if (swiper) {
-  //     swiper.destroy(true, true);
-  //   }
+  let swiper;
 
-  //   swiper = new Swiper(serviceSwiper, {
-  //     loop: true,
-  //     slidesPerView: 'auto',
+  var initSwiper = () => {
+    if (breakpoint.matches) {
+      swiper = new Swiper(catalogSwiper, {
+        loop: true,
+        slidesPerView: 'auto',
+        slidesPerGroup: 4,
 
-  //     pagination: {
-  //       el: '.swiper-pagination',
-  //       type: 'fraction',
-  //       renderFraction: function (currentClass, totalClass) {
-  //         return '<span class="' + currentClass + '"></span>' +
-  //         '<span class="' + totalClass + '"></span>';
-  //       },
-  //     },
-  //   });
-  // };
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+          }
+        },
+      });
+    }
+  };
+
+  const initAdvantagesSlider = () => {
+    if (catalogSwiper) {
+
+      breakpoint.addListener(initSwiper);
+      initSwiper();
+    }
+  };
+
+window.addEventListener('DOMContentLoaded', () => {
+  initAdvantagesSlider();
+});

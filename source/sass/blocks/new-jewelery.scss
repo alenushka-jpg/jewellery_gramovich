@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   padding: 120px 98px 65px;
+  overflow: hidden;
 
   @media (max-width: 1360px) {
     padding-left: 43px;
@@ -96,12 +97,12 @@
   margin: 44px auto 36px;
   width: 1170px;
   list-style: none;
-  overflow: hidden;
-  scroll-behavior: smooth;
+  // overflow: hidden;
+  // scroll-behavior: smooth;
 
-  @media (max-width: 1290px) {
-    width: 938px;
-  }
+  // @media (max-width: 1290px) {
+  //   width: 938px;
+  // }
 
   @media (max-width: $tablet-width) {
     width: 677px;

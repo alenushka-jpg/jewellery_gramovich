@@ -15,6 +15,16 @@
     }
   }
 
+  &--shop-now  {
+    .swiper-pagination-bullet {
+      color: $dark-font;
+    }
+
+    .swiper-pagination-bullet-active {
+      color: $light-font;
+    }
+  }
+
   @media (max-width: $tablet-width) {
     width: 120px;
 
