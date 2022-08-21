@@ -272,6 +272,10 @@ var breadcrumbs = document.querySelector('.catalog__slider');
   let swiper;
 
   var initSwiper = () => {
+    if (swiper) {
+      swiper.destroy(true, true);
+    }
+
     if (breakpoint.matches) {
       swiper = new Swiper(catalogSwiper, {
         loop: true,
@@ -289,6 +293,16 @@ var breadcrumbs = document.querySelector('.catalog__slider');
           renderBullet: function (index, className) {
             return '<span class="' + className + '">' + (index + 1) + "</span>";
           }
+        },
+      });
+    } else {
+      swiper = new Swiper(catalogSwiper, {
+        slidesPerView: 'auto',
+        slidesPerGroup: 2,
+
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'fraction',
         },
       });
     }
